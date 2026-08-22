@@ -5,9 +5,16 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/',
+    // GitHub Pages needs /teslamanagement-/
+    // Vercel needs /
+    base: process.env.GITHUB_ACTIONS
+      ? '/teslamanagement-/'
+      : '/',
 
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      react(),
+      tailwindcss(),
+    ],
 
     resolve: {
       alias: {
@@ -19,6 +26,7 @@ export default defineConfig(() => {
       target: 'esnext',
       minify: 'esbuild',
       cssMinify: true,
+
       rollupOptions: {
         output: {
           manualChunks: {
@@ -27,16 +35,17 @@ export default defineConfig(() => {
           },
         },
       },
+
       chunkSizeWarningLimit: 1000,
     },
 
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modify HMR settings to prevent flickering during agent edits.
-      hmr: process.env.DISABLE_HMR !== 'true',
+      hmr: process.env.DISABLE_HMR !== 'true' ? true : false,
 
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
-      watch: process.env.DISABLE_HMR === 'true' ? null : {},
+      // Disable file watching when DISABLE_HMR is true to save CPU.
+      watch: process.env.DISABLE_HMR === 'true' ? {} : undefined,
     },
   };
 });
