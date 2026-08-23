@@ -16,11 +16,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'High-Efficiency Electric Sports Sedan',
     description: 'Designed for electric efficiency, refined aerodynamics, quiet acoustic glass cabin, ambient interior lighting, and nimble handling.',
     category: 'sedan',
-    imageUrl: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-3-1.png',
     galleryImages: [
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-3-1.png',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-3-2.png'
     ],
     colors: DEFAULT_MODEL_3_COLORS,
     specs: {
@@ -99,11 +98,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'Versatile Mid-Size Electric Crossover SUV',
     description: 'The best-selling all-electric crossover SUV engineered with maximum cargo versatility, elevated ride height, and all-weather capability.',
     category: 'suv',
-    imageUrl: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-1.png',
     galleryImages: [
-      'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-1.png',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-2.png'
     ],
     colors: DEFAULT_MODEL_Y_COLORS,
     specs: {
@@ -179,10 +177,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'Extended Wheelbase Luxury Executive Crossover',
     description: 'Authorized extended-wheelbase specification featuring executive rear captain seating, enhanced legroom, premium sound isolation, and dual lounge consoles.',
     category: 'suv',
-    imageUrl: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-l-1.png',
     galleryImages: [
-      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-l-1.png',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-l-2.png'
     ],
     colors: DEFAULT_MODEL_Y_L_COLORS,
     specs: {
@@ -247,10 +245,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'Ultra-Hard 30X Cold-Rolled Stainless-Steel Exoskeleton',
     description: 'Built with an impenetrable exterior exoskeleton, shatter-resistant Armor Glass, 4-wheel steer-by-wire agility, and up to 11,000 lbs of towing power.',
     category: 'truck',
-    imageUrl: 'https://images.unsplash.com/photo-1698877546059-d8cbff695796?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybertruck-1.png',
     galleryImages: [
-      'https://images.unsplash.com/photo-1698877546059-d8cbff695796?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybertruck-1.png',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybertruck-2.png'
     ],
     colors: DEFAULT_CYBERTRUCK_COLORS,
     specs: {
@@ -325,10 +323,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'The Pinnacle of Electric Luxury & Acceleration',
     description: 'Unrivaled acceleration, ultra-long range, iconic liftback silhouette, tri-motor Plaid performance, and tri-zone climate luxury.',
     category: 'sedan',
-    imageUrl: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-s-1.png',
     galleryImages: [
-      'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-s-1.png',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-s-2.png'
     ],
     colors: DEFAULT_MODEL_S_COLORS,
     specs: {
@@ -394,10 +392,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'Falcon Wing Flagship Luxury SUV',
     description: 'Signature Falcon Wing rear doors, panoramic windshield, unmatched acceleration, three-row luxury seating, and 5,000 lbs towing capacity.',
     category: 'suv',
-    imageUrl: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-x-1.png',
     galleryImages: [
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-x-1.png',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-x-2.png'
     ],
     colors: DEFAULT_MODEL_X_COLORS,
     specs: {
@@ -462,10 +460,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'Supercar Performance & Record-Setting Aerodynamics',
     description: 'An all-electric supercar designed to maximize the potential of aerodynamic engineering into record-setting performance and efficiency.',
     category: 'specialty',
-    imageUrl: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/roadster-1.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/roadster-1.jpg',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/roadster-2.jpg'
     ],
     specs: {
       range: '620 miles',
@@ -513,16 +511,16 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     expirationDate: '2026-12-31'
   },
   {
-    id: 'cybercab',
+        id: 'cybercab',
     name: 'Cybercab',
     modelCode: 'CC-2026',
     tagline: 'Dedicated Autonomous Point-to-Point Mobility',
     description: 'Designed exclusively for autonomous, driverless transportation with butterfly doors, inductive wireless charging, and zero steering wheel or pedal clutter.',
     category: 'specialty',
-    imageUrl: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybercab-1.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybercab-1.jpg',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybercab-2.jpg'
     ],
     specs: {
       range: '200+ miles per charge',
@@ -576,10 +574,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     tagline: 'Heavy-Duty Class 8 Electric Freight Hauler',
     description: 'Revolutionary heavy-duty commercial freight semi with center-driver cockpit, 3 independent electric motors, and massive operating cost savings.',
     category: 'commercial',
-    imageUrl: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/tesla-semi-1.jpg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80',
-      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80'
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/tesla-semi-1.jpg',
+      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/tesla-semi-2.jpg'
     ],
     specs: {
       range: '500 miles at 82,000 lbs gross combination weight',
@@ -629,10 +627,4 @@ export const INITIAL_VEHICLES: Vehicle[] = [
       'Low center of gravity with battery pack mounted low within frame rails'
     ],
     chargingHighlights: [
-      'Compatible with high-power Megawatt Charging System (MCS)'
-    ],
-    pricingNotes: 'Commercial fleet inquiry pricing subject to fleet contract terms and delivery region.',
-    effectiveDate: '2026-08-01',
-    expirationDate: '2026-12-31'
-  }
-];
+      'Compatible with high-power Megawatt Charging System
