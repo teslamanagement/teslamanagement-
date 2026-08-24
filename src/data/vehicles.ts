@@ -628,3 +628,4 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     ],
     chargingHighlights: [
       'Compatible with high-power Megawatt Charging System'
+],
