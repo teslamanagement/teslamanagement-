@@ -627,4 +627,4 @@ export const INITIAL_VEHICLES: Vehicle[] = [
       'Low center of gravity with battery pack mounted low within frame rails'
     ],
     chargingHighlights: [
-      'Compatible with high-power Megawatt Charging System
+      'Compatible with high-power Megawatt Charging System'
