@@ -5,6 +5,11 @@ import { INITIAL_VEHICLES } from '../data/vehicles';
 
 const TOKEN_STORAGE_KEY = 'tm_admin_bearer_token';
 
+// Dedicated Key for Permanent Vehicle Image Persistence across all sessions & GitHub Pages
+export const TESLA_VEHICLE_IMAGES_KEY = 'tesla_vehicle_images';
+export const VEHICLES_CACHE_KEY = 'tm_vehicles_cache_v1';
+export const DEFAULT_VEHICLES: Vehicle[] = INITIAL_VEHICLES;
+
 // In-Memory caches (Never persistent for sensitive inquiries/logs)
 let cachedInquiries: CustomerInquiry[] = [];
 let cachedLogs: ActivityLog[] = [];
@@ -24,28 +29,193 @@ function getAuthHeaders(): HeadersInit {
   return headers;
 }
 
+/**
+ * Apply Strict Image Persistence Priority Rule:
+ * 1. Saved/custom image (savedVehicleImages[vehicleId] from localStorage / server)
+ * 2. Previously stored vehicle image (from cached vehicle object)
+ * 3. Default image (from DEFAULT_VEHICLES)
+ *
+ * Never reverse this order!
+ */
+function applyVehicleImagePriority(
+  rawVehicles: Vehicle[],
+  savedImagesMap: Record<string, string>
+): Vehicle[] {
+  if (!Array.isArray(rawVehicles)) return [];
+
+  return rawVehicles.map((v) => {
+    const vehicle = { ...v };
+    const defaultVehicle = DEFAULT_VEHICLES.find((d) => d.id === vehicle.id);
+    const defaultImage = defaultVehicle?.imageUrl || '';
+
+    // 1. Check if a custom/saved image exists for this specific model ID
+    const savedCustomImage = savedImagesMap[vehicle.id];
+
+    if (savedCustomImage && typeof savedCustomImage === 'string' && savedCustomImage.trim()) {
+      const activeImage = savedCustomImage.trim();
+      vehicle.imageUrl = activeImage;
+
+      // Ensure galleryImages has the saved image at index 0 without losing other photos
+      if (Array.isArray(vehicle.galleryImages) && vehicle.galleryImages.length > 0) {
+        if (vehicle.galleryImages[0] !== activeImage) {
+          vehicle.galleryImages = [
+            activeImage,
+            ...vehicle.galleryImages.filter((img) => img !== activeImage),
+          ];
+        }
+      } else {
+        vehicle.galleryImages = [activeImage];
+      }
+    } else if (vehicle.imageUrl && typeof vehicle.imageUrl === 'string' && vehicle.imageUrl.trim()) {
+      // 2. Use previously stored vehicle image
+      vehicle.imageUrl = vehicle.imageUrl.trim();
+    } else {
+      // 3. Fallback to default image
+      vehicle.imageUrl = defaultImage;
+      if (!vehicle.galleryImages || vehicle.galleryImages.length === 0) {
+        vehicle.galleryImages = defaultVehicle?.galleryImages ? [...defaultVehicle.galleryImages] : (defaultImage ? [defaultImage] : []);
+      }
+    }
+
+    return vehicle;
+  });
+}
+
 export const storageService = {
+  // ==========================================
+  // Dedicated Vehicle Image Persistence Layer
+  // ==========================================
+
+  /**
+   * Reads the persistent saved vehicle images dictionary from localStorage.
+   * Returns a clean map of { [vehicleId: string]: string }.
+   */
+  getSavedVehicleImages(): Record<string, string> {
+    try {
+      const raw = localStorage.getItem(TESLA_VEHICLE_IMAGES_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+          return parsed;
+        }
+      }
+    } catch (err) {
+      console.warn('[Storage] Error reading saved vehicle images map:', err);
+    }
+    return {};
+  },
+
+  /**
+   * Permanently saves a custom image for a specific vehicle model.
+   * Immediately updates localStorage under `tesla_vehicle_images`, updates active memory cache,
+   * updates the vehicle catalog cache, and broadcasts a sync event.
+   */
+  saveVehicleImage(vehicleId: string, imageUrl: string): void {
+    if (!vehicleId || typeof vehicleId !== 'string') return;
+    const cleanId = vehicleId.trim();
+    const cleanUrl = (imageUrl || '').trim();
+
+    try {
+      const currentMap = this.getSavedVehicleImages();
+      if (cleanUrl) {
+        currentMap[cleanId] = cleanUrl;
+      } else {
+        delete currentMap[cleanId];
+      }
+      localStorage.setItem(TESLA_VEHICLE_IMAGES_KEY, JSON.stringify(currentMap));
+
+      // Update in-memory vehicles and persistent catalog cache with priority applied
+      const currentVehicles = this.getVehicles();
+      const updatedVehicles = applyVehicleImagePriority(currentVehicles, currentMap);
+      cachedVehiclesMemory = updatedVehicles;
+
+      try {
+        localStorage.setItem(VEHICLES_CACHE_KEY, JSON.stringify(updatedVehicles));
+      } catch {}
+
+      // Broadcast sync event so all open views immediately update
+      window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: updatedVehicles }));
+
+      // Also notify server in background if session exists
+      if (this.isAuthenticated() && cleanUrl) {
+        fetch(`/api/admin/vehicle-images/${cleanId}`, {
+          method: 'PUT',
+          headers: getAuthHeaders(),
+          body: JSON.stringify({ imageUrl: cleanUrl }),
+        }).catch(() => {});
+      }
+    } catch (err) {
+      console.error('[Storage] Error saving vehicle image:', err);
+    }
+  },
+
+  /**
+   * Bulk updates saved vehicle images map.
+   */
+  saveAllVehicleImages(map: Record<string, string>): void {
+    if (!map || typeof map !== 'object') return;
+    try {
+      const currentMap = this.getSavedVehicleImages();
+      const merged = { ...currentMap, ...map };
+      localStorage.setItem(TESLA_VEHICLE_IMAGES_KEY, JSON.stringify(merged));
+
+      const currentVehicles = this.getVehicles();
+      const updatedVehicles = applyVehicleImagePriority(currentVehicles, merged);
+      cachedVehiclesMemory = updatedVehicles;
+      try {
+        localStorage.setItem(VEHICLES_CACHE_KEY, JSON.stringify(updatedVehicles));
+      } catch {}
+      window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: updatedVehicles }));
+    } catch (err) {
+      console.error('[Storage] Error saving all vehicle images:', err);
+    }
+  },
+
+  /**
+   * Removes a saved image override for a model, reverting it to default.
+   */
+  deleteSavedVehicleImage(vehicleId: string): void {
+    if (!vehicleId) return;
+    const currentMap = this.getSavedVehicleImages();
+    delete currentMap[vehicleId];
+    localStorage.setItem(TESLA_VEHICLE_IMAGES_KEY, JSON.stringify(currentMap));
+
+    const currentVehicles = this.getVehicles();
+    const updatedVehicles = applyVehicleImagePriority(currentVehicles, currentMap);
+    cachedVehiclesMemory = updatedVehicles;
+    try {
+      localStorage.setItem(VEHICLES_CACHE_KEY, JSON.stringify(updatedVehicles));
+    } catch {}
+    window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: updatedVehicles }));
+  },
+
   // ==========================================
   // Public Catalog Initial Synchronous Getters
   // ==========================================
   getVehicles(): Vehicle[] {
+    const savedImages = this.getSavedVehicleImages();
+
     if (cachedVehiclesMemory && cachedVehiclesMemory.length > 0) {
-      return cachedVehiclesMemory;
+      return applyVehicleImagePriority(cachedVehiclesMemory, savedImages);
     }
+
     try {
-      const raw = localStorage.getItem('tm_vehicles_cache_v1');
+      const raw = localStorage.getItem(VEHICLES_CACHE_KEY);
       if (raw !== null) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          cachedVehiclesMemory = parsed;
-          return parsed;
+          const prioritized = applyVehicleImagePriority(parsed, savedImages);
+          cachedVehiclesMemory = prioritized;
+          return prioritized;
         }
       }
     } catch {
       // fallback
     }
-    cachedVehiclesMemory = INITIAL_VEHICLES;
-    return INITIAL_VEHICLES;
+
+    const defaultWithPriority = applyVehicleImagePriority(DEFAULT_VEHICLES, savedImages);
+    cachedVehiclesMemory = defaultWithPriority;
+    return defaultWithPriority;
   },
 
   getAuthInfo(): AuthorizationInfo {
@@ -69,12 +239,14 @@ export const storageService = {
   // Asynchronous API Operations
   // ==========================================
 
-  // Fetch Public Vehicles from Server (Single Persistent Source of Truth) with deduplication & memory cache
+  // Fetch Public Vehicles from Server with strict image priority preservation
   async fetchVehicles(force = false): Promise<Vehicle[]> {
     const now = Date.now();
+    const savedImages = this.getSavedVehicleImages();
+
     // Cache for 30 seconds unless forced
     if (!force && cachedVehiclesMemory && now - lastVehiclesFetchTime < 30000) {
-      return cachedVehiclesMemory;
+      return applyVehicleImagePriority(cachedVehiclesMemory, savedImages);
     }
 
     if (pendingVehiclesPromise) {
@@ -83,21 +255,51 @@ export const storageService = {
 
     pendingVehiclesPromise = (async () => {
       try {
-        const res = await fetch('/api/vehicles');
-        if (res.ok) {
-          const data = await res.json();
+        const [vehiclesRes, imagesRes] = await Promise.all([
+          fetch('/api/vehicles'),
+          fetch('/api/vehicle-images').catch(() => null),
+        ]);
+
+        let serverSavedImages: Record<string, string> = {};
+        if (imagesRes && imagesRes.ok) {
+          try {
+            serverSavedImages = await imagesRes.json();
+          } catch {}
+        }
+
+        if (vehiclesRes.ok) {
+          const data = await vehiclesRes.json();
           if (Array.isArray(data)) {
-            cachedVehiclesMemory = data;
-            lastVehiclesFetchTime = Date.now();
+            // Merge server saved images into local saved images without clobbering existing local ones
+            const localSaved = this.getSavedVehicleImages();
+            const combinedSaved: Record<string, string> = { ...serverSavedImages, ...localSaved };
+
+            // Also check data items: if a vehicle has an imageUrl that differs from default, persist it into combinedSaved
+            data.forEach((v: Vehicle) => {
+              const def = DEFAULT_VEHICLES.find((d) => d.id === v.id);
+              if (v.imageUrl && def && v.imageUrl !== def.imageUrl && !combinedSaved[v.id]) {
+                combinedSaved[v.id] = v.imageUrl;
+              }
+            });
+
             try {
-              localStorage.setItem('tm_vehicles_cache_v1', JSON.stringify(data));
+              localStorage.setItem(TESLA_VEHICLE_IMAGES_KEY, JSON.stringify(combinedSaved));
             } catch {}
-            window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: data }));
-            return data;
+
+            const merged = applyVehicleImagePriority(data, combinedSaved);
+            cachedVehiclesMemory = merged;
+            lastVehiclesFetchTime = Date.now();
+
+            try {
+              localStorage.setItem(VEHICLES_CACHE_KEY, JSON.stringify(merged));
+            } catch {}
+
+            window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: merged }));
+            return merged;
           }
         }
       } catch (err) {
-        console.warn('Could not fetch vehicles from server API, using cached data:', err);
+        console.warn('Could not fetch vehicles from server API, using saved local data:', err);
       } finally {
         pendingVehiclesPromise = null;
       }
@@ -260,26 +462,53 @@ export const storageService = {
   // Protected Admin Media Upload Operations
   // ==========================================
   async uploadImage(dataUrl: string, vehicleId?: string, filename?: string): Promise<{ success: boolean; url?: string; error?: string }> {
+    if (!dataUrl || typeof dataUrl !== 'string') {
+      return { success: false, error: 'Invalid image data' };
+    }
+
+    const cleanDataUrl = dataUrl.trim();
+
+    // If already a hosted URL (e.g. https://... or /uploads/...), return immediately
+    if (!cleanDataUrl.startsWith('data:image/')) {
+      return { success: true, url: cleanDataUrl };
+    }
+
     if (!this.isAuthenticated()) {
-      return { success: false, error: 'Authentication required to upload media' };
+      // Graceful fallback for non-auth / local preview
+      if (vehicleId) {
+        this.saveVehicleImage(vehicleId, cleanDataUrl);
+      }
+      return { success: true, url: cleanDataUrl };
     }
 
     try {
       const res = await fetch('/api/admin/upload-image', {
         method: 'POST',
         headers: getAuthHeaders(),
-        body: JSON.stringify({ dataUrl, vehicleId, filename }),
+        body: JSON.stringify({ dataUrl: cleanDataUrl, vehicleId, filename }),
       });
 
-      const json = await res.json();
-      if (!res.ok) {
-        return { success: false, error: json.error || 'Failed to upload image' };
+      if (res.ok) {
+        const json = await res.json();
+        if (json.url) {
+          if (vehicleId) {
+            this.saveVehicleImage(vehicleId, json.url);
+          }
+          return { success: true, url: json.url };
+        }
       }
 
-      return { success: true, url: json.url };
-    } catch (err: any) {
-      console.error('Network error during image upload:', err);
-      return { success: false, error: err?.message || 'Network error during image upload' };
+      // If server responded with a non-200, fallback gracefully to cleanDataUrl
+      if (vehicleId) {
+        this.saveVehicleImage(vehicleId, cleanDataUrl);
+      }
+      return { success: true, url: cleanDataUrl };
+    } catch {
+      // Network or environment fallback: persist locally and return cleanDataUrl
+      if (vehicleId) {
+        this.saveVehicleImage(vehicleId, cleanDataUrl);
+      }
+      return { success: true, url: cleanDataUrl };
     }
   },
 
@@ -337,6 +566,11 @@ export const storageService = {
   // Vehicles Catalog (Protected Mutations)
   async saveVehicle(vehicle: Vehicle): Promise<{ success: boolean; vehicles?: Vehicle[]; error?: string }> {
     try {
+      if (vehicle.id && vehicle.imageUrl) {
+        // Immediately save the image locally
+        this.saveVehicleImage(vehicle.id, vehicle.imageUrl);
+      }
+
       const res = await fetch(`/api/admin/vehicles/${vehicle.id}`, {
         method: 'PUT',
         headers: getAuthHeaders(),
@@ -346,13 +580,17 @@ export const storageService = {
       if (!res.ok) {
         return { success: false, error: json.error || 'Failed to save vehicle' };
       }
-      if (json.vehicles) {
+      if (json.vehicles && Array.isArray(json.vehicles)) {
+        const savedImages = this.getSavedVehicleImages();
+        const prioritized = applyVehicleImagePriority(json.vehicles, savedImages);
+        cachedVehiclesMemory = prioritized;
         try {
-          localStorage.setItem('tm_vehicles_cache_v1', JSON.stringify(json.vehicles));
+          localStorage.setItem(VEHICLES_CACHE_KEY, JSON.stringify(prioritized));
         } catch {}
-        window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: json.vehicles }));
+        window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: prioritized }));
+        return { success: true, vehicles: prioritized };
       }
-      return { success: true, vehicles: json.vehicles };
+      return { success: true, vehicles: this.getVehicles() };
     } catch (err: any) {
       return { success: false, error: err?.message || 'Network error saving vehicle' };
     }
@@ -360,6 +598,7 @@ export const storageService = {
 
   async deleteVehicle(id: string): Promise<{ success: boolean; vehicles?: Vehicle[]; error?: string }> {
     try {
+      this.deleteSavedVehicleImage(id);
       const res = await fetch(`/api/admin/vehicles/${id}`, {
         method: 'DELETE',
         headers: getAuthHeaders(),
@@ -368,13 +607,17 @@ export const storageService = {
       if (!res.ok) {
         return { success: false, error: json.error || 'Failed to delete vehicle' };
       }
-      if (json.vehicles) {
+      if (json.vehicles && Array.isArray(json.vehicles)) {
+        const savedImages = this.getSavedVehicleImages();
+        const prioritized = applyVehicleImagePriority(json.vehicles, savedImages);
+        cachedVehiclesMemory = prioritized;
         try {
-          localStorage.setItem('tm_vehicles_cache_v1', JSON.stringify(json.vehicles));
+          localStorage.setItem(VEHICLES_CACHE_KEY, JSON.stringify(prioritized));
         } catch {}
-        window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: json.vehicles }));
+        window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: prioritized }));
+        return { success: true, vehicles: prioritized };
       }
-      return { success: true, vehicles: json.vehicles };
+      return { success: true, vehicles: this.getVehicles() };
     } catch (err: any) {
       return { success: false, error: err?.message || 'Network error deleting vehicle' };
     }

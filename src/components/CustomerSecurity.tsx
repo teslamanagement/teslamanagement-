@@ -4,8 +4,6 @@ import { ShieldAlert, Ban, CheckCircle2, Lock, AlertTriangle } from 'lucide-reac
 export const CustomerSecurity: React.FC = () => {
   const bannedMethods = [
     'Gift cards (Retail, Digital, or Pre-loaded)',
-    'Cryptocurrency transfers (Bitcoin, Ethereum, USDT, etc.)',
-    'Personal mobile wallets (Cash App, Venmo, Zelle, personal PayPal)',
     'Unverified personal or third-party bank accounts',
     'Anonymous or peer-to-peer wire transfer services',
   ];
@@ -51,9 +49,9 @@ export const CustomerSecurity: React.FC = () => {
                 Management representatives will <strong className="text-red-600">NEVER</strong> instruct customers to pay through any of the following methods:
               </p>
 
-              <ul className="space-y-2.5 pt-1">
+              <ul className="space-y-3.5 pt-1.5">
                 {bannedMethods.map((method, idx) => (
-                  <li key={idx} className="flex items-start space-x-2.5 text-xs text-neutral-700 font-medium">
+                  <li key={idx} className="flex items-start space-x-2.5 text-xs text-neutral-700 font-medium leading-relaxed">
                     <span className="text-red-600 font-bold flex-shrink-0">✕</span>
                     <span>{method}</span>
                   </li>

@@ -21,6 +21,7 @@ import {
 import { Vehicle, VehicleColor } from '../../types';
 import { TESLA_COLOR_PRESETS } from '../../data/colors';
 import { storageService } from '../../services/storage';
+import { optimizeImageFile } from '../../utils/imageOptimizer';
 
 interface VehicleMediaManagerProps {
   vehicle: Vehicle;
@@ -74,16 +75,19 @@ export const VehicleMediaManager: React.FC<VehicleMediaManagerProps> = ({
     });
   };
 
-  // Upload helper: converts file to persistent server URL
-  const uploadAndGetPersistentUrl = async (file: File, prefix = 'car'): Promise<string> => {
-    const dataUrl = await readFileAsDataUrl(file);
+  // Upload helper: converts file to web-optimized data and uploads to persistent server URL
+  const uploadAndGetPersistentUrl = async (file: File, _prefix = 'car'): Promise<string> => {
+    let dataUrl: string;
+    try {
+      // Compress and scale to max 1920x1080 WebP/JPEG
+      dataUrl = await optimizeImageFile(file, { maxWidth: 1920, maxHeight: 1080, quality: 0.85 });
+    } catch {
+      dataUrl = await readFileAsDataUrl(file);
+    }
+
     const res = await storageService.uploadImage(dataUrl, vehicle.id || 'catalog', file.name);
     if (res.success && res.url) {
       return res.url;
-    }
-    // If direct server upload returned an error or non-auth, use dataUrl (server PUT will convert to disk file on save)
-    if (res.error) {
-      console.warn('Direct upload warning:', res.error);
     }
     return dataUrl;
   };
@@ -95,6 +99,9 @@ export const VehicleMediaManager: React.FC<VehicleMediaManagerProps> = ({
     // If images exist, the first image is always the default/main imageUrl
     // If all images are deleted, imageUrl is empty string ''
     const primaryImg = newImages.length > 0 ? newImages[0] : '';
+    if (primaryImg && vehicle.id) {
+      storageService.saveVehicleImage(vehicle.id, primaryImg);
+    }
     onChange({
       ...vehicle,
       imageUrl: primaryImg,

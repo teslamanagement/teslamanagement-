@@ -87,6 +87,7 @@ function normalizeVehicleImages(v: Vehicle): Vehicle {
 
 // In-Memory Secure State (Synchronized with Disk Storage)
 let vehicles: Vehicle[] = JSON.parse(JSON.stringify(INITIAL_VEHICLES));
+let savedVehicleImages: Record<string, string> = {};
 let authInfo: AuthorizationInfo = JSON.parse(JSON.stringify(INITIAL_AUTH_INFO));
 let countriesList: CountryData[] = JSON.parse(JSON.stringify(WORLDWIDE_COUNTRIES));
 let inquiries: CustomerInquiry[] = [];
@@ -117,10 +118,30 @@ function initStore() {
     if (fs.existsSync(STORE_FILE)) {
       const raw = fs.readFileSync(STORE_FILE, 'utf-8');
       const data = JSON.parse(raw);
+      if (data.savedVehicleImages && typeof data.savedVehicleImages === 'object' && !Array.isArray(data.savedVehicleImages)) {
+        savedVehicleImages = data.savedVehicleImages;
+      }
       if (Array.isArray(data.vehicles)) {
         // Automatically extract and migrate any legacy embedded base64 to disk files
         vehicles = data.vehicles.map(normalizeVehicleImages);
       }
+      // Apply strict priority: 1. Saved/custom image, 2. Stored vehicle image, 3. Default image
+      vehicles = vehicles.map((v) => {
+        const customImg = savedVehicleImages[v.id];
+        if (customImg && typeof customImg === 'string' && customImg.trim()) {
+          const cleanImg = customImg.trim();
+          v.imageUrl = cleanImg;
+          if (Array.isArray(v.galleryImages) && v.galleryImages.length > 0) {
+            if (v.galleryImages[0] !== cleanImg) {
+              v.galleryImages = [cleanImg, ...v.galleryImages.filter((img) => img !== cleanImg)];
+            }
+          } else {
+            v.galleryImages = [cleanImg];
+          }
+        }
+        return v;
+      });
+
       if (data.authInfo && typeof data.authInfo === 'object') {
         authInfo = { ...INITIAL_AUTH_INFO, ...data.authInfo };
       }
@@ -154,6 +175,7 @@ function saveStoreToDisk() {
     }
     const payload = {
       vehicles,
+      savedVehicleImages,
       authInfo,
       countriesList,
       inquiries,
@@ -277,8 +299,9 @@ async function startServer() {
     threshold: 1024,
   }));
 
-  // JSON Body Parser with 50MB limit (for seamless batch vehicle media uploads)
+  // JSON & URL-encoded Body Parsers with 50MB limit (for seamless batch vehicle media uploads)
   app.use(express.json({ limit: '50mb' }));
+  app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
   // Static serving for persistent uploaded media files with caching headers
   app.use('/uploads', express.static(UPLOADS_DIR, {
@@ -305,6 +328,12 @@ async function startServer() {
   app.get('/api/vehicles', (_req: Request, res: Response) => {
     res.setHeader('Cache-Control', 'public, max-age=15, stale-while-revalidate=60');
     res.json(vehicles);
+  });
+
+  // 1b. Get Public Saved Vehicle Images Map
+  app.get('/api/vehicle-images', (_req: Request, res: Response) => {
+    res.setHeader('Cache-Control', 'public, max-age=5, stale-while-revalidate=30');
+    res.json(savedVehicleImages);
   });
 
   // 2. Get Public Authorization Info (with cache-control)
@@ -583,6 +612,37 @@ async function startServer() {
     }
   });
 
+  // 12b. Update Saved Vehicle Image Directly (Admin Only)
+  app.put('/api/admin/vehicle-images/:id', requireAdminAuth, (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { imageUrl } = req.body;
+    if (!imageUrl || typeof imageUrl !== 'string' || !imageUrl.trim()) {
+      return res.status(400).json({ error: 'Missing or invalid imageUrl', code: 'INVALID_PAYLOAD' });
+    }
+
+    const cleanUrl = saveBase64ImageToDisk(imageUrl.trim(), `${id}-custom`);
+    savedVehicleImages[id] = cleanUrl;
+
+    const vehIndex = vehicles.findIndex((v) => v.id === id);
+    if (vehIndex >= 0) {
+      vehicles[vehIndex].imageUrl = cleanUrl;
+      if (Array.isArray(vehicles[vehIndex].galleryImages)) {
+        if (vehicles[vehIndex].galleryImages[0] !== cleanUrl) {
+          vehicles[vehIndex].galleryImages = [
+            cleanUrl,
+            ...vehicles[vehIndex].galleryImages.filter((img) => img !== cleanUrl),
+          ];
+        }
+      } else {
+        vehicles[vehIndex].galleryImages = [cleanUrl];
+      }
+    }
+
+    saveStoreToDisk();
+    addAuditLog('IMAGE_UPDATED', 'VEHICLE', `Saved permanent vehicle image for ${id}`, 'Management Admin');
+    res.json({ success: true, savedVehicleImages, vehicle: vehIndex >= 0 ? vehicles[vehIndex] : null, vehicles });
+  });
+
   // 13. Create / Update Vehicle in Catalog (Admin Only)
   app.post('/api/admin/vehicles', requireAdminAuth, (req: Request, res: Response) => {
     const rawVehicle = req.body as Vehicle;
@@ -593,6 +653,10 @@ async function startServer() {
     // Automatically convert any embedded base64 to disk files and clean URLs
     const newVehicle = normalizeVehicleImages(rawVehicle);
 
+    if (newVehicle.imageUrl && typeof newVehicle.imageUrl === 'string' && newVehicle.imageUrl.trim()) {
+      savedVehicleImages[newVehicle.id] = newVehicle.imageUrl.trim();
+    }
+
     const existingIndex = vehicles.findIndex((v) => v.id === newVehicle.id);
     if (existingIndex >= 0) {
       vehicles[existingIndex] = newVehicle;
@@ -602,7 +666,7 @@ async function startServer() {
 
     saveStoreToDisk();
     addAuditLog('VEHICLE_SAVED', 'VEHICLE', `Saved vehicle ${newVehicle.name} (${newVehicle.id})`, 'Management Admin');
-    res.json({ success: true, vehicle: newVehicle, vehicles });
+    res.json({ success: true, vehicle: newVehicle, vehicles, savedVehicleImages });
   });
 
   // 14. Update Vehicle by ID (Admin Only)
@@ -616,6 +680,10 @@ async function startServer() {
     // Automatically convert any embedded base64 to disk files and clean URLs
     const updatedVehicle = normalizeVehicleImages({ ...rawVehicle, id });
 
+    if (updatedVehicle.imageUrl && typeof updatedVehicle.imageUrl === 'string' && updatedVehicle.imageUrl.trim()) {
+      savedVehicleImages[id] = updatedVehicle.imageUrl.trim();
+    }
+
     const index = vehicles.findIndex((v) => v.id === id);
     if (index >= 0) {
       vehicles[index] = updatedVehicle;
@@ -625,16 +693,17 @@ async function startServer() {
 
     saveStoreToDisk();
     addAuditLog('VEHICLE_UPDATED', 'VEHICLE', `Updated specifications/media for ${updatedVehicle.name}`, 'Management Admin');
-    res.json({ success: true, vehicle: updatedVehicle, vehicles });
+    res.json({ success: true, vehicle: updatedVehicle, vehicles, savedVehicleImages });
   });
 
   // 15. Delete Vehicle (Admin Only)
   app.delete('/api/admin/vehicles/:id', requireAdminAuth, (req: Request, res: Response) => {
     const { id } = req.params;
+    delete savedVehicleImages[id];
     vehicles = vehicles.filter((v) => v.id !== id);
     saveStoreToDisk();
     addAuditLog('VEHICLE_DELETED', 'VEHICLE', `Vehicle ${id} removed from catalog`, 'Management Admin');
-    res.json({ success: true, vehicles });
+    res.json({ success: true, vehicles, savedVehicleImages });
   });
 
   // 16. Update Official Authorization Info (Admin Only)
