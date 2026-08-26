@@ -284,7 +284,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                         type="button"
                         id={`btn-request-${vehicle.id}`}
                         onClick={() => onRequestVehicle(vehicle)}
-                        className="py-2.5 px-3 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer flex items-center justify-center space-x-1 shadow-xs active:scale-95"
+                        className="py-2.5 px-3 rounded-xl bg-[#000000] hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer flex items-center justify-center space-x-1 shadow-xs active:scale-95"
                       >
                         <span>Request</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />

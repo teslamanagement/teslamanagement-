@@ -638,7 +638,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                 type="submit"
                 id="submit-vehicle-request-btn"
                 disabled={isSubmitting}
-                className="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer shadow-xs flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed active:scale-98"
+                className="w-full py-3.5 px-4 rounded-xl bg-[#000000] hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer shadow-xs flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed active:scale-98"
               >
                 {isSubmitting ? (
                   <>

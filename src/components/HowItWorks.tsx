@@ -107,7 +107,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartInquiry }) => {
             type="button"
             id="how-it-works-start-btn"
             onClick={onStartInquiry}
-            className="px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider transition-colors flex-shrink-0 cursor-pointer flex items-center space-x-2 shadow-2xs"
+            className="px-5 py-2.5 rounded-xl bg-[#000000] hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors flex-shrink-0 cursor-pointer flex items-center space-x-2 shadow-2xs"
           >
             <span>Start Inquiry</span>
             <ArrowRight className="w-4 h-4" />
