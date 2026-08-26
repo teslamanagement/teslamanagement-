@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag, ShieldCheck, ArrowRight, Info, Check, HelpCircle } from 'lucide-react';
+import { Tag, ShieldCheck, ArrowRight, Info } from 'lucide-react';
 import { Vehicle } from '../types';
 
 interface SpecialPricingSectionProps {
@@ -31,17 +31,17 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3">
-            <Tag className="w-3.5 h-3.5" />
-            <span>Authorized Management Pricing Matrix</span>
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800 text-xs font-bold uppercase tracking-wider mb-3 font-mono">
+            <Tag className="w-3.5 h-3.5 text-red-600" />
+            <span>Management Pricing Matrix</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight">
-            Special Management Promotional Pricing
+            Special Promotional Pricing
           </h2>
 
           <p className="text-sm sm:text-base text-neutral-600 mt-3 leading-relaxed">
-            The figures below represent verified Management Promotional Pricing authorized for approved client allocations.
+            Verified Management Promotional Pricing available on authorized client allocations.
           </p>
         </div>
 
@@ -49,12 +49,12 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
         <div className="mb-10 p-5 rounded-2xl bg-[#F8F9FA] border border-neutral-200 shadow-xs max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-start space-x-3.5">
             <ShieldCheck className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" />
-            <div className="text-xs text-neutral-700 space-y-1">
+            <div className="text-xs text-neutral-600 space-y-1">
               <p className="font-bold text-neutral-900">
                 Authorized Publication Standard
               </p>
               <p className="text-neutral-600 leading-relaxed">
-                These promotional figures are published under verified authorization. They represent authorized Management Promotional Pricing and are distinct from standard factory MSRP until verified during client matching.
+                Published under verified authorization. These figures reflect authorized Management Promotional Pricing and are distinct from standard factory MSRP until verified during client matching.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
           <button
             type="button"
             onClick={onOpenVerification}
-            className="px-3.5 py-2 rounded-lg bg-white hover:bg-neutral-50 text-neutral-800 text-xs font-semibold whitespace-nowrap border border-neutral-300 transition-colors flex-shrink-0 cursor-pointer shadow-xs"
+            className="px-3.5 py-2 rounded-lg bg-white hover:bg-neutral-100 text-neutral-800 text-xs font-semibold whitespace-nowrap border border-neutral-300 transition-colors flex-shrink-0 cursor-pointer shadow-2xs"
           >
             Verify Protocol
           </button>
@@ -74,7 +74,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
             {[1, 2, 3].map((idx) => (
               <div
                 key={`promo-skel-${idx}`}
-                className="p-6 rounded-2xl bg-white border border-neutral-200/90 shadow-xs animate-pulse space-y-4"
+                className="p-6 rounded-2xl bg-white border border-neutral-200 shadow-xs animate-pulse space-y-4"
               >
                 <div className="flex justify-between">
                   <div className="h-3 bg-neutral-200 rounded w-1/4" />
@@ -95,14 +95,14 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
                 <div
                   key={vehicle.id}
                   id={`pricing-card-${vehicle.id}`}
-                  className="relative p-6 rounded-2xl bg-white hover:bg-white border border-neutral-200/90 hover:border-neutral-300 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col justify-between"
+                  className="relative p-6 rounded-2xl bg-white hover:border-neutral-300 border border-neutral-200 transition-all duration-300 shadow-xs hover:shadow-md flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-xs font-mono uppercase tracking-widest text-neutral-400">
                         Tesla Model
                       </span>
-                      <span className="text-[11px] px-2 py-0.5 rounded bg-neutral-100 text-neutral-700 font-mono font-semibold">
+                      <span className="text-[11px] px-2 py-0.5 rounded bg-neutral-100 border border-neutral-200 text-neutral-700 font-mono font-semibold">
                         {vehicle.modelCode}
                       </span>
                     </div>
@@ -115,8 +115,8 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
                       {vehicle.tagline}
                     </p>
 
-                    {/* Exact Visual Pricing Structure mandated in Section 5 */}
-                    <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200/80 mb-6">
+                    {/* Exact Visual Pricing Structure */}
+                    <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200 mb-6">
                       {hasOriginalPrice ? (
                         <div className="space-y-1.5">
                           <div className="flex items-center justify-between text-xs">
@@ -146,7 +146,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
                         </div>
                       )}
 
-                      <div className="mt-2 text-[10px] text-neutral-600 flex items-center space-x-1 font-medium">
+                      <div className="mt-2 text-[10px] text-emerald-700 flex items-center space-x-1.5 font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                         <span>{vehicle.promotionalLabel || 'Management Promotional Price'}</span>
                       </div>
@@ -158,14 +158,14 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
                       type="button"
                       id={`request-promo-${vehicle.id}`}
                       onClick={() => onRequestVehicle(vehicle)}
-                      className="w-full py-3 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer flex items-center justify-center space-x-2 shadow-xs active:scale-95"
+                      className="w-full py-3 px-4 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer flex items-center justify-center space-x-2 shadow-xs active:scale-95"
                     >
                       <span>Request Allocation</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
 
-                    <p className="text-[10px] text-neutral-500 text-center mt-2.5">
-                      {vehicle.availability} • Authorized client inquiry
+                    <p className="text-[10px] text-neutral-400 text-center mt-2.5 font-mono">
+                      {vehicle.availability} • Authorized inquiry
                     </p>
                   </div>
                 </div>
@@ -173,18 +173,18 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
             })}
           </div>
         ) : (
-          <div className="py-12 text-center text-neutral-500 bg-[#F8F9FA] rounded-2xl border border-neutral-200 mb-12 max-w-xl mx-auto p-6">
+          <div className="py-12 text-center text-neutral-500 bg-white rounded-2xl border border-neutral-200 mb-12 max-w-xl mx-auto p-6">
             <Info className="w-8 h-8 mx-auto text-neutral-400 mb-2" />
-            <p className="text-sm font-medium text-neutral-800">No promotional pricing entries are currently active.</p>
+            <p className="text-sm font-medium text-neutral-900">No promotional pricing entries are currently active.</p>
             <p className="text-xs text-neutral-500 mt-1">Check back later or contact management for direct inquiries.</p>
           </div>
         )}
 
-        {/* Mandatory Final Pricing Notice from Section 5 */}
-        <div className="max-w-4xl mx-auto p-5 rounded-2xl bg-[#F8F9FA] border border-neutral-200 text-neutral-700 text-xs sm:text-sm space-y-2 shadow-xs">
+        {/* Mandatory Final Pricing Notice */}
+        <div className="max-w-4xl mx-auto p-5 rounded-2xl bg-[#F8F9FA] border border-neutral-200 text-neutral-600 text-xs sm:text-sm space-y-2 shadow-2xs">
           <div className="flex items-center space-x-2 font-bold text-neutral-900">
             <Info className="w-4 h-4 text-red-600 flex-shrink-0" />
-            <span>Important Terms & Conditions Regarding Promotional Figures</span>
+            <span>Pricing Terms & Conditions</span>
           </div>
           <p className="text-neutral-600 leading-relaxed">
             &ldquo;Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the authorized purchasing process.&rdquo;

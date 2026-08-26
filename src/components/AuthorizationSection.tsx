@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, CheckCircle2, Lock, ExternalLink, Hash, Calendar, Globe } from 'lucide-react';
+import { ShieldCheck, Hash, Calendar, Globe } from 'lucide-react';
 import { AuthorizationInfo } from '../types';
 
 interface AuthorizationSectionProps {
@@ -38,19 +38,16 @@ export const AuthorizationSection: React.FC<AuthorizationSectionProps> = ({
             </h2>
 
             <p className="text-sm sm:text-base text-neutral-600 mt-3 max-w-2xl mx-auto leading-relaxed">
-              Transparent, verifiable representation credentials ensuring client trust, authentic pricing, and authorized vehicle purchasing assistance.
+              Transparent representation credentials ensuring authentic pricing, verified specifications, and secure vehicle purchasing.
             </p>
           </div>
 
           {/* Main Verification Certificate Card */}
-          <div className="p-6 sm:p-10 rounded-3xl bg-white border border-neutral-200 shadow-sm space-y-8 relative overflow-hidden">
-            {/* Background Watermark */}
-            <div className="absolute right-0 top-0 translate-x-12 -translate-y-12 w-64 h-64 bg-red-600/5 rounded-full blur-3xl pointer-events-none" />
-
+          <div className="p-6 sm:p-10 rounded-3xl bg-white border border-neutral-200 shadow-2xs space-y-8 relative overflow-hidden">
             {/* Certificate Header Banner */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-neutral-100 gap-4">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shadow-xs">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shadow-2xs">
                   <ShieldCheck className="w-7 h-7" />
                 </div>
                 <div>
@@ -65,7 +62,7 @@ export const AuthorizationSection: React.FC<AuthorizationSectionProps> = ({
                 </div>
               </div>
 
-              <div className="text-right sm:text-right">
+              <div className="text-left sm:text-right">
                 <span className="text-[10px] text-neutral-500 uppercase font-mono block font-semibold">Registry Ref</span>
                 <span className="text-xs font-mono font-bold text-neutral-800 bg-[#F8F9FA] px-3 py-1.5 rounded-lg border border-neutral-200 inline-block mt-1">
                   {authorizationNumber}
@@ -78,7 +75,7 @@ export const AuthorizationSection: React.FC<AuthorizationSectionProps> = ({
               <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200 space-y-1">
                 <div className="flex items-center space-x-1.5 text-neutral-500 font-mono text-[10px] uppercase font-semibold">
                   <Hash className="w-3 h-3" />
-                  <span>Authorized Representative Name</span>
+                  <span>Representative</span>
                 </div>
                 <div className="text-sm font-bold text-neutral-900">
                   {representativeName}
@@ -88,7 +85,7 @@ export const AuthorizationSection: React.FC<AuthorizationSectionProps> = ({
               <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200 space-y-1">
                 <div className="flex items-center space-x-1.5 text-neutral-500 font-mono text-[10px] uppercase font-semibold">
                   <Calendar className="w-3 h-3" />
-                  <span>Authorization Validity Window</span>
+                  <span>Validity Window</span>
                 </div>
                 <div className="text-sm font-bold text-neutral-900">
                   {authorizationDate} to {expirationDate}
@@ -122,7 +119,7 @@ export const AuthorizationSection: React.FC<AuthorizationSectionProps> = ({
                 type="button"
                 id="btn-verify-authorization-main"
                 onClick={onOpenVerification}
-                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer shadow-xs flex items-center justify-center space-x-2 active:scale-95"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer shadow-2xs flex items-center justify-center space-x-2 active:scale-95"
               >
                 <ShieldCheck className="w-4 h-4" />
                 <span>Verify Authorization</span>

@@ -62,9 +62,6 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
     (vehicle.colors || []).find((c) => c?.id === selectedColorId) ||
     (vehicle.colors || [])[0];
 
-  // Determine current active images:
-  // If a color is selected and has custom images, use them.
-  // Otherwise, fallback to the vehicle's general galleryImages or imageUrl.
   let currentImages: string[] = [];
   if (currentColor && currentColor.images && currentColor.images.length > 0) {
     currentImages = currentColor.images;
@@ -76,7 +73,6 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
     currentImages = [];
   }
 
-  // Ensure activeImageIndex stays within range
   const safeImageIndex = Math.min(activeImageIndex, Math.max(0, currentImages.length - 1));
 
   const formatCurrency = (val: number) => {
@@ -139,10 +135,10 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
         {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200 bg-[#F8F9FA] sticky top-0 z-20">
           <div className="flex items-center space-x-3">
-            <div className="w-2.5 h-2.5 rounded-full bg-red-600" />
+            <div className="w-2.5 h-2.5 rounded-full bg-red-600 shadow-xs" />
             <div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-neutral-500 font-semibold">
-                Authorized Vehicle Overview
+                Vehicle Configurator & Overview
               </span>
               <h3 className="text-xl font-bold text-neutral-900 font-sans">
                 Tesla {vehicle.name}
@@ -154,7 +150,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
             type="button"
             id="close-vehicle-detail-btn"
             onClick={onClose}
-            className="p-2 rounded-lg bg-white hover:bg-neutral-100 text-neutral-500 hover:text-neutral-900 border border-neutral-200 transition-colors cursor-pointer"
+            className="p-2 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-500 hover:text-neutral-900 border border-neutral-200 transition-colors cursor-pointer"
             aria-label="Close vehicle details"
           >
             <X className="w-5 h-5" />
@@ -168,7 +164,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
             {/* Image Gallery Column */}
             <div className="lg:col-span-7 space-y-3">
               <div
-                className="relative aspect-[16/10] rounded-xl overflow-hidden bg-neutral-900 border border-neutral-200 select-none group touch-pan-y"
+                className="relative aspect-[16/10] rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 select-none group touch-pan-y shadow-2xs"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -183,13 +179,13 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
 
                 {/* Top Status & Color Badge */}
                 <div className="absolute top-3 left-3 flex items-center space-x-2">
-                  <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-white/90 backdrop-blur-md text-neutral-900 border border-neutral-200 shadow-xs">
+                  <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-black/70 backdrop-blur-xs text-white border border-white/20 shadow-xs">
                     {vehicle.availability}
                   </span>
                   {currentColor && (
-                    <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-black/60 backdrop-blur-md text-white border border-white/20 shadow-xs flex items-center space-x-1.5 font-mono">
+                    <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-black/70 backdrop-blur-xs text-white border border-white/20 shadow-xs flex items-center space-x-1.5 font-mono">
                       <span
-                        className="w-2.5 h-2.5 rounded-full border border-white/50"
+                        className="w-3 h-3 rounded-full border border-white/40 shadow-xs"
                         style={{ backgroundColor: currentColor.hex }}
                       />
                       <span>{currentColor.name}</span>
@@ -203,7 +199,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                     <button
                       type="button"
                       onClick={handlePrevImage}
-                      className="absolute left-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md sm:opacity-0 sm:group-hover:opacity-100"
+                      className="absolute left-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md sm:opacity-0 sm:group-hover:opacity-100 border border-white/10"
                       aria-label="Previous image"
                     >
                       <ChevronLeft className="w-5 h-5" />
@@ -211,7 +207,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                     <button
                       type="button"
                       onClick={handleNextImage}
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/80 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md sm:opacity-0 sm:group-hover:opacity-100"
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md sm:opacity-0 sm:group-hover:opacity-100 border border-white/10"
                       aria-label="Next image"
                     >
                       <ChevronRight className="w-5 h-5" />
@@ -221,16 +217,16 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
 
                 {/* Navigation Dots Indicator */}
                 {currentImages.length > 1 && (
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-xs">
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-xs border border-white/10">
                     {currentImages.map((_, idx) => (
                       <button
                         key={idx}
                         type="button"
                         onClick={() => setActiveImageIndex(idx)}
-                        className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
+                        className={`h-1.5 rounded-full transition-all cursor-pointer ${
                           safeImageIndex === idx
                             ? 'bg-white w-5'
-                            : 'bg-white/50 hover:bg-white/80'
+                            : 'bg-white/40 hover:bg-white/80 w-1.5'
                         }`}
                         aria-label={`Go to slide ${idx + 1}`}
                       />
@@ -241,7 +237,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
 
               {/* Thumbnails Strip */}
               {currentImages.length > 1 && (
-                <div className="flex space-x-2 overflow-x-auto pb-1">
+                <div className="flex space-x-2 overflow-x-auto pb-1 no-scrollbar">
                   {currentImages.map((img, idx) => (
                     <button
                       key={idx}
@@ -249,7 +245,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                       onClick={() => setActiveImageIndex(idx)}
                       className={`relative w-20 h-14 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 cursor-pointer ${
                         safeImageIndex === idx
-                          ? 'border-red-600 scale-105 shadow-xs'
+                          ? 'border-neutral-900 scale-105 shadow-xs'
                           : 'border-neutral-200 opacity-60 hover:opacity-100'
                       }`}
                     >
@@ -264,22 +260,22 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 </div>
               )}
 
-              {/* Available Exterior Colors Selector */}
+              {/* Exterior Colors Selector */}
               {vehicle.colors && vehicle.colors.length > 0 && (
-                <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200 space-y-2.5">
+                <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200 space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-xs font-bold text-neutral-900 uppercase tracking-wider font-mono">
                       <Palette className="w-3.5 h-3.5 text-red-600" />
-                      <span>Choose Exterior Color</span>
+                      <span>Select Exterior Paint</span>
                     </div>
                     {currentColor && (
-                      <span className="text-xs font-semibold text-neutral-800">
+                      <span className="text-xs font-semibold text-neutral-600">
                         {currentColor.name}
                       </span>
                     )}
                   </div>
 
-                  <div className="flex flex-wrap gap-2 pt-1">
+                  <div className="flex flex-wrap gap-2.5 pt-1">
                     {vehicle.colors.map((c) => {
                       const isSelected = selectedColorId === c.id;
                       return (
@@ -288,21 +284,21 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                           type="button"
                           id={`color-swatch-${c.id}`}
                           onClick={() => handleSelectColor(c.id)}
-                          className={`flex items-center space-x-2 px-3 py-1.5 rounded-xl border transition-all cursor-pointer ${
+                          className={`flex items-center space-x-2 px-3.5 py-2 rounded-xl border transition-all duration-200 cursor-pointer ${
                             isSelected
-                              ? 'bg-white border-red-600 ring-2 ring-red-500/20 shadow-xs'
-                              : 'bg-white hover:bg-neutral-50 border-neutral-200 hover:border-neutral-300'
+                              ? 'bg-white border-neutral-900 shadow-xs text-neutral-900 ring-1 ring-neutral-900'
+                              : 'bg-white hover:bg-neutral-50 border-neutral-200 text-neutral-600 hover:text-neutral-900'
                           }`}
                         >
                           <span
-                            className="w-4 h-4 rounded-full border border-black/20 shadow-2xs flex-shrink-0"
+                            className="w-4 h-4 rounded-full border border-neutral-300 shadow-2xs flex-shrink-0"
                             style={{ backgroundColor: c.hex }}
                           />
-                          <span className="text-xs font-medium text-neutral-800">
+                          <span className="text-xs font-medium">
                             {c.name}
                           </span>
                           {isSelected && (
-                            <CheckCircle2 className="w-3.5 h-3.5 text-red-600 ml-1" />
+                            <CheckCircle2 className="w-3.5 h-3.5 text-neutral-900 ml-1" />
                           )}
                         </button>
                       );
@@ -329,19 +325,19 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 <div className="grid grid-cols-2 gap-2.5 p-3 rounded-xl bg-white border border-neutral-200 mb-4 shadow-2xs">
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase block font-mono font-semibold">Range</span>
-                    <span className="text-sm font-bold text-neutral-900">{vehicle.specs.range}</span>
+                    <span className="text-sm font-bold text-neutral-900 font-mono">{vehicle.specs.range}</span>
                   </div>
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase block font-mono font-semibold">Acceleration</span>
-                    <span className="text-sm font-bold text-neutral-900">{vehicle.specs.acceleration}</span>
+                    <span className="text-sm font-bold text-neutral-900 font-mono">{vehicle.specs.acceleration}</span>
                   </div>
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase block font-mono font-semibold">Top Speed</span>
-                    <span className="text-sm font-bold text-neutral-900">{vehicle.specs.topSpeed}</span>
+                    <span className="text-sm font-bold text-neutral-900 font-mono">{vehicle.specs.topSpeed}</span>
                   </div>
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase block font-mono font-semibold">Drivetrain</span>
-                    <span className="text-sm font-bold text-neutral-900 truncate block">{vehicle.specs.drivetrain}</span>
+                    <span className="text-sm font-bold text-neutral-900 truncate block font-mono">{vehicle.specs.drivetrain}</span>
                   </div>
                 </div>
               </div>
@@ -375,9 +371,9 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                     onClose();
                     onRequestVehicle(vehicle, currentConfig?.name, currentColor?.name);
                   }}
-                  className="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer shadow-xs flex items-center justify-center space-x-2 active:scale-95"
+                  className="w-full py-3.5 px-4 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-all duration-150 cursor-pointer shadow-xs flex items-center justify-center space-x-2 active:scale-95"
                 >
-                  <span>Request This Vehicle</span>
+                  <span>Request Allocation</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -401,26 +397,26 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                       onClick={() => setSelectedConfigId(config.id)}
                       className={`p-4 rounded-xl border transition-all cursor-pointer ${
                         isSelected
-                          ? 'bg-red-50/50 border-red-500 ring-1 ring-red-500 shadow-xs'
-                          : 'bg-white border-neutral-200 hover:border-neutral-300'
+                          ? 'bg-[#F8F9FA] border-neutral-900 ring-1 ring-neutral-900 shadow-2xs text-neutral-900'
+                          : 'bg-white border-neutral-200 hover:border-neutral-300 hover:bg-neutral-50'
                       }`}
                     >
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-xs font-bold text-neutral-900">{config.name}</span>
-                        {isSelected && <CheckCircle2 className="w-4 h-4 text-red-600" />}
+                        {isSelected && <CheckCircle2 className="w-4 h-4 text-neutral-900" />}
                       </div>
                       <div className="space-y-1 text-xs text-neutral-600">
                         <div className="flex justify-between">
                           <span>Range:</span>
-                          <span className="font-semibold text-neutral-900">{config.range}</span>
+                          <span className="font-semibold text-neutral-900 font-mono">{config.range}</span>
                         </div>
                         <div className="flex justify-between">
                           <span>0-60 mph:</span>
-                          <span className="font-semibold text-neutral-900">{config.acceleration}</span>
+                          <span className="font-semibold text-neutral-900 font-mono">{config.acceleration}</span>
                         </div>
                         <div className="flex justify-between">
                           <span>Drivetrain:</span>
-                          <span className="font-semibold text-neutral-900">{config.drivetrain}</span>
+                          <span className="font-semibold text-neutral-900 font-mono">{config.drivetrain}</span>
                         </div>
                       </div>
                     </div>
@@ -492,7 +488,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
             <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200">
               <div className="flex items-center space-x-2 text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5 font-mono">
                 <Shield className="w-4 h-4 text-purple-600" />
-                <span>Safety & Build</span>
+                <span>Safety & Structure</span>
               </div>
               <ul className="space-y-1.5 text-xs text-neutral-600">
                 {vehicle.safetyHighlights.map((item, idx) => (
@@ -508,14 +504,14 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
           {/* Pricing Policy and Terms Notice */}
           <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200 text-xs text-neutral-600 space-y-1.5">
             <p className="font-bold text-neutral-900">
-              Authorized Management Pricing Terms:
+              Management Pricing Terms:
             </p>
             <p>
               {vehicle.pricingNotes ||
                 'Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms.'}
             </p>
-            <p className="text-[11px] text-neutral-500">
-              Effective Date: {vehicle.effectiveDate || '2026-08-01'} | Expiration:{' '}
+            <p className="text-[11px] text-neutral-500 font-mono">
+              Effective: {vehicle.effectiveDate || '2026-08-01'} | Expiration:{' '}
               {vehicle.expirationDate || '2026-12-31'} | Allocation Code: {vehicle.modelCode}
             </p>
           </div>

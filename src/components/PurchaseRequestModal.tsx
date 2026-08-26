@@ -301,7 +301,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
         <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200 bg-[#F8F9FA] sticky top-0 z-20 rounded-t-2xl">
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-lg bg-red-50 border border-red-200 flex items-center justify-center text-red-600">
-              <Car className="w-4 h-4" />
+              <Car className="w-4 h-4 text-red-600" />
             </div>
             <div>
               <span className="text-[10px] uppercase font-mono tracking-widest text-neutral-500 font-semibold">
@@ -320,7 +320,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               onClose();
               if (isSubmitted) resetForm();
             }}
-            className="p-2 rounded-lg bg-white hover:bg-neutral-100 text-neutral-500 hover:text-neutral-900 border border-neutral-200 transition-colors cursor-pointer"
+            className="p-2 rounded-lg bg-neutral-100 hover:bg-neutral-200 text-neutral-500 hover:text-neutral-900 border border-neutral-200 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -331,7 +331,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
           {isSubmitted && submittedDetails ? (
             <div className="py-4 text-center space-y-6 animate-in zoom-in-95 duration-200" id="inquiry-success-state">
               {/* Success Badge */}
-              <div className="w-16 h-16 rounded-full bg-emerald-50 border-2 border-emerald-500 text-emerald-600 mx-auto flex items-center justify-center shadow-md">
+              <div className="w-16 h-16 rounded-full bg-emerald-50 border-2 border-emerald-500 text-emerald-600 mx-auto flex items-center justify-center shadow-xs">
                 <CheckCircle2 className="w-9 h-9" />
               </div>
 
@@ -346,7 +346,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                 </h4>
 
                 {/* Primary Confirmation Notice */}
-                <div className="text-left bg-[#F8F9FA] p-5 sm:p-6 rounded-2xl border border-neutral-200 space-y-3 text-sm text-neutral-700 leading-relaxed shadow-2xs">
+                <div className="text-left bg-[#F8F9FA] p-5 sm:p-6 rounded-2xl border border-neutral-200 space-y-3 text-sm text-neutral-600 leading-relaxed shadow-xs">
                   <p className="font-medium text-neutral-900">
                     Thank you. Your vehicle request has been successfully submitted and received by our management team.
                   </p>
@@ -366,9 +366,9 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               </div>
 
               {/* Submitted Request Record Overview */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-neutral-200 text-left text-xs text-neutral-600 max-w-xl mx-auto space-y-2 font-mono shadow-2xs">
-                <div className="flex items-center justify-between pb-2 border-b border-neutral-100 text-neutral-900 font-sans font-bold text-xs uppercase tracking-wider">
-                  <span className="flex items-center space-x-1.5 text-neutral-700">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-neutral-200 text-left text-xs text-neutral-600 max-w-xl mx-auto space-y-2 font-mono shadow-xs">
+                <div className="flex items-center justify-between pb-2 border-b border-neutral-200 text-neutral-900 font-sans font-bold text-xs uppercase tracking-wider">
+                  <span className="flex items-center space-x-1.5 text-neutral-900">
                     <FileText className="w-3.5 h-3.5 text-neutral-500" />
                     <span>Submission Summary</span>
                   </span>
@@ -433,7 +433,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                     onClose();
                     resetForm();
                   }}
-                  className="w-full sm:w-auto px-8 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-xs active:scale-98"
+                  className="w-full sm:w-auto px-8 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs uppercase tracking-wider transition-colors cursor-pointer shadow-xs active:scale-98"
                 >
                   Done
                 </button>
@@ -442,7 +442,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                   type="button"
                   id="submit-another-request-btn"
                   onClick={resetForm}
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-neutral-100 text-neutral-700 text-xs font-bold uppercase tracking-wider border border-neutral-300 transition-colors cursor-pointer flex items-center justify-center space-x-2 active:scale-98"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#F8F9FA] hover:bg-neutral-100 text-neutral-900 text-xs font-bold uppercase tracking-wider border border-neutral-200 transition-colors cursor-pointer flex items-center justify-center space-x-2 active:scale-98"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span>Submit Another Request</span>
@@ -456,7 +456,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                   id="purchase-form-error"
                   className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-start space-x-2.5 animate-in fade-in"
                 >
-                  <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                  <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-red-600" />
                   <span className="leading-relaxed font-medium">{errorMessage}</span>
                 </div>
               )}
@@ -464,7 +464,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               {/* Full Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="inq-fullname" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                  <label htmlFor="inq-fullname" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono">
                     Full Name <span className="text-red-600">*</span>
                   </label>
                   <input
@@ -480,7 +480,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                 </div>
 
                 <div>
-                  <label htmlFor="inq-email" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                  <label htmlFor="inq-email" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono">
                     Email Address <span className="text-red-600">*</span>
                   </label>
                   <input
@@ -506,7 +506,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                 />
 
                 <div className="mt-3">
-                  <label htmlFor="inq-region" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                  <label htmlFor="inq-region" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono">
                     State / Province / Region
                   </label>
                   <input
@@ -545,7 +545,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               {/* Preferred Exterior Paint (Vehicle-specific colors) */}
               {currentVehicleObj?.colors && currentVehicleObj.colors.length > 0 && (
                 <div>
-                  <label htmlFor="inq-preferred-color" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                  <label htmlFor="inq-preferred-color" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono">
                     Preferred Exterior Color
                   </label>
                   <div className="flex flex-wrap gap-2">
@@ -560,12 +560,12 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                           onClick={() => setSelectedColor(c.name)}
                           className={`flex items-center space-x-2 px-3 py-1.5 rounded-xl border text-xs font-medium transition-all cursor-pointer disabled:opacity-50 ${
                             isSelected
-                              ? 'bg-red-50/50 border-red-600 ring-1 ring-red-600 text-neutral-900 shadow-2xs'
-                              : 'bg-white hover:bg-neutral-50 border-neutral-200 text-neutral-700'
+                              ? 'bg-white border-neutral-900 ring-1 ring-neutral-900 text-neutral-900 shadow-2xs'
+                              : 'bg-white hover:bg-neutral-50 border-neutral-200 text-neutral-600 hover:text-neutral-900'
                           }`}
                         >
                           <span
-                            className="w-3.5 h-3.5 rounded-full border border-black/20 flex-shrink-0"
+                            className="w-3.5 h-3.5 rounded-full border border-neutral-300 shadow-2xs flex-shrink-0"
                             style={{ backgroundColor: c.hex }}
                           />
                           <span>{c.name}</span>
@@ -578,7 +578,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
 
               {/* Purchase Method */}
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-2">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-2 font-mono">
                   Purchase Method <span className="text-red-600">*</span>
                 </label>
                 <div className="grid grid-cols-3 gap-3">
@@ -591,7 +591,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                       onClick={() => setPurchaseMethod(method)}
                       className={`py-2.5 px-3 rounded-xl text-xs font-bold border text-center transition-all cursor-pointer disabled:opacity-50 ${
                         purchaseMethod === method
-                          ? 'bg-red-50/50 border-red-600 text-red-700 ring-1 ring-red-600 shadow-2xs'
+                          ? 'bg-neutral-900 border-neutral-900 text-white shadow-2xs'
                           : 'bg-white border-neutral-200 text-neutral-600 hover:text-neutral-900 hover:border-neutral-300'
                       }`}
                     >
@@ -603,7 +603,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
 
               {/* Message */}
               <div>
-                <label htmlFor="inq-message" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
+                <label htmlFor="inq-message" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono">
                   Message / Special Allocation Requirements (Optional)
                 </label>
                 <textarea
@@ -625,10 +625,10 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
                   checked={agreeConsent}
                   disabled={isSubmitting}
                   onChange={(e) => setAgreeConsent(e.target.checked)}
-                  className="mt-0.5 w-4 h-4 rounded border-neutral-300 bg-white text-red-600 focus:ring-red-500 cursor-pointer disabled:opacity-50"
+                  className="mt-0.5 w-4 h-4 rounded border-neutral-300 bg-white text-red-600 focus:ring-red-600 cursor-pointer disabled:opacity-50"
                   required
                 />
-                <label htmlFor="inq-consent-checkbox" className="text-xs text-neutral-700 leading-relaxed cursor-pointer select-none">
+                <label htmlFor="inq-consent-checkbox" className="text-xs text-neutral-600 leading-relaxed cursor-pointer select-none">
                   &ldquo;I confirm that the information submitted is accurate and I agree to be contacted regarding my vehicle inquiry.&rdquo;
                 </label>
               </div>
@@ -642,7 +642,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               >
                 {isSubmitting ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <Loader2 className="w-4 h-4 animate-spin text-white" />
                     <span>Submitting Request...</span>
                   </>
                 ) : (

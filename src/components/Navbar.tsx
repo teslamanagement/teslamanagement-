@@ -68,8 +68,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         id="main-header"
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200/80 shadow-sm py-3.5'
-            : 'bg-white/80 backdrop-blur-sm border-b border-neutral-100 py-4 sm:py-5'
+            ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-xs py-3.5'
+            : 'bg-white/80 backdrop-blur-xs border-b border-neutral-200/60 py-4 sm:py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -82,16 +82,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               id="brand-logo"
             >
               {/* Official Tesla Logo */}
-              <TeslaLogo className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 transition-transform duration-200 group-hover:scale-105" />
+              <TeslaLogo className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 transition-transform duration-200 group-hover:scale-105" color="#E82127" />
               <div className="flex flex-col">
                 <div className="flex items-center space-x-1.5">
                   <TeslaWordmark className="h-3 sm:h-3.5 w-auto text-neutral-900" />
-                  <span className="font-light text-xs sm:text-sm tracking-[0.18em] uppercase text-neutral-600">
+                  <span className="font-light text-xs sm:text-sm tracking-[0.2em] uppercase text-neutral-500">
                     MANAGEMENT
                   </span>
                 </div>
-                <div className="flex items-center space-x-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <div className="flex items-center space-x-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-xs"></span>
                   <span className="text-[10px] text-neutral-500 font-medium tracking-wide">
                     Authorized Representative Desk
                   </span>
@@ -101,7 +101,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-1.5" aria-label="Main navigation">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.replace('#', '');
               return (
@@ -110,9 +110,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                   href={link.href}
                   id={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`px-3 py-2 rounded-md text-xs font-semibold tracking-wider uppercase transition-colors relative flex items-center space-x-1.5 ${
+                  className={`px-3 py-2 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all duration-200 relative flex items-center space-x-1.5 ${
                     isActive
-                      ? 'text-neutral-900 bg-neutral-100 font-bold'
+                      ? 'text-neutral-900 bg-neutral-100 shadow-2xs border border-neutral-200'
                       : 'text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50'
                   }`}
                 >
@@ -134,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               id="nav-verify-button"
               onClick={onOpenVerification}
-              className="px-3 py-2 rounded-lg text-xs font-semibold text-neutral-700 hover:text-neutral-900 border border-neutral-200 hover:border-neutral-300 bg-neutral-50/80 hover:bg-neutral-100 transition-all flex items-center space-x-1.5 cursor-pointer shadow-xs"
+              className="px-3.5 py-2 rounded-lg text-xs font-semibold text-neutral-700 hover:text-neutral-900 border border-neutral-300 bg-white hover:bg-neutral-50 transition-all flex items-center space-x-1.5 cursor-pointer shadow-2xs"
               title="Verify Official Authorization"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
@@ -146,10 +146,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               id="nav-dashboard-button"
               onClick={onOpenDashboard}
-              className="p-2 rounded-lg text-xs font-medium text-neutral-600 hover:text-neutral-900 border border-neutral-200 hover:border-neutral-300 bg-neutral-50 hover:bg-neutral-100 transition-all cursor-pointer shadow-xs"
+              className="p-2 rounded-lg text-xs font-medium text-neutral-500 hover:text-neutral-800 border border-neutral-300 bg-white hover:bg-neutral-50 transition-all cursor-pointer shadow-2xs"
               title="Private Management Dashboard"
             >
-              <Lock className="w-3.5 h-3.5 text-neutral-600" />
+              <Lock className="w-3.5 h-3.5" />
             </button>
 
             {/* Primary CTA: Contact Management */}
@@ -157,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               id="nav-contact-management-btn"
               onClick={() => onOpenPurchaseModal()}
-              className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-semibold uppercase tracking-wider shadow-sm transition-all duration-200 cursor-pointer flex items-center space-x-1.5 active:scale-95"
+              className="px-4 py-2 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider shadow-xs transition-all duration-200 cursor-pointer flex items-center space-x-1.5 active:scale-95"
             >
               <span>Contact Management</span>
             </button>
@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               id="nav-mobile-contact-btn"
               onClick={() => onOpenPurchaseModal()}
-              className="sm:hidden px-2.5 py-1.5 rounded-lg bg-red-600 text-white text-xs font-medium uppercase tracking-wider"
+              className="sm:hidden px-2.5 py-1.5 rounded-lg bg-neutral-900 text-white font-bold text-xs uppercase tracking-wider"
             >
               Contact
             </button>
@@ -177,7 +177,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               type="button"
               id="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-neutral-50 text-neutral-700 hover:text-neutral-900 border border-neutral-200 focus:outline-none cursor-pointer"
+              className="p-2 rounded-lg bg-neutral-100 text-neutral-800 hover:bg-neutral-200 border border-neutral-300 focus:outline-none cursor-pointer"
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -189,12 +189,12 @@ export const Navbar: React.FC<NavbarProps> = ({
         {mobileMenuOpen && (
           <div
             id="mobile-nav-drawer"
-            className="lg:hidden bg-white border-b border-neutral-200 px-4 pt-3 pb-6 space-y-2.5 backdrop-blur-xl animate-in slide-in-from-top-2 duration-200 shadow-xl"
+            className="lg:hidden bg-white border-b border-neutral-200 px-4 pt-3 pb-6 space-y-2.5 shadow-lg animate-in slide-in-from-top-2 duration-200"
           >
-            <div className="p-2.5 rounded-lg bg-neutral-50 border border-neutral-200 flex items-center justify-between mb-3">
+            <div className="p-2.5 rounded-lg bg-[#F8F9FA] border border-neutral-200 flex items-center justify-between mb-3">
               <div className="flex items-center space-x-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span className="text-xs font-medium text-neutral-800">Authorized Rep Desk</span>
+                <span className="text-xs font-medium text-neutral-900">Authorized Rep Desk</span>
               </div>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white text-neutral-600 border border-neutral-200 font-semibold">
                 {authInfo?.authorizationNumber || 'TM-AUTH-2026-GLOBAL-8941'}
@@ -208,7 +208,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   href={link.href}
                   id={`mobile-nav-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="block px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 transition-colors"
+                  className="block px-3 py-2.5 rounded-lg text-sm font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100 transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <span>{link.label}</span>
@@ -229,7 +229,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   setMobileMenuOpen(false);
                   onOpenPurchaseModal();
                 }}
-                className="w-full py-3 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-semibold uppercase tracking-wider text-center shadow-sm transition-colors cursor-pointer"
+                className="w-full py-3 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider text-center shadow-xs transition-colors cursor-pointer"
               >
                 Contact Management
               </button>
@@ -241,7 +241,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     setMobileMenuOpen(false);
                     onOpenVerification();
                   }}
-                  className="py-2.5 px-3 rounded-lg bg-neutral-50 border border-neutral-200 text-neutral-700 hover:text-neutral-900 text-xs font-medium flex items-center justify-center space-x-1.5 cursor-pointer"
+                  className="py-2.5 px-3 rounded-lg bg-[#F8F9FA] border border-neutral-200 text-neutral-800 hover:bg-neutral-100 text-xs font-medium flex items-center justify-center space-x-1.5 cursor-pointer"
                 >
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Verify Status</span>
@@ -253,9 +253,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                     setMobileMenuOpen(false);
                     onOpenDashboard();
                   }}
-                  className="py-2.5 px-3 rounded-lg bg-neutral-50 border border-neutral-200 text-neutral-700 hover:text-neutral-900 text-xs font-medium flex items-center justify-center space-x-1.5 cursor-pointer"
+                  className="py-2.5 px-3 rounded-lg bg-[#F8F9FA] border border-neutral-200 text-neutral-800 hover:bg-neutral-100 text-xs font-medium flex items-center justify-center space-x-1.5 cursor-pointer"
                 >
-                  <Lock className="w-3.5 h-3.5 text-neutral-600" />
+                  <Lock className="w-3.5 h-3.5 text-neutral-500" />
                   <span>Dashboard</span>
                 </button>
               </div>

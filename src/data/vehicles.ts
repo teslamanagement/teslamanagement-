@@ -13,13 +13,14 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'model-3',
     name: 'Model 3',
     modelCode: 'M3-2026',
-    tagline: 'High-Efficiency Electric Sports Sedan',
-    description: 'Designed for electric efficiency, refined aerodynamics, quiet acoustic glass cabin, ambient interior lighting, and nimble handling.',
+    tagline: 'Electric Sports Sedan',
+    description: 'Built for distance, performance and everyday comfort. Streamlined aerodynamics, responsive handling, and an all-glass acoustic interior.',
     category: 'sedan',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-3-1.png',
+    imageUrl: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-3-1.png',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-3-2.png'
+      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80'
     ],
     colors: DEFAULT_MODEL_3_COLORS,
     specs: {
@@ -67,24 +68,24 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Available for Order',
     isFeatured: true,
     performanceHighlights: [
-      'Refined sport suspension with adaptive frequency-selective damping',
-      'Ultra-low 0.219 drag coefficient for maximum efficiency',
-      'Track Mode V3 on Performance trim'
+      'Refined suspension tuning with frequency-selective damping',
+      '0.219 drag coefficient for maximum highway efficiency',
+      'Track Mode V3 calibration on Performance trim'
     ],
     interiorHighlights: [
       '15.4-inch center touchscreen with ultra-thin bezel',
-      '8-inch rear passenger display for climate & media controls',
-      'Acoustic glass with 360-degree cabin sound dampening'
+      '8-inch rear passenger display for climate and media',
+      '360-degree acoustic glass for a quiet cabin'
     ],
     safetyHighlights: [
-      '5-Star overall safety rating in all categories and subcategories',
-      'Rigid steel and aluminum unibody passenger cell structure',
-      'Active emergency braking, lane departure avoidance & side collision warning'
+      '5-Star safety rating in all tested categories',
+      'Rigid steel and aluminum passenger cell architecture',
+      'Active collision avoidance and emergency braking suite'
     ],
     chargingHighlights: [
-      'Access to 50,000+ Tesla Superchargers worldwide',
-      'Up to 250 kW peak charging speeds',
-      'Automated battery preconditioning for rapid stopovers'
+      'Access to 50,000+ Superchargers worldwide',
+      'Up to 250 kW charging speed capability',
+      'Automatic battery preconditioning for rapid charging stops'
     ],
     pricingNotes: 'Final pricing confirmed during authorized documentation review based on options and local duties.',
     effectiveDate: '2026-08-01',
@@ -95,13 +96,14 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'model-y',
     name: 'Model Y',
     modelCode: 'MY-2026',
-    tagline: 'Versatile Mid-Size Electric Crossover SUV',
-    description: 'The best-selling all-electric crossover SUV engineered with maximum cargo versatility, elevated ride height, and all-weather capability.',
+    tagline: 'Mid-Size Electric SUV',
+    description: 'Engineered for versatility, elevated seating height, generous cargo volume, and confident all-weather capability.',
     category: 'suv',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-1.png',
+    imageUrl: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-1.png',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-2.png'
+      'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80'
     ],
     colors: DEFAULT_MODEL_Y_COLORS,
     specs: {
@@ -149,22 +151,22 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Available for Order',
     isFeatured: true,
     performanceHighlights: [
-      'Independent digital motors controlling torque to front and rear wheels in milliseconds',
-      'Off-road assist mode and dedicated snow traction control',
-      'Lower center of gravity for superior rollover protection'
+      'Dual motors digitally regulate torque to front and rear wheels',
+      'Off-Road Assist mode for increased traction on rough terrain',
+      'Low center of gravity for balanced handling and roll resistance'
     ],
     interiorHighlights: [
-      'Panoramic all-glass roof with ultraviolet and infrared protection',
-      'Expansive second-row legroom with adjustable seat backs',
-      'Power liftgate with deep sub-trunk storage wells'
+      'All-glass panoramic roof with UV and infrared protection',
+      'Second-row seating with adjustable recline angles',
+      'Power liftgate with deep under-floor trunk wells'
     ],
     safetyHighlights: [
-      'Top Safety Pick+ award winner with ultra-high-strength steel pillars',
-      'Active safety suite including blind spot collision warning and obstacle-aware acceleration'
+      'Top Safety Pick+ rating with high-strength passenger cell',
+      'Standard active safety suite with blind spot monitoring'
     ],
     chargingHighlights: [
-      'High-speed NACS charging compatibility',
-      'Integrated route planner optimizing Supercharger stops globally'
+      'NACS standard charging port with 250 kW support',
+      'Integrated Trip Planner with real-time Supercharger routing'
     ],
     pricingNotes: 'Subject to inventory status and authorized management approval.',
     effectiveDate: '2026-08-01',
@@ -174,13 +176,13 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'model-y-l',
     name: 'Model Y L',
     modelCode: 'MYL-2026',
-    tagline: 'Extended Wheelbase Luxury Executive Crossover',
-    description: 'Authorized extended-wheelbase specification featuring executive rear captain seating, enhanced legroom, premium sound isolation, and dual lounge consoles.',
+    tagline: 'Extended Wheelbase Luxury Crossover',
+    description: 'Extended wheelbase architecture paired with executive rear captain seating, enhanced legroom, and refined acoustic isolation.',
     category: 'suv',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-l-1.png',
+    imageUrl: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-l-1.png',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-y-l-2.png'
+      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80'
     ],
     colors: DEFAULT_MODEL_Y_L_COLORS,
     specs: {
@@ -219,20 +221,20 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Limited Allocation',
     isFeatured: true,
     performanceHighlights: [
-      'Calibrated executive smooth-ride air suspension',
-      'Whisper-quiet electric powertrain acoustics'
+      'Adaptive air suspension tuned for executive highway comfort',
+      'Ultra-quiet acoustic glass throughout cabin'
     ],
     interiorHighlights: [
       'Power reclining rear executive massage seating',
-      'Dual 10-inch rear entertainment monitors with wireless audio',
-      'Executive work fold-out tables and chilled beverage compartment'
+      'Dual rear entertainment displays with independent audio zones',
+      'Fold-out work surfaces and temperature-controlled storage'
     ],
     safetyHighlights: [
-      'Reinforced long-wheelbase chassis with active side impact deflection',
-      'Complete 360-degree vision camera architecture'
+      'Reinforced long-wheelbase chassis with side-impact deflection',
+      'Surround vision camera network with real-time hazard detection'
     ],
     chargingHighlights: [
-      'Fast Supercharging with thermal battery management'
+      'High-speed Supercharging with smart thermal battery control'
     ],
     pricingNotes: 'Limited allocation reservation with verified executive client status.',
     effectiveDate: '2026-08-01',
@@ -242,13 +244,13 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'cybertruck',
     name: 'Cybertruck',
     modelCode: 'CT-2026',
-    tagline: 'Ultra-Hard 30X Cold-Rolled Stainless-Steel Exoskeleton',
-    description: 'Built with an impenetrable exterior exoskeleton, shatter-resistant Armor Glass, 4-wheel steer-by-wire agility, and up to 11,000 lbs of towing power.',
+    tagline: 'Stainless-Steel Utility Vehicle',
+    description: 'Engineered with a durable stainless-steel exoskeleton, shatter-resistant Armor Glass, 4-wheel steer-by-wire agility, and 11,000 lbs towing capacity.',
     category: 'truck',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybertruck-1.png',
+    imageUrl: 'https://images.unsplash.com/photo-1698877546059-d8cbff695796?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybertruck-1.png',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybertruck-2.png'
+      'https://images.unsplash.com/photo-1698877546059-d8cbff695796?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80'
     ],
     colors: DEFAULT_CYBERTRUCK_COLORS,
     specs: {
@@ -296,21 +298,21 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Limited Allocation',
     isFeatured: true,
     performanceHighlights: [
-      '800V electrical architecture for ultra-high-rate charging',
-      'True steer-by-wire variable steering ratio with active rear-wheel steering',
-      'Adaptive air suspension with up to 17 inches of ground clearance'
+      '800V electrical architecture for high-power Supercharging',
+      'Steer-by-wire system paired with responsive rear-wheel steering',
+      'Adaptive air suspension with up to 17 inches of clearance'
     ],
     interiorHighlights: [
-      '18.5-inch infinity center touchscreen & 9.4-inch rear entertainment display',
-      'Integrated 120V & 240V bed power outlets (up to 11.5 kW onboard power for job sites)',
-      'Motorized lockable vault tonneau cover strong enough to stand on'
+      '18.5-inch center display and 9.4-inch rear entertainment screen',
+      'Integrated 120V and 240V outlets delivering up to 11.5 kW onboard power',
+      'Motorized lockable vault tonneau cover'
     ],
     safetyHighlights: [
-      'Ultra-hard 30X cold-rolled stainless-steel structural skin resists dents and scratches',
-      'Armor Glass withstands class 4 hail and high-velocity road debris'
+      'Cold-rolled stainless-steel skin helps reduce denting and corrosion',
+      'Armor Glass resists impact and road debris'
     ],
     chargingHighlights: [
-      'Powershare vehicle-to-home and vehicle-to-load bidirectional capability'
+      'Powershare bidirectional charging capability for home backup'
     ],
     pricingNotes: 'Management promotional pricing available on confirmed authorized allocations.',
     effectiveDate: '2026-08-01',
@@ -320,13 +322,13 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'model-s',
     name: 'Model S',
     modelCode: 'MS-2026',
-    tagline: 'The Pinnacle of Electric Luxury & Acceleration',
-    description: 'Unrivaled acceleration, ultra-long range, iconic liftback silhouette, tri-motor Plaid performance, and tri-zone climate luxury.',
+    tagline: 'Flagship Luxury Sedan',
+    description: 'Instant torque, long-distance range, aerodynamic efficiency, and tri-motor Plaid performance packaged in a refined luxury silhouette.',
     category: 'sedan',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-s-1.png',
+    imageUrl: 'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-s-1.png',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-s-2.png'
+      'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80'
     ],
     colors: DEFAULT_MODEL_S_COLORS,
     specs: {
@@ -365,21 +367,21 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Available for Order',
     isFeatured: true,
     performanceHighlights: [
-      '1,020 horsepower with torque vectoring across three independent carbon-sleeved rotors',
-      'World-record 0.208 drag coefficient for effortless highway cruising',
-      'Adaptive air suspension with automatic GPS-based height memory'
+      '1,020 horsepower with torque vectoring across three carbon-sleeved rotors',
+      '0.208 drag coefficient for extended range and quiet cruising',
+      'Adaptive air suspension with automatic location-based memory'
     ],
     interiorHighlights: [
-      '17-inch cinematic tilting center display with 2200x1300 resolution',
-      '22-speaker, 960-watt audio system with active road noise reduction',
-      'Wireless gaming computer with 10 teraflops of processing capability'
+      '17-inch cinematic tilting touchscreen with 2200x1300 resolution',
+      '22-speaker audio system with active road noise cancellation',
+      'Tri-zone climate control with invisible interior air vents'
     ],
     safetyHighlights: [
-      'Reinforced battery architecture shielding passenger compartment',
-      'Standard Autopilot and full suite of 360-degree neural network optical cameras'
+      'Rigid floor-mounted battery architecture protecting the cabin',
+      'Full Autopilot sensor suite with 360-degree vision coverage'
     ],
     chargingHighlights: [
-      '250 kW high-speed Supercharging with automatic battery temperature optimization'
+      '250 kW Supercharging with automatic battery preconditioning'
     ],
     pricingNotes: 'Authorized promotional rate valid for selected corporate and private client requests.',
     effectiveDate: '2026-08-01',
@@ -389,13 +391,13 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'model-x',
     name: 'Model X',
     modelCode: 'MX-2026',
-    tagline: 'Falcon Wing Flagship Luxury SUV',
-    description: 'Signature Falcon Wing rear doors, panoramic windshield, unmatched acceleration, three-row luxury seating, and 5,000 lbs towing capacity.',
+    tagline: 'Flagship Electric SUV',
+    description: 'Falcon Wing rear doors, expansive panoramic windshield, three-row luxury seating, and up to 5,000 lbs towing capacity.',
     category: 'suv',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-x-1.png',
+    imageUrl: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-x-1.png',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/model-x-2.png'
+      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80'
     ],
     colors: DEFAULT_MODEL_X_COLORS,
     specs: {
@@ -434,20 +436,20 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Available for Order',
     isFeatured: true,
     performanceHighlights: [
-      'Fastest accelerating production SUV in history (0-60 mph in 2.5s)',
-      'Intelligent all-wheel drive with instant torque modulation'
+      '2.5-second 0-60 mph acceleration on Plaid configuration',
+      'Dual and tri-motor all-wheel-drive configurations'
     ],
     interiorHighlights: [
-      'Motorized Falcon Wing doors with ultrasonic distance clearance sensors',
-      'Largest all-glass panoramic windshield in production',
-      'Six-passenger captain chair configuration with power tilt and slide'
+      'Falcon Wing doors with dual-hinged sensor clearance',
+      'Panoramic windshield providing expansive road and sky views',
+      'Flexible seating configurations for up to seven passengers'
     ],
     safetyHighlights: [
-      'Lowest rollover risk of any SUV tested by NHTSA',
-      'HEPA air filtration system with Bioweapon Defense Mode'
+      'Low rollover risk with high-strength floor-mounted battery pack',
+      'Medical-grade HEPA filtration with Bioweapon Defense Mode'
     ],
     chargingHighlights: [
-      'Supercharging network integration with pre-conditioning'
+      'Integrated Supercharging network route guidance'
     ],
     pricingNotes: 'Authorized management promotional pricing subject to inventory matching.',
     effectiveDate: '2026-08-01',
@@ -457,13 +459,13 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'roadster',
     name: 'Roadster',
     modelCode: 'RD-2026',
-    tagline: 'Supercar Performance & Record-Setting Aerodynamics',
-    description: 'An all-electric supercar designed to maximize the potential of aerodynamic engineering into record-setting performance and efficiency.',
+    tagline: 'Electric Supercar',
+    description: 'Engineered to maximize aerodynamic efficiency and electric powertrain performance into record-setting acceleration and highway range.',
     category: 'specialty',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/roadster-1.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/roadster-1.jpg',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/roadster-2.jpg'
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80'
     ],
     specs: {
       range: '620 miles',
@@ -492,35 +494,35 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Reservation Inquiry',
     isFeatured: false,
     performanceHighlights: [
-      '10,000 Nm wheel torque delivering breathtaking launches',
+      '10,000 Nm wheel torque delivering immediate power delivery',
       'Sub-8.8 second quarter-mile run capability',
-      'Active aero rear wing and ground effect diffuser'
+      'Active rear wing and underbody ground-effect diffuser'
     ],
     interiorHighlights: [
-      'Lightweight removable glass roof storing neatly in trunk',
-      'Minimalist driver-centric cockpit with curved OLED interface'
+      'Lightweight removable glass roof stows neatly in the trunk',
+      'Driver-focused minimalist cockpit with curved digital interface'
     ],
     safetyHighlights: [
-      'Carbon-composite passenger safety cell with energy-absorbing crash structures'
+      'Carbon-composite passenger safety structure'
     ],
     chargingHighlights: [
-      '200 kWh battery pack with dual-phase thermal management'
+      'High-capacity energy pack with dual-phase thermal management'
     ],
     pricingNotes: 'Reservation inquiry via authorized management allocation protocol only.',
     effectiveDate: '2026-08-01',
     expirationDate: '2026-12-31'
   },
   {
-        id: 'cybercab',
+    id: 'cybercab',
     name: 'Cybercab',
     modelCode: 'CC-2026',
-    tagline: 'Dedicated Autonomous Point-to-Point Mobility',
-    description: 'Designed exclusively for autonomous, driverless transportation with butterfly doors, inductive wireless charging, and zero steering wheel or pedal clutter.',
+    tagline: 'Autonomous Mobility',
+    description: 'Designed exclusively for autonomous, driverless transportation with motorized butterfly doors, inductive wireless charging, and an open lounge cabin.',
     category: 'specialty',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybercab-1.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybercab-1.jpg',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/cybercab-2.jpg'
+      'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80'
     ],
     specs: {
       range: '200+ miles per charge',
@@ -549,19 +551,19 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Production Preview',
     isFeatured: false,
     performanceHighlights: [
-      'Next-generation AI 4 Full Self-Driving hardware platform',
-      'No mechanical steering column or pedal assemblies'
+      'Full Self-Driving hardware platform with redundant compute nodes',
+      'Purpose-built cabin without pedals or manual steering controls'
     ],
     interiorHighlights: [
-      'Large 21-inch passenger media and route display',
-      'Dual ergonomic reclining lounge chairs with easy-clean sustainable fabrics',
-      'Upward-opening motorized butterfly doors for effortless curbside ingress'
+      '21-inch center passenger display for media and route information',
+      'Ergonomic lounge seating with durable sustainable textiles',
+      'Curbside butterfly doors for easy entry and exit'
     ],
     safetyHighlights: [
-      'Complete sensor redundancy and fail-operational compute architecture'
+      'Full sensor redundancy and fail-operational vehicle controls'
     ],
     chargingHighlights: [
-      'Hands-free wireless inductive charging - no cables or plugs needed'
+      'Inductive wireless pad charging without physical connectors'
     ],
     pricingNotes: 'Commercial and fleet interest inquiry. Subject to regulatory approvals.',
     effectiveDate: '2026-08-01',
@@ -571,13 +573,13 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     id: 'tesla-semi',
     name: 'Tesla Semi',
     modelCode: 'SEMI-2026',
-    tagline: 'Heavy-Duty Class 8 Electric Freight Hauler',
-    description: 'Revolutionary heavy-duty commercial freight semi with center-driver cockpit, 3 independent electric motors, and massive operating cost savings.',
+    tagline: 'Class 8 Electric Truck',
+    description: 'Heavy-duty commercial freight semi with center-driver cockpit, 3 independent electric motors, and substantial operational efficiency.',
     category: 'commercial',
-    imageUrl: 'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/tesla-semi-1.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80',
     galleryImages: [
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/tesla-semi-1.jpg',
-      'https://raw.githubusercontent.com/teslamanagement/teslamanagement-/main/car-images/tesla-semi-2.jpg'
+      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80'
     ],
     specs: {
       range: '500 miles at 82,000 lbs gross combination weight',
@@ -615,19 +617,22 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     availability: 'Limited Allocation',
     isFeatured: false,
     performanceHighlights: [
-      'Maintains 65 mph highway speeds uphill on a 5% continuous highway grade',
-      'Regenerative braking recuperates majority of kinetic energy on descents'
+      'Maintains 65 mph highway speeds uphill on a 5% continuous grade',
+      'Regenerative braking returns energy directly to the battery'
     ],
     interiorHighlights: [
-      'Centered driver seating position providing unparalleled road visibility',
-      'Dual 15-inch touchscreens flanking the steering wheel for navigation and blind-spot monitoring'
+      'Center driver seating position for commanding road visibility',
+      'Dual 15-inch touchscreens for navigation and blind-spot monitoring'
     ],
     safetyHighlights: [
-      'Active traction and torque control preventing jackknifing under extreme road conditions',
-      'Low center of gravity with battery pack mounted low within frame rails'
+      'Active torque control on rear axles helps prevent jackknifing',
+      'Low center of gravity with battery mounted low in the frame'
     ],
     chargingHighlights: [
-  'Compatible with high-power Megawatt Charging System'
-  ],
-},
+      'Compatible with Megawatt Charging System (MCS)'
+    ],
+    pricingNotes: 'Commercial fleet inquiry pricing subject to fleet contract terms and delivery region.',
+    effectiveDate: '2026-08-01',
+    expirationDate: '2026-12-31'
+  }
 ];

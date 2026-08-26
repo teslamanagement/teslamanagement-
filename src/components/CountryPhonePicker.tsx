@@ -136,7 +136,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
       <div>
         <label
           htmlFor={`${idPrefix}-country-trigger`}
-          className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5"
+          className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono"
         >
           Country / Territory <span className="text-red-600">*</span>
         </label>
@@ -147,7 +147,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
             id={`${idPrefix}-country-trigger`}
             disabled={disabled}
             onClick={() => setIsOpen(!isOpen)}
-            className="w-full flex items-center justify-between px-3.5 py-2.5 bg-white border border-neutral-300 hover:border-neutral-400 focus:border-red-500 focus:ring-1 focus:ring-red-500 rounded-xl text-left transition-all duration-200 text-neutral-900 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
+            className="w-full flex items-center justify-between px-3.5 py-2.5 bg-white border border-neutral-300 hover:border-neutral-400 focus:border-red-600 focus:ring-1 focus:ring-red-600 rounded-xl text-left transition-all duration-200 text-neutral-900 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shadow-2xs"
             aria-expanded={isOpen}
             aria-haspopup="listbox"
           >
@@ -163,7 +163,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
               </span>
             </div>
             <div className="flex items-center space-x-2 flex-shrink-0 pl-2">
-              <span className="text-xs font-semibold text-neutral-700 font-mono">
+              <span className="text-xs font-semibold text-neutral-500 font-mono">
                 {selectedCountry.dialCode}
               </span>
               <ChevronDown
@@ -178,7 +178,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
           {isOpen && (
             <div
               id={`${idPrefix}-country-dropdown`}
-              className="absolute z-50 mt-1.5 w-full bg-white border border-neutral-200 rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-150"
+              className="absolute z-50 mt-1.5 w-full bg-white border border-neutral-200 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150"
               style={{ maxHeight: '340px' }}
             >
               {/* Search Bar */}
@@ -192,7 +192,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search country (e.g. Nigeria, United, 234, NG)..."
-                    className="w-full pl-9 pr-8 py-2 bg-white border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-colors shadow-2xs"
+                    className="w-full pl-9 pr-8 py-2 bg-white border border-neutral-300 rounded-lg text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 transition-colors"
                   />
                   {searchQuery && (
                     <button
@@ -204,7 +204,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
                     </button>
                   )}
                 </div>
-                <div className="flex items-center justify-between mt-1.5 px-1 text-[11px] text-neutral-500">
+                <div className="flex items-center justify-between mt-1.5 px-1 text-[11px] text-neutral-500 font-mono">
                   <span>Showing {filteredCountries.length} countries</span>
                   <span>Alphabetical A–Z Standard</span>
                 </div>
@@ -226,7 +226,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
                         id={`${idPrefix}-country-opt-${country.isoCode}`}
                         onClick={() => handleSelectCountry(country)}
                         className={`w-full flex items-center justify-between px-3.5 py-2.5 text-left text-sm transition-colors cursor-pointer hover:bg-neutral-50 ${
-                          isSelected ? 'bg-red-50 text-red-700 font-semibold' : 'text-neutral-800'
+                          isSelected ? 'bg-neutral-100 text-neutral-900 font-semibold' : 'text-neutral-700'
                         }`}
                         role="option"
                         aria-selected={isSelected}
@@ -235,13 +235,13 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
                           <span className="text-xl flex-shrink-0" role="img">
                             {country.flag}
                           </span>
-                          <span className="truncate">{country.name}</span>
-                          <span className="text-[11px] px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-600 font-mono">
+                          <span className="truncate text-neutral-900">{country.name}</span>
+                          <span className="text-[11px] px-1.5 py-0.5 rounded bg-neutral-100 text-neutral-600 font-mono border border-neutral-200">
                             {country.isoCode}
                           </span>
                         </div>
                         <div className="flex items-center space-x-2 flex-shrink-0 ml-2">
-                          <span className="text-xs font-mono text-neutral-500">
+                          <span className="text-xs font-mono text-neutral-400">
                             {country.dialCode}
                           </span>
                           {isSelected && <Check className="w-4 h-4 text-red-600" />}
@@ -267,18 +267,18 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
         <div className="flex items-center justify-between mb-1.5">
           <label
             htmlFor={`${idPrefix}-phone-input`}
-            className="block text-xs font-semibold uppercase tracking-wider text-neutral-700"
+            className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 font-mono"
           >
             Phone Number <span className="text-red-600">*</span>
           </label>
-          <span className="text-[11px] text-neutral-500 font-mono">
+          <span className="text-[11px] text-neutral-400 font-mono">
             E.164 International Format
           </span>
         </div>
 
         <div className="relative flex rounded-xl shadow-2xs">
           {/* Static Dial Code Prefix Box */}
-          <div className="flex items-center justify-center px-3.5 bg-neutral-100 border border-r-0 border-neutral-300 rounded-l-xl text-neutral-800 text-sm font-semibold font-mono select-none flex-shrink-0">
+          <div className="flex items-center justify-center px-3.5 bg-neutral-100 border border-r-0 border-neutral-300 rounded-l-xl text-neutral-900 text-sm font-semibold font-mono select-none flex-shrink-0">
             <span className="mr-1.5">{selectedCountry.flag}</span>
             <span>{selectedCountry.dialCode}</span>
           </div>
@@ -298,7 +298,7 @@ export const CountryPhonePicker: React.FC<CountryPhonePickerProps> = ({
                 ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500'
                 : isTouched && value.phoneNumber && validationResult.isValid
                 ? 'border-emerald-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500'
-                : 'border-neutral-300 hover:border-neutral-400 focus:border-red-500 focus:ring-1 focus:ring-red-500'
+                : 'border-neutral-300 hover:border-neutral-400 focus:border-red-600 focus:ring-1 focus:ring-red-600'
             }`}
           />
         </div>

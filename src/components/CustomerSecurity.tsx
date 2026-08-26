@@ -21,7 +21,7 @@ export const CustomerSecurity: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 font-mono">
               <ShieldAlert className="w-3.5 h-3.5" />
               <span>Fraud Prevention & Customer Protection</span>
             </div>
@@ -31,13 +31,13 @@ export const CustomerSecurity: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-neutral-600 mt-3 leading-relaxed">
-              Tesla Management strictly enforces transparent, authorized purchasing protocols to protect customers worldwide against fraudulent solicitations.
+              Transparent, authorized purchasing protocols to protect customers against unauthorized solicitations.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Prohibited Methods Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-red-50/50 border border-red-200 space-y-4 shadow-xs">
+            <div className="p-6 sm:p-8 rounded-2xl bg-red-50/50 border border-red-200 space-y-4 shadow-2xs">
               <div className="flex items-center space-x-3 text-red-600">
                 <Ban className="w-6 h-6 flex-shrink-0" />
                 <h3 className="text-base font-bold uppercase tracking-wider text-neutral-900">
@@ -60,7 +60,7 @@ export const CustomerSecurity: React.FC = () => {
             </div>
 
             {/* Legitimate Protocol Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-4 shadow-xs">
+            <div className="p-6 sm:p-8 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-4 shadow-2xs">
               <div className="flex items-center space-x-3 text-emerald-700">
                 <Lock className="w-6 h-6 flex-shrink-0" />
                 <h3 className="text-base font-bold uppercase tracking-wider text-neutral-900">
@@ -84,7 +84,7 @@ export const CustomerSecurity: React.FC = () => {
           </div>
 
           {/* Critical Advisory Banner */}
-          <div className="p-5 rounded-2xl bg-[#F8F9FA] border border-neutral-200 flex items-start space-x-4 shadow-xs">
+          <div className="p-5 rounded-2xl bg-[#F8F9FA] border border-neutral-200 flex items-start space-x-4">
             <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
             <div className="text-xs text-neutral-700 space-y-1">
               <span className="font-bold text-neutral-900 block">

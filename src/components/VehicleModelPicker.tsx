@@ -118,12 +118,12 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
       {label && (
         <label
           htmlFor={id}
-          className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 flex items-center justify-between"
+          className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 flex items-center justify-between font-mono"
         >
           <span>
             {label} {required && <span className="text-red-600">*</span>}
           </span>
-          <span className="text-[10px] text-neutral-400 font-mono font-normal lowercase">
+          <span className="text-[10px] text-neutral-500 font-mono font-normal">
             {availableVehicles.length} available
           </span>
         </label>
@@ -142,10 +142,10 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
           disabled
             ? 'bg-neutral-100 border-neutral-200 text-neutral-400 cursor-not-allowed opacity-75'
             : isOpen
-            ? 'border-red-600 ring-2 ring-red-600/20 bg-white shadow-xs'
+            ? 'border-red-600 ring-1 ring-red-600 bg-white shadow-md'
             : error
-            ? 'border-red-500 hover:border-red-600'
-            : 'border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50/50'
+            ? 'border-red-500 hover:border-red-500'
+            : 'border-neutral-300 hover:border-neutral-400'
         }`}
       >
         <div className="flex items-center space-x-3 min-w-0 pr-2">
@@ -170,7 +170,7 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
           {/* Vehicle Label & Tag */}
           <div className="truncate">
             <div className="flex items-center space-x-2">
-              <span className="text-sm font-bold text-neutral-900 truncate">
+              <span className="text-sm font-bold text-neutral-900 truncate font-sans">
                 {currentVehicle ? currentVehicle.name : 'Select a Tesla Model'}
               </span>
               {currentVehicle?.availability && (
@@ -190,8 +190,8 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
         {/* Animated Chevron */}
         <div className="pl-2 border-l border-neutral-200 flex-shrink-0">
           <ChevronDown
-            className={`w-4 h-4 text-neutral-500 transition-transform duration-200 ${
-              isOpen ? 'rotate-180 text-red-600' : ''
+            className={`w-4 h-4 text-neutral-400 transition-transform duration-200 ${
+              isOpen ? 'rotate-180 text-neutral-900' : ''
             }`}
           />
         </div>
@@ -202,11 +202,11 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
         <div
           role="listbox"
           aria-labelledby={id}
-          className="absolute z-[70] left-0 right-0 mt-1.5 bg-white border border-neutral-200 rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in-98 duration-150"
+          className="absolute z-[70] left-0 right-0 mt-1.5 bg-white border border-neutral-200 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-98 duration-150"
         >
           {/* Optional Search Filter for many vehicles */}
           {availableVehicles.length > 4 && (
-            <div className="p-2 border-b border-neutral-100 bg-neutral-50/80">
+            <div className="p-2 border-b border-neutral-200 bg-[#F8F9FA]">
               <div className="relative">
                 <Search className="w-3.5 h-3.5 text-neutral-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
                 <input
@@ -215,7 +215,7 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Filter models (e.g. Model 3, Cybertruck)..."
-                  className="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-neutral-200 rounded-lg text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-red-600"
+                  className="w-full pl-8 pr-3 py-1.5 text-xs bg-white border border-neutral-300 rounded-lg text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-red-600"
                   onClick={(e) => e.stopPropagation()}
                 />
               </div>
@@ -223,7 +223,7 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
           )}
 
           {/* List of Models */}
-          <div className="max-h-64 overflow-y-auto py-1 divide-y divide-neutral-100/60">
+          <div className="max-h-64 overflow-y-auto py-1 divide-y divide-neutral-100">
             {filteredVehicles.length === 0 ? (
               <div className="p-4 text-center text-xs text-neutral-500">
                 No matching Tesla models found
@@ -242,8 +242,8 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
                     onClick={() => handleSelectVehicle(veh)}
                     className={`px-3 py-2.5 flex items-center justify-between cursor-pointer transition-colors duration-100 touch-manipulation select-none ${
                       isSelected
-                        ? 'bg-red-50/70 text-red-900 font-semibold'
-                        : 'hover:bg-neutral-50 text-neutral-800'
+                        ? 'bg-neutral-100 text-neutral-900 font-semibold'
+                        : 'hover:bg-neutral-50 text-neutral-700'
                     }`}
                   >
                     <div className="flex items-center space-x-3 min-w-0 pr-2">
@@ -267,19 +267,19 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
                       {/* Info */}
                       <div className="min-w-0">
                         <div className="flex items-center space-x-2">
-                          <span className="text-xs font-bold text-neutral-900 truncate">
+                          <span className="text-xs font-bold text-neutral-900 truncate font-sans">
                             {veh.name}
                           </span>
                           <span className="text-[10px] px-1.5 py-0.2 rounded bg-neutral-100 text-neutral-600 border border-neutral-200 font-mono truncate">
                             {veh.availability || 'Available'}
                           </span>
                         </div>
-                        <div className="text-[10.5px] text-neutral-500 truncate flex items-center space-x-2 mt-0.5">
+                        <div className="text-[10.5px] text-neutral-500 truncate flex items-center space-x-2 mt-0.5 font-mono">
                           {veh.specs?.range && <span>{veh.specs.range}</span>}
                           {veh.promotionalPrice && (
                             <>
                               <span>•</span>
-                              <span className="text-red-600 font-medium">
+                              <span className="text-neutral-900 font-medium">
                                 From ${veh.promotionalPrice.toLocaleString()}
                               </span>
                             </>
@@ -290,7 +290,7 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
 
                     {/* Selection Indicator */}
                     {isSelected ? (
-                      <div className="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
+                      <div className="w-5 h-5 rounded-full bg-neutral-900 text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
                         <Check className="w-3 h-3" />
                       </div>
                     ) : (
@@ -376,13 +376,13 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
       {label && (
         <label
           htmlFor={id}
-          className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 flex items-center justify-between"
+          className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 flex items-center justify-between font-mono"
         >
           <span>
             {label} {required && <span className="text-red-600">*</span>}
           </span>
           {hasConfigs && (
-            <span className="text-[10px] text-neutral-400 font-mono font-normal">
+            <span className="text-[10px] text-neutral-500 font-mono font-normal">
               {configurations.length} trim{configurations.length > 1 ? 's' : ''}
             </span>
           )}
@@ -401,15 +401,15 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
           isComponentDisabled
             ? 'bg-neutral-100 border border-neutral-200 text-neutral-400 cursor-not-allowed'
             : isOpen
-            ? 'bg-white border-red-600 ring-2 ring-red-600/20 shadow-xs cursor-pointer'
-            : 'bg-white border border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50/50 cursor-pointer text-neutral-900'
+            ? 'bg-white border-red-600 ring-1 ring-red-600 shadow-md cursor-pointer'
+            : 'bg-white border border-neutral-300 hover:border-neutral-400 cursor-pointer text-neutral-900'
         }`}
       >
         <div className="flex items-center space-x-2.5 min-w-0 pr-2">
           <div
             className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${
               isComponentDisabled
-                ? 'bg-neutral-200 text-neutral-400'
+                ? 'bg-neutral-100 text-neutral-400'
                 : 'bg-red-50 text-red-600 border border-red-200'
             }`}
           >
@@ -423,7 +423,7 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
               </span>
             ) : (
               <div>
-                <div className="text-xs font-bold text-neutral-900 truncate">
+                <div className="text-xs font-bold text-neutral-900 truncate font-sans">
                   {currentConfig ? currentConfig.name : 'Select a configuration'}
                 </div>
                 {currentConfig && (
@@ -447,10 +447,10 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
           <ChevronDown
             className={`w-4 h-4 ${
               isComponentDisabled
-                ? 'text-neutral-300'
+                ? 'text-neutral-400'
                 : isOpen
-                ? 'rotate-180 text-red-600'
-                : 'text-neutral-500'
+                ? 'rotate-180 text-neutral-900'
+                : 'text-neutral-400'
             } transition-transform duration-200`}
           />
         </div>
@@ -461,13 +461,13 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
         <div
           role="listbox"
           aria-labelledby={id}
-          className="absolute z-[70] left-0 right-0 mt-1.5 bg-white border border-neutral-200 rounded-xl shadow-xl overflow-hidden animate-in fade-in zoom-in-98 duration-150"
+          className="absolute z-[70] left-0 right-0 mt-1.5 bg-white border border-neutral-200 rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-98 duration-150"
         >
-          <div className="p-2 border-b border-neutral-100 bg-neutral-50/80 flex items-center justify-between">
-            <span className="text-[10.5px] uppercase font-mono font-bold text-neutral-500">
+          <div className="p-2 border-b border-neutral-200 bg-[#F8F9FA] flex items-center justify-between">
+            <span className="text-[10.5px] uppercase font-mono font-bold text-neutral-700">
               {vehicleName} Configurations
             </span>
-            <span className="text-[10.5px] text-neutral-400 font-mono">
+            <span className="text-[10.5px] text-neutral-500 font-mono">
               Select desired powertrain
             </span>
           </div>
@@ -484,13 +484,13 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
                   onClick={() => handleSelectConfig(cfg)}
                   className={`px-3.5 py-2.5 flex items-center justify-between cursor-pointer transition-colors duration-100 touch-manipulation select-none ${
                     isSelected
-                      ? 'bg-red-50/70 text-red-900 font-semibold'
-                      : 'hover:bg-neutral-50 text-neutral-800'
+                      ? 'bg-neutral-100 text-neutral-900 font-semibold'
+                      : 'hover:bg-neutral-50 text-neutral-700'
                   }`}
                 >
                   <div className="min-w-0 pr-2">
                     <div className="flex items-center space-x-2">
-                      <span className="text-xs font-bold text-neutral-900 truncate">
+                      <span className="text-xs font-bold text-neutral-900 truncate font-sans">
                         {cfg.name}
                       </span>
                       {cfg.basePrice && (
@@ -502,7 +502,7 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
 
                     <div className="text-[11px] text-neutral-500 font-mono mt-0.5 flex flex-wrap gap-x-2 gap-y-0.5">
                       {cfg.range && (
-                        <span className="flex items-center text-neutral-700 font-medium">
+                        <span className="flex items-center text-neutral-900 font-medium">
                           <Zap className="w-2.5 h-2.5 text-amber-500 mr-0.5" />
                           {cfg.range}
                         </span>
@@ -515,7 +515,7 @@ export const VehicleConfigDropdown: React.FC<VehicleConfigDropdownProps> = ({
 
                   {/* Checkmark */}
                   {isSelected ? (
-                    <div className="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
+                    <div className="w-5 h-5 rounded-full bg-neutral-900 text-white flex items-center justify-center flex-shrink-0 shadow-2xs">
                       <Check className="w-3 h-3" />
                     </div>
                   ) : (
