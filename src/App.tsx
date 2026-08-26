@@ -12,7 +12,6 @@ import { VehicleCatalog } from './components/VehicleCatalog';
 import { SpecialPricingSection } from './components/SpecialPricingSection';
 import { HowItWorks } from './components/HowItWorks';
 import { AboutManagement } from './components/AboutManagement';
-import { AuthorizationSection } from './components/AuthorizationSection';
 import { CustomerSecurity } from './components/CustomerSecurity';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -23,9 +22,6 @@ const VehicleDetailModal = lazy(() =>
 );
 const PurchaseRequestModal = lazy(() =>
   import('./components/PurchaseRequestModal').then((m) => ({ default: m.PurchaseRequestModal }))
-);
-const VerificationModal = lazy(() =>
-  import('./components/VerificationModal').then((m) => ({ default: m.VerificationModal }))
 );
 const ManagementDashboard = lazy(() =>
   import('./components/dashboard/ManagementDashboard').then((m) => ({ default: m.ManagementDashboard }))
@@ -46,7 +42,6 @@ export default function App() {
   const [preferredVehicleForPurchase, setPreferredVehicleForPurchase] = useState<Vehicle | null>(null);
   const [preferredConfigName, setPreferredConfigName] = useState<string | undefined>(undefined);
   const [preferredColorName, setPreferredColorName] = useState<string | undefined>(undefined);
-  const [verificationModalOpen, setVerificationModalOpen] = useState(false);
   const [dashboardOpen, setDashboardOpen] = useState(false);
 
   // Refresh helper
@@ -108,12 +103,10 @@ export default function App() {
         (window as any).requestIdleCallback(() => {
           import('./components/VehicleDetailModal');
           import('./components/PurchaseRequestModal');
-          import('./components/VerificationModal');
         });
       } else {
         import('./components/VehicleDetailModal');
         import('./components/PurchaseRequestModal');
-        import('./components/VerificationModal');
       }
     }, 1500);
 
@@ -149,14 +142,6 @@ export default function App() {
     setPurchaseModalOpen(false);
   };
 
-  const handleOpenVerificationModal = () => {
-    setVerificationModalOpen(true);
-  };
-
-  const handleCloseVerificationModal = () => {
-    setVerificationModalOpen(false);
-  };
-
   const handleOpenDashboard = () => {
     setDashboardOpen(true);
     const baseUrl = import.meta.env.BASE_URL || '/';
@@ -177,10 +162,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900 selection:bg-red-600 selection:text-white flex flex-col font-sans antialiased">
+    <div className="min-h-screen w-full bg-white text-neutral-900 selection:bg-red-600 selection:text-white flex flex-col font-sans antialiased overflow-x-hidden">
       {/* Top Navigation */}
       <Navbar
-        onOpenVerification={handleOpenVerificationModal}
         onOpenDashboard={handleOpenDashboard}
         onOpenPurchaseModal={() => handleOpenPurchaseModal()}
         authInfo={authInfo}
@@ -195,7 +179,6 @@ export default function App() {
             el?.scrollIntoView({ behavior: 'smooth' });
           }}
           onContactManagement={() => handleOpenPurchaseModal()}
-          onOpenVerification={handleOpenVerificationModal}
           authInfo={authInfo}
         />
 
@@ -213,7 +196,6 @@ export default function App() {
           vehicles={vehicles}
           isLoading={isLoadingVehicles}
           onRequestVehicle={(vehicle) => handleOpenPurchaseModal(vehicle)}
-          onOpenVerification={handleOpenVerificationModal}
         />
 
         {/* Section 12: How It Works */}
@@ -224,13 +206,6 @@ export default function App() {
         {/* Section 10: About Management */}
         <AboutManagement
           authInfo={authInfo}
-          onOpenVerification={handleOpenVerificationModal}
-        />
-
-        {/* Section 11: Authorization & Verification */}
-        <AuthorizationSection
-          authInfo={authInfo}
-          onOpenVerification={handleOpenVerificationModal}
         />
 
         {/* Section 13: Customer Security */}
@@ -241,7 +216,6 @@ export default function App() {
           authInfo={authInfo}
           countriesList={countriesList}
           vehicles={vehicles}
-          onOpenVerification={handleOpenVerificationModal}
         />
       </main>
 
@@ -250,7 +224,6 @@ export default function App() {
         vehicles={vehicles}
         authInfo={authInfo}
         onSelectVehicle={handleOpenDetailModal}
-        onOpenVerification={handleOpenVerificationModal}
         onOpenDashboard={handleOpenDashboard}
         onOpenPurchaseModal={() => handleOpenPurchaseModal()}
       />
@@ -282,16 +255,7 @@ export default function App() {
           />
         )}
 
-        {/* 3. Official Verification Modal */}
-        {verificationModalOpen && (
-          <VerificationModal
-            isOpen={verificationModalOpen}
-            onClose={handleCloseVerificationModal}
-            authInfo={authInfo}
-          />
-        )}
-
-        {/* 4. Private Management Dashboard */}
+        {/* 3. Private Management Dashboard */}
         {dashboardOpen && (
           <ManagementDashboard
             isOpen={dashboardOpen}

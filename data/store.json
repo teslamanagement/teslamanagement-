@@ -7,10 +7,10 @@
       "tagline": "High-Efficiency Electric Sports Sedan",
       "description": "Designed for electric efficiency, refined aerodynamics, quiet acoustic glass cabin, ambient interior lighting, and nimble handling.",
       "category": "sedan",
-      "imageUrl": "/uploads/model-3-main-1787352197020-d1f499bf.png",
+      "imageUrl": "/uploads/model-3-img-1787747721635-cd8d8823.webp",
       "galleryImages": [
-        "/uploads/model-3-gal-0-1787352197024-60b86e4c.png",
-        "/uploads/model-3-gal-1-1787352197028-ef3076f8.png"
+        "/uploads/model-3-img-1787747721635-cd8d8823.webp",
+        "/uploads/model-3-img-1787747722822-ce626329.webp"
       ],
       "colors": [
         {
@@ -138,10 +138,10 @@
       "tagline": "Versatile Mid-Size Electric Crossover SUV",
       "description": "The best-selling all-electric crossover SUV engineered with maximum cargo versatility, elevated ride height, and all-weather capability.",
       "category": "suv",
-      "imageUrl": "/uploads/model-y-main-1787352197032-16c720d0.png",
+      "imageUrl": "/uploads/model-y-img-1787747768502-2e659d81.webp",
       "galleryImages": [
-        "/uploads/model-y-gal-0-1787352197035-c4ffef2a.png",
-        "/uploads/model-y-gal-1-1787352197039-7fe3ca93.png"
+        "/uploads/model-y-img-1787747768502-2e659d81.webp",
+        "/uploads/model-y-img-1787747770063-ee6df530.webp"
       ],
       "colors": [
         {
@@ -266,10 +266,10 @@
       "tagline": "Extended Wheelbase Luxury Executive Crossover",
       "description": "Authorized extended-wheelbase specification featuring executive rear captain seating, enhanced legroom, premium sound isolation, and dual lounge consoles.",
       "category": "suv",
-      "imageUrl": "/uploads/model-y-l-main-1787352197042-3b9ac0ef.png",
+      "imageUrl": "/uploads/model-y-l-img-1787747815199-6ba94775.webp",
       "galleryImages": [
-        "/uploads/model-y-l-gal-0-1787352197044-e5399704.png",
-        "/uploads/model-y-l-gal-1-1787352197048-7985fe18.png"
+        "/uploads/model-y-l-img-1787747815199-6ba94775.webp",
+        "/uploads/model-y-l-img-1787747817374-d7c2656c.webp"
       ],
       "colors": [
         {
@@ -383,10 +383,10 @@
       "tagline": "Ultra-Hard 30X Cold-Rolled Stainless-Steel Exoskeleton",
       "description": "Built with an impenetrable exterior exoskeleton, shatter-resistant Armor Glass, 4-wheel steer-by-wire agility, and up to 11,000 lbs of towing power.",
       "category": "truck",
-      "imageUrl": "/uploads/cybertruck-main-1787352197051-216a658c.png",
+      "imageUrl": "/uploads/cybertruck-img-1787747842474-288a014c.webp",
       "galleryImages": [
-        "/uploads/cybertruck-gal-0-1787352197055-f8f5f8ed.png",
-        "/uploads/cybertruck-gal-1-1787352197058-3dcd9aad.png"
+        "/uploads/cybertruck-img-1787747842474-288a014c.webp",
+        "/uploads/cybertruck-img-1787747844667-15699132.webp"
       ],
       "colors": [
         {
@@ -438,7 +438,7 @@
         }
       ],
       "originalPrice": 79990,
-      "promotionalPrice": 49341,
+      "promotionalPrice": 42341,
       "promotionalLabel": "Management Promotional Price",
       "availability": "Limited Allocation",
       "isFeatured": true,
@@ -470,10 +470,10 @@
       "tagline": "The Pinnacle of Electric Luxury & Acceleration",
       "description": "Unrivaled acceleration, ultra-long range, iconic liftback silhouette, tri-motor Plaid performance, and tri-zone climate luxury.",
       "category": "sedan",
-      "imageUrl": "/uploads/model-s-main-1787352197062-549f5343.png",
+      "imageUrl": "/uploads/model-s-img-1787747887543-83da5a37.webp",
       "galleryImages": [
-        "/uploads/model-s-gal-0-1787352197066-aff53e3a.png",
-        "/uploads/model-s-gal-1-1787352197074-a97fd99f.png"
+        "/uploads/model-s-img-1787747887543-83da5a37.webp",
+        "/uploads/model-s-img-1787747889854-b9234d6c.webp"
       ],
       "colors": [
         {
@@ -556,7 +556,7 @@
         }
       ],
       "originalPrice": 74990,
-      "promotionalPrice": 53994,
+      "promotionalPrice": 39994,
       "promotionalLabel": "Management Promotional Price",
       "availability": "Available for Order",
       "isFeatured": true,
@@ -588,10 +588,10 @@
       "tagline": "Falcon Wing Flagship Luxury SUV",
       "description": "Signature Falcon Wing rear doors, panoramic windshield, unmatched acceleration, three-row luxury seating, and 5,000 lbs towing capacity.",
       "category": "suv",
-      "imageUrl": "/uploads/model-x-main-1787352197078-84d061df.png",
+      "imageUrl": "/uploads/model-x-img-1787747922033-389ccb0f.webp",
       "galleryImages": [
-        "/uploads/model-x-gal-0-1787352197083-3bc1fb30.png",
-        "/uploads/model-x-gal-1-1787352197090-87ff2b6e.png"
+        "/uploads/model-x-img-1787747922033-389ccb0f.webp",
+        "/uploads/model-x-img-1787747923536-4b9ed94c.webp"
       ],
       "colors": [
         {
@@ -674,7 +674,7 @@
         }
       ],
       "originalPrice": 79990,
-      "promotionalPrice": 59994,
+      "promotionalPrice": 40024,
       "promotionalLabel": "Management Promotional Price",
       "availability": "Available for Order",
       "isFeatured": true,
@@ -705,10 +705,10 @@
       "tagline": "Supercar Performance & Record-Setting Aerodynamics",
       "description": "An all-electric supercar designed to maximize the potential of aerodynamic engineering into record-setting performance and efficiency.",
       "category": "specialty",
-      "imageUrl": "/uploads/roadster-main-1787352197094-4ce8abf5.png",
+      "imageUrl": "/uploads/roadster-img-1787747949166-cbaa15be.webp",
       "galleryImages": [
-        "/uploads/roadster-gal-0-1787352197100-50cc983b.png",
-        "/uploads/roadster-gal-1-1787352197109-31b41211.png"
+        "/uploads/roadster-img-1787747949166-cbaa15be.webp",
+        "/uploads/roadster-img-1787747951067-17e1a38e.webp"
       ],
       "specs": {
         "range": "620 miles",
@@ -732,7 +732,7 @@
         }
       ],
       "originalPrice": 200000,
-      "promotionalPrice": 120000,
+      "promotionalPrice": 98950,
       "promotionalLabel": "Management Promotional Price",
       "availability": "Reservation Inquiry",
       "isFeatured": false,
@@ -762,10 +762,10 @@
       "tagline": "Dedicated Autonomous Point-to-Point Mobility",
       "description": "Designed exclusively for autonomous, driverless transportation with butterfly doors, inductive wireless charging, and zero steering wheel or pedal clutter.",
       "category": "specialty",
-      "imageUrl": "/uploads/cybercab-main-1787352197112-8a73d7b0.png",
+      "imageUrl": "/uploads/cybercab-img-1787748016346-33871110.webp",
       "galleryImages": [
-        "/uploads/cybercab-gal-0-1787352197117-ed1ca76c.png",
-        "/uploads/cybercab-gal-1-1787352197125-36b40593.png"
+        "/uploads/cybercab-img-1787748016346-33871110.webp",
+        "/uploads/cybercab-img-1787748018804-976b5e94.webp"
       ],
       "specs": {
         "range": "200+ miles per charge",
@@ -788,8 +788,8 @@
           "basePrice": 180000
         }
       ],
-      "originalPrice": 25000,
-      "promotionalPrice": 18000,
+      "originalPrice": 90000,
+      "promotionalPrice": 42050,
       "promotionalLabel": "Management Promotional Price",
       "availability": "Production Preview",
       "isFeatured": false,
@@ -819,10 +819,10 @@
       "tagline": "Heavy-Duty Class 8 Electric Freight Hauler",
       "description": "Revolutionary heavy-duty commercial freight semi with center-driver cockpit, 3 independent electric motors, and massive operating cost savings.",
       "category": "commercial",
-      "imageUrl": "/uploads/tesla-semi-main-1787352197132-4d60e8af.png",
+      "imageUrl": "/uploads/tesla-semi-img-1787748050884-b610a1b7.webp",
       "galleryImages": [
-        "/uploads/tesla-semi-gal-0-1787352197140-0a9499a4.png",
-        "/uploads/tesla-semi-gal-1-1787352197145-b98e6606.png"
+        "/uploads/tesla-semi-img-1787748050884-b610a1b7.webp",
+        "/uploads/tesla-semi-img-1787748053248-f3df4feb.webp"
       ],
       "specs": {
         "range": "500 miles at 82,000 lbs gross combination weight",
@@ -879,28 +879,39 @@
       "expirationDate": "2026-12-31"
     }
   ],
+  "savedVehicleImages": {
+    "model-3": "/uploads/model-3-img-1787747721635-cd8d8823.webp",
+    "model-y": "/uploads/model-y-img-1787747768502-2e659d81.webp",
+    "model-y-l": "/uploads/model-y-l-img-1787747815199-6ba94775.webp",
+    "cybertruck": "/uploads/cybertruck-img-1787747842474-288a014c.webp",
+    "model-s": "/uploads/model-s-img-1787747887543-83da5a37.webp",
+    "model-x": "/uploads/model-x-img-1787747922033-389ccb0f.webp",
+    "roadster": "/uploads/roadster-img-1787747949166-cbaa15be.webp",
+    "cybercab": "/uploads/cybercab-img-1787748016346-33871110.webp",
+    "tesla-semi": "/uploads/tesla-semi-img-1787748050884-b610a1b7.webp"
+  },
   "authInfo": {
-    "representativeName": "Authorized Client Services & Fleet Allocation Desk",
-    "authorizedTitle": "Authorized Tesla Management Representative & Allocation Coordinator",
-    "authorizationNumber": "TM-AUTH-2026-GLOBAL-8941",
-    "authorizationDate": "2026-01-15",
-    "expirationDate": "2026-12-31",
-    "verificationUrl": "https://auth.teslamanagement.org/verify/TM-AUTH-2026-GLOBAL-8941",
-    "publicAuthorizationReference": "TM-ALLOC-GLOBAL-VERIFIED-V4",
-    "verificationInstructions": "To verify authorization status, enter the Authorization Number into the official verification channel or request a real-time cryptographic confirmation from your assigned management coordinator.",
+    "representativeName": "Client Services & Fleet Allocation Desk",
+    "authorizedTitle": "Client Vehicle Representative & Allocation Coordinator",
+    "authorizationNumber": "",
+    "authorizationDate": "",
+    "expirationDate": "",
+    "verificationUrl": "",
+    "publicAuthorizationReference": "",
+    "verificationInstructions": "",
     "responsibilities": [
       "Client vehicle purchase request processing and configuration coordination",
-      "Authorized management promotional pricing verification and allocation vouchers",
+      "Application and confirmation of management promotional allocation pricing",
       "Cross-border delivery, logistics, and documentation review assistance",
-      "Official corporate and fleet customer order support",
-      "Independent purchasing instructions and direct payment verification guidance"
+      "Dedicated corporate fleet and individual customer order support",
+      "Purchase guidance, client payment security, and order tracking"
     ],
-    "officialEmail": "management@teslamanagement.org",
-    "officialPhone": "1-800-613-8840",
+    "officialEmail": "teslasemi60@gmail.com",
+    "officialPhone": "Unavailable at this moment",
     "officialDialCode": "+1",
-    "businessMessagingChannel": "Tesla Management Official Desk (Verified Secure Protocol)",
-    "officeLocation": "Tesla Management Operations & International Client Support Center, 1 Tesla Road, Austin, TX 78725 / Global Regional Hubs",
-    "legalDisclaimer": "Tesla Management operates exclusively under verified client advisory authorization. All vehicle brand names, trademarks, and vehicle imagery are the property of Tesla, Inc. Promotional figures represent authorized Management Promotional Pricing and are distinct from standard manufacturer MSRP until formally matched and certified upon order completion."
+    "businessMessagingChannel": "Tesla Management Official Client Desk",
+    "officeLocation": "Tesla Management Operations & International Client Support Center, 1 Tesla Road, Austin, TX 78725",
+    "legalDisclaimer": "Tesla Management provides private vehicle acquisition assistance and fleet allocation services. All vehicle brand names, trademarks, and vehicle imagery are the property of Tesla, Inc. Promotional figures represent Management Promotional Pricing and are distinct from standard manufacturer MSRP until formally confirmed upon order completion."
   },
   "countriesList": [
     {
@@ -2243,6 +2254,766 @@
   "inquiries": [],
   "activityLogs": [
     {
+      "id": "log-1787748584682-f752d8",
+      "timestamp": "2026-08-26T12:49:44.682Z",
+      "action": "AUTH_INFO_UPDATED",
+      "category": "AUTH",
+      "details": "Updated representative: Authorized Client Services & Fleet Allocation Desk",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748569009-e7a591",
+      "timestamp": "2026-08-26T12:49:29.009Z",
+      "action": "AUTH_INFO_UPDATED",
+      "category": "AUTH",
+      "details": "Updated representative: Authorized Client Services & Fleet Allocation Desk",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748568522-9d30ed",
+      "timestamp": "2026-08-26T12:49:28.522Z",
+      "action": "AUTH_INFO_UPDATED",
+      "category": "AUTH",
+      "details": "Updated representative: Authorized Client Services & Fleet Allocation Desk",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748387292-7b2902",
+      "timestamp": "2026-08-26T12:46:27.292Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748387289-4204d1",
+      "timestamp": "2026-08-26T12:46:27.289Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748332896-7c7ff1",
+      "timestamp": "2026-08-26T12:45:32.896Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748332891-30faf5",
+      "timestamp": "2026-08-26T12:45:32.891Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748273985-510987",
+      "timestamp": "2026-08-26T12:44:33.985Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model X",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748273977-10065a",
+      "timestamp": "2026-08-26T12:44:33.977Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748239087-c86cc0",
+      "timestamp": "2026-08-26T12:43:59.087Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model S",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748238990-96b57c",
+      "timestamp": "2026-08-26T12:43:58.990Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748191279-10d02d",
+      "timestamp": "2026-08-26T12:43:11.279Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748190636-83e0f8",
+      "timestamp": "2026-08-26T12:43:10.636Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748058765-da3911",
+      "timestamp": "2026-08-26T12:40:58.765Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Tesla Semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748058749-21dfe7",
+      "timestamp": "2026-08-26T12:40:58.749Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748053460-cd8b01",
+      "timestamp": "2026-08-26T12:40:53.460Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748053456-146eb8",
+      "timestamp": "2026-08-26T12:40:53.456Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748053249-28bc2e",
+      "timestamp": "2026-08-26T12:40:53.249Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for tesla-semi (/uploads/tesla-semi-img-1787748053248-f3df4feb.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748051196-718637",
+      "timestamp": "2026-08-26T12:40:51.196Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748050884-4cbd97",
+      "timestamp": "2026-08-26T12:40:50.884Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for tesla-semi (/uploads/tesla-semi-img-1787748050884-b610a1b7.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748032800-ccea4c",
+      "timestamp": "2026-08-26T12:40:32.800Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748031486-78b140",
+      "timestamp": "2026-08-26T12:40:31.486Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748022833-7c1827",
+      "timestamp": "2026-08-26T12:40:22.833Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748022830-2d2c80",
+      "timestamp": "2026-08-26T12:40:22.830Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748019026-f4286f",
+      "timestamp": "2026-08-26T12:40:19.026Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748019019-044f05",
+      "timestamp": "2026-08-26T12:40:19.019Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748018804-4ae86e",
+      "timestamp": "2026-08-26T12:40:18.804Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for cybercab (/uploads/cybercab-img-1787748018804-976b5e94.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748016757-4b4a1e",
+      "timestamp": "2026-08-26T12:40:16.757Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787748016347-fd9f4f",
+      "timestamp": "2026-08-26T12:40:16.347Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for cybercab (/uploads/cybercab-img-1787748016346-33871110.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747968159-ec2c88",
+      "timestamp": "2026-08-26T12:39:28.159Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747966328-7e57ee",
+      "timestamp": "2026-08-26T12:39:26.328Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747957096-ac08b5",
+      "timestamp": "2026-08-26T12:39:17.096Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747957091-d0ad30",
+      "timestamp": "2026-08-26T12:39:17.091Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747951295-b59064",
+      "timestamp": "2026-08-26T12:39:11.296Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747951293-841064",
+      "timestamp": "2026-08-26T12:39:11.293Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747951067-a16fec",
+      "timestamp": "2026-08-26T12:39:11.067Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for roadster (/uploads/roadster-img-1787747951067-17e1a38e.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747949349-8899d9",
+      "timestamp": "2026-08-26T12:39:09.349Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747949166-8b223e",
+      "timestamp": "2026-08-26T12:39:09.166Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for roadster (/uploads/roadster-img-1787747949166-cbaa15be.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747939569-3ffa46",
+      "timestamp": "2026-08-26T12:38:59.569Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747938241-80ec17",
+      "timestamp": "2026-08-26T12:38:58.241Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747927816-7b373a",
+      "timestamp": "2026-08-26T12:38:47.816Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model X",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747927799-591d7c",
+      "timestamp": "2026-08-26T12:38:47.799Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747923726-399c94",
+      "timestamp": "2026-08-26T12:38:43.726Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747923723-bd93db",
+      "timestamp": "2026-08-26T12:38:43.723Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747923536-14c105",
+      "timestamp": "2026-08-26T12:38:43.536Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-x (/uploads/model-x-img-1787747923536-4b9ed94c.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747922240-715ae1",
+      "timestamp": "2026-08-26T12:38:42.240Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747922034-2ba6c9",
+      "timestamp": "2026-08-26T12:38:42.034Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-x (/uploads/model-x-img-1787747922033-389ccb0f.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747910358-c0ffbe",
+      "timestamp": "2026-08-26T12:38:30.358Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747910353-8e7c4e",
+      "timestamp": "2026-08-26T12:38:30.353Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747897571-06353f",
+      "timestamp": "2026-08-26T12:38:17.571Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model S",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747897567-12b306",
+      "timestamp": "2026-08-26T12:38:17.567Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747890243-9e7996",
+      "timestamp": "2026-08-26T12:38:10.243Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747890172-806a5c",
+      "timestamp": "2026-08-26T12:38:10.172Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747889854-b74f3c",
+      "timestamp": "2026-08-26T12:38:09.854Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-s (/uploads/model-s-img-1787747889854-b9234d6c.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747887971-0e2ffe",
+      "timestamp": "2026-08-26T12:38:07.971Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747887544-d1e8ca",
+      "timestamp": "2026-08-26T12:38:07.544Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-s (/uploads/model-s-img-1787747887543-83da5a37.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747866154-83ed0b",
+      "timestamp": "2026-08-26T12:37:46.154Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747861813-dd097d",
+      "timestamp": "2026-08-26T12:37:41.813Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747849173-660a6d",
+      "timestamp": "2026-08-26T12:37:29.173Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747849151-a74adc",
+      "timestamp": "2026-08-26T12:37:29.151Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747845433-ab539e",
+      "timestamp": "2026-08-26T12:37:25.433Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747845168-ad14d5",
+      "timestamp": "2026-08-26T12:37:25.169Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747844667-8fde8d",
+      "timestamp": "2026-08-26T12:37:24.667Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for cybertruck (/uploads/cybertruck-img-1787747844667-15699132.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747843014-53cd2e",
+      "timestamp": "2026-08-26T12:37:23.014Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747842474-d6cba5",
+      "timestamp": "2026-08-26T12:37:22.474Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for cybertruck (/uploads/cybertruck-img-1787747842474-288a014c.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747830359-68f0c1",
+      "timestamp": "2026-08-26T12:37:10.359Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747828636-1e41a4",
+      "timestamp": "2026-08-26T12:37:08.636Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747822081-74340a",
+      "timestamp": "2026-08-26T12:37:02.081Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model Y L",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747822059-92b910",
+      "timestamp": "2026-08-26T12:37:02.059Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747818074-aef32b",
+      "timestamp": "2026-08-26T12:36:58.074Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747817858-b97849",
+      "timestamp": "2026-08-26T12:36:57.858Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747817375-90a7b1",
+      "timestamp": "2026-08-26T12:36:57.375Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y-l (/uploads/model-y-l-img-1787747817374-d7c2656c.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747815953-287e9d",
+      "timestamp": "2026-08-26T12:36:55.953Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747815199-48f5fe",
+      "timestamp": "2026-08-26T12:36:55.199Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y-l (/uploads/model-y-l-img-1787747815199-6ba94775.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747802837-a07199",
+      "timestamp": "2026-08-26T12:36:42.837Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747797597-f6c51a",
+      "timestamp": "2026-08-26T12:36:37.597Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747774782-6888c8",
+      "timestamp": "2026-08-26T12:36:14.782Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model Y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747774774-fe983b",
+      "timestamp": "2026-08-26T12:36:14.774Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747770873-100f74",
+      "timestamp": "2026-08-26T12:36:10.873Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747770562-b464de",
+      "timestamp": "2026-08-26T12:36:10.562Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747770063-a9debd",
+      "timestamp": "2026-08-26T12:36:10.063Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y (/uploads/model-y-img-1787747770063-ee6df530.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747768997-173c95",
+      "timestamp": "2026-08-26T12:36:08.997Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747768503-e87ed0",
+      "timestamp": "2026-08-26T12:36:08.503Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y (/uploads/model-y-img-1787747768502-2e659d81.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747751921-3e7777",
+      "timestamp": "2026-08-26T12:35:51.921Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747750296-70719d",
+      "timestamp": "2026-08-26T12:35:50.296Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747737396-665542",
+      "timestamp": "2026-08-26T12:35:37.396Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model 3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747737369-1fe91a",
+      "timestamp": "2026-08-26T12:35:37.370Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747723375-1c49bd",
+      "timestamp": "2026-08-26T12:35:23.375Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747723202-5fb3b5",
+      "timestamp": "2026-08-26T12:35:23.203Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747722822-5852f7",
+      "timestamp": "2026-08-26T12:35:22.823Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-3 (/uploads/model-3-img-1787747722822-ce626329.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747722097-f6659f",
+      "timestamp": "2026-08-26T12:35:22.097Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747721636-79953d",
+      "timestamp": "2026-08-26T12:35:21.636Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-3 (/uploads/model-3-img-1787747721635-cd8d8823.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747684099-b7933d",
+      "timestamp": "2026-08-26T12:34:44.099Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747682116-134fce",
+      "timestamp": "2026-08-26T12:34:42.116Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787747652993-96be24",
+      "timestamp": "2026-08-26T12:34:12.993Z",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "category": "SECURITY",
+      "details": "Authorized management representative authenticated successfully.",
+      "performedBy": "Authorized Client Services & Fleet Allocation Desk"
+    },
+    {
       "id": "log-1787351834727-f1f991",
       "timestamp": "2026-08-21T22:37:14.727Z",
       "action": "VEHICLE_UPDATED",
@@ -2372,5 +3143,5 @@
     }
   ],
   "adminPasscode": "vQ7$z5N2!rL9@xJK4#pT76&",
-  "updatedAt": "2026-08-21T22:43:17.146Z"
+  "updatedAt": "2026-08-26T13:06:31.357Z"
 }

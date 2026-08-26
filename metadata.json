@@ -1,6 +1,6 @@
 {
   "name": "Tesla Management",
-  "description": "Explore Tesla vehicles, available configurations, pricing and authorized customer purchasing assistance.",
+  "description": "Explore Tesla vehicles, available configurations, promotional pricing, and direct customer purchase assistance.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

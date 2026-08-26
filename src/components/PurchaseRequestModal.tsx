@@ -462,7 +462,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               )}
 
               {/* Full Name & Email */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="inq-fullname" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono">
                     Full Name <span className="text-red-600">*</span>
@@ -522,7 +522,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               </div>
 
               {/* Preferred Model & Dependent Configuration Cascading Dropdowns */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4">
                 <VehicleModelDropdown
                   id="inq-preferred-model"
                   selectedModelName={selectedModel}

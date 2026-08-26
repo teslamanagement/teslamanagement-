@@ -345,7 +345,7 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                 </span>
               </div>
               <span className="text-[11px] text-neutral-500">
-                Operating Under Verified Authorization • Ref: {authInfo.authorizationNumber}
+                Tesla Management Operations & Client Assistance Portal
               </span>
             </div>
           </div>
@@ -390,9 +390,9 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-neutral-900">Authorized Management Access</h3>
+                <h3 className="text-xl font-bold text-neutral-900">Management Portal Access</h3>
                 <p className="text-xs text-neutral-600 mt-1.5 leading-relaxed">
-                  Enter your authorization credentials to manage customer inquiries, vehicle configurations, promotional pricing, and verification data.
+                  Enter your management credentials to access customer inquiries, vehicle configurations, promotional pricing, and settings.
                 </p>
               </div>
 
@@ -424,14 +424,14 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                   id="btn-login-dashboard"
                   className="w-full py-3.5 px-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-xs flex items-center justify-center space-x-2"
                 >
-                  <ShieldCheck className="w-4 h-4" />
+                  <Lock className="w-4 h-4" />
                   <span>Unlock Management Portal</span>
                 </button>
               </form>
 
               <div className="p-3 rounded-xl bg-[#F8F9FA] border border-neutral-200 text-[11px] text-neutral-500 flex items-center justify-center space-x-2">
                 <Lock className="w-3.5 h-3.5 text-neutral-400" />
-                <span>Authorized Personnel Only • Secure 256-Bit Encrypted Portal</span>
+                <span>Management Personnel Only • Secure Portal</span>
               </div>
             </div>
           </div>
@@ -499,7 +499,7 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                   }`}
                 >
                   <FileText className="w-4 h-4 flex-shrink-0" />
-                  <span>Auth & Content</span>
+                  <span>Desk & Settings</span>
                 </button>
 
                 <button
@@ -1186,22 +1186,22 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                   </div>
 
                   <div className="p-4 rounded-2xl bg-[#F8F9FA] border border-neutral-200 text-xs text-neutral-600 leading-relaxed">
-                    <span className="font-bold text-neutral-900 block mb-1">Pricing Compliance Mandate:</span>
-                    Original reference prices should only be included and crossed out when authorized documentation exists. If an original reference price is omitted, only the Management Promotional Price is displayed without artificial strikethroughs.
+                    <span className="font-bold text-neutral-900 block mb-1">Pricing Publication Guidelines:</span>
+                    Original reference prices should only be included and crossed out when comparative baseline data exists. If an original reference price is omitted, only the Management Promotional Price is displayed without artificial strikethroughs.
                   </div>
                 </div>
               )}
 
-              {/* TAB 4: AUTH & CONTENT MANAGEMENT */}
+              {/* TAB 4: DESK & SETTINGS */}
               {activeTab === 'content' && (
                 <div className="space-y-6">
                   <div>
                     <h3 className="text-xl font-bold text-neutral-900 flex items-center space-x-2">
                       <FileText className="w-5 h-5 text-red-600" />
-                      <span>Authorization & Content Management</span>
+                      <span>Management Desk & Content Settings</span>
                     </h3>
                     <p className="text-xs text-neutral-500 mt-0.5">
-                      Update official representative information, authorization numbers, verification URLs, and official channels.
+                      Update official representative information, contact channels, office location, and legal disclaimer.
                     </p>
                   </div>
 
@@ -1209,7 +1209,7 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
-                          Authorized Representative Name
+                          Representative Desk Name
                         </label>
                         <input
                           type="text"
@@ -1222,7 +1222,7 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
 
                       <div>
                         <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
-                          Authorized Management Title
+                          Management Desk Function / Title
                         </label>
                         <input
                           type="text"
@@ -1230,45 +1230,6 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                           value={editAuth.authorizedTitle}
                           onChange={(e) => setEditAuth({ ...editAuth, authorizedTitle: e.target.value })}
                           className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 shadow-2xs"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                      <div>
-                        <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
-                          Authorization Number
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={editAuth.authorizationNumber}
-                          onChange={(e) => setEditAuth({ ...editAuth, authorizationNumber: e.target.value })}
-                          className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 font-mono shadow-2xs"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
-                          Authorization Date
-                        </label>
-                        <input
-                          type="date"
-                          value={editAuth.authorizationDate}
-                          onChange={(e) => setEditAuth({ ...editAuth, authorizationDate: e.target.value })}
-                          className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 font-mono shadow-2xs"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
-                          Expiration Date
-                        </label>
-                        <input
-                          type="date"
-                          value={editAuth.expirationDate}
-                          onChange={(e) => setEditAuth({ ...editAuth, expirationDate: e.target.value })}
-                          className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 font-mono shadow-2xs"
                         />
                       </div>
                     </div>
@@ -1301,28 +1262,30 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                       </div>
                     </div>
 
-                    <div>
-                      <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
-                        Public Authorization Reference
-                      </label>
-                      <input
-                        type="text"
-                        value={editAuth.publicAuthorizationReference}
-                        onChange={(e) => setEditAuth({ ...editAuth, publicAuthorizationReference: e.target.value })}
-                        className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 font-mono shadow-2xs"
-                      />
-                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
+                          Office Location / Delivery Center
+                        </label>
+                        <input
+                          type="text"
+                          value={editAuth.officeLocation}
+                          onChange={(e) => setEditAuth({ ...editAuth, officeLocation: e.target.value })}
+                          className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 shadow-2xs"
+                        />
+                      </div>
 
-                    <div>
-                      <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
-                        Verification Instructions
-                      </label>
-                      <textarea
-                        rows={2}
-                        value={editAuth.verificationInstructions}
-                        onChange={(e) => setEditAuth({ ...editAuth, verificationInstructions: e.target.value })}
-                        className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 shadow-2xs"
-                      />
+                      <div>
+                        <label className="block text-xs font-semibold uppercase text-neutral-700 mb-1">
+                          Client Messaging Channel
+                        </label>
+                        <input
+                          type="text"
+                          value={editAuth.businessMessagingChannel}
+                          onChange={(e) => setEditAuth({ ...editAuth, businessMessagingChannel: e.target.value })}
+                          className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 shadow-2xs"
+                        />
+                      </div>
                     </div>
 
                     <div>
@@ -1330,7 +1293,7 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                         Official Legal Disclaimer
                       </label>
                       <textarea
-                        rows={2}
+                        rows={3}
                         value={editAuth.legalDisclaimer}
                         onChange={(e) => setEditAuth({ ...editAuth, legalDisclaimer: e.target.value })}
                         className="w-full px-3 py-2 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 shadow-2xs"
@@ -1343,7 +1306,7 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                         className="px-6 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold uppercase tracking-wider flex items-center space-x-1.5 cursor-pointer shadow-xs"
                       >
                         <Save className="w-4 h-4" />
-                        <span>Update Authorization Info</span>
+                        <span>Update Desk Settings</span>
                       </button>
                     </div>
                   </form>

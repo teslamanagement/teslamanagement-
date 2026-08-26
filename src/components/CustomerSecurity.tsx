@@ -9,15 +9,15 @@ export const CustomerSecurity: React.FC = () => {
   ];
 
   const legitimatePractices = [
-    'Direct authorized corporate wire instructions matching official documentation',
-    'Independent verification through the official verification channel prior to transfer',
-    'Signed purchase agreement with verified allocation reference numbers',
+    'Direct corporate invoice instructions matching official documentation',
+    'Independent confirmation through official communication channels prior to transfer',
+    'Signed purchase agreement with official allocation reference numbers',
     'Full transparency with itemized tax, logistics, and registration documentation',
   ];
 
   return (
     <section id="security" className="py-20 bg-white text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
@@ -26,18 +26,18 @@ export const CustomerSecurity: React.FC = () => {
               <span>Fraud Prevention & Customer Protection</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight">
+            <h2 className="text-5xl font-extrabold text-neutral-900 tracking-tight">
               Customer Security & Payment Safety
             </h2>
 
-            <p className="text-sm sm:text-base text-neutral-600 mt-3 leading-relaxed">
-              Transparent, authorized purchasing protocols to protect customers against unauthorized solicitations.
+            <p className="text-base text-neutral-600 mt-3 leading-relaxed">
+              Transparent purchasing protocols to protect customers against fraudulent solicitations.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-2 gap-6 mb-8">
             {/* Prohibited Methods Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-red-50/50 border border-red-200 space-y-4 shadow-2xs">
+            <div className="p-8 rounded-2xl bg-red-50/50 border border-red-200 space-y-4 shadow-2xs">
               <div className="flex items-center space-x-3 text-red-600">
                 <Ban className="w-6 h-6 flex-shrink-0" />
                 <h3 className="text-base font-bold uppercase tracking-wider text-neutral-900">
@@ -60,11 +60,11 @@ export const CustomerSecurity: React.FC = () => {
             </div>
 
             {/* Legitimate Protocol Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-4 shadow-2xs">
+            <div className="p-8 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-4 shadow-2xs">
               <div className="flex items-center space-x-3 text-emerald-700">
                 <Lock className="w-6 h-6 flex-shrink-0" />
                 <h3 className="text-base font-bold uppercase tracking-wider text-neutral-900">
-                  Authorized Verification Standard
+                  Official Transaction Standards
                 </h3>
               </div>
 

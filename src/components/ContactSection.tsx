@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Mail, Phone, MapPin, MessageSquare, ShieldCheck, Send, CheckCircle2, AlertCircle, Loader2, RotateCcw, FileText, Check } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare, Send, CheckCircle2, AlertCircle, Loader2, RotateCcw, FileText, Check } from 'lucide-react';
 import { AuthorizationInfo, CountryData, Vehicle } from '../types';
 import { CountryPhonePicker, CountryPhoneValue } from './CountryPhonePicker';
 import { VehicleModelDropdown, VehicleConfigDropdown } from './VehicleModelPicker';
@@ -10,7 +10,6 @@ interface ContactSectionProps {
   authInfo?: AuthorizationInfo;
   countriesList: CountryData[];
   vehicles?: Vehicle[];
-  onOpenVerification: () => void;
 }
 
 interface SubmittedInquirySummary {
@@ -29,7 +28,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   authInfo,
   countriesList,
   vehicles: propVehicles,
-  onOpenVerification,
 }) => {
   const vehicles = useMemo(() => {
     if (Array.isArray(propVehicles) && propVehicles.length > 0) return propVehicles;
@@ -38,11 +36,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     return INITIAL_VEHICLES;
   }, [propVehicles]);
 
-  const officialEmail = authInfo?.officialEmail || 'management@tesla-allocation.desk';
+  const officialEmail = authInfo?.officialEmail || 'teslasemi60@gmail.com';
   const officialDialCode = authInfo?.officialDialCode || '+1';
-  const officialPhone = authInfo?.officialPhone || '(888) 518-3752';
-  const businessMessagingChannel = authInfo?.businessMessagingChannel || 'Authorized Client Messaging Portal';
-  const officeLocation = authInfo?.officeLocation || 'Tesla Global Delivery & Management Network';
+  const officialPhone = authInfo?.officialPhone || 'Unavailable at this moment';
+  const businessMessagingChannel = authInfo?.businessMessagingChannel || 'Tesla Management Client Desk';
+  const officeLocation = authInfo?.officeLocation || 'Tesla Management Operations & International Client Support Center, 1 Tesla Road, Austin, TX 78725';
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -192,29 +190,29 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
   return (
     <section id="contact" className="py-20 bg-[#F8F9FA] text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-600 block mb-2">
-            Verified Communication Desk
+            Direct Communication Desk
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-5xl font-extrabold text-neutral-900 tracking-tight">
             Contact Management
           </h2>
-          <p className="text-sm sm:text-base text-neutral-600 mt-3 leading-relaxed">
-            Reach authorized Tesla Management representatives for vehicle allocations, corporate orders, and certified pricing inquiries.
+          <p className="text-base text-neutral-600 mt-3 leading-relaxed">
+            Reach Tesla Management representatives for vehicle allocations, corporate orders, and direct pricing inquiries.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Verified Contact Details Sidebar */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs space-y-6">
+        <div className="grid grid-cols-12 gap-8 items-start">
+          {/* Contact Details Sidebar */}
+          <div className="col-span-5 space-y-6">
+            <div className="p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs space-y-6">
               <h3 className="text-lg font-bold text-neutral-900 flex items-center space-x-2">
-                <ShieldCheck className="w-5 h-5 text-emerald-600" />
-                <span>Verified Direct Channels</span>
+                <MessageSquare className="w-5 h-5 text-red-600" />
+                <span>Direct Contact Channels</span>
               </h3>
 
-              <div className="space-y-4 text-xs sm:text-sm">
+              <div className="space-y-4 text-sm">
                 <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-[#F8F9FA] border border-neutral-200">
                   <Mail className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
@@ -238,7 +236,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <div className="flex items-start space-x-3 p-3.5 rounded-xl bg-[#F8F9FA] border border-neutral-200">
                   <MessageSquare className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] text-neutral-500 uppercase font-mono block font-semibold">Authorized Messaging Channel</span>
+                    <span className="text-[10px] text-neutral-500 uppercase font-mono block font-semibold">Client Messaging Channel</span>
                     <span className="text-neutral-800 font-medium">
                       {businessMessagingChannel}
                     </span>
@@ -255,29 +253,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   </div>
                 </div>
               </div>
-
-              {/* Security Verification Notice */}
-              <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-xs text-neutral-700 leading-relaxed">
-                <span className="text-red-700 font-bold block mb-1">
-                  Mandatory Security Verification Notice:
-                </span>
-                &ldquo;For your security, independently verify purchasing instructions and final pricing through the authorized verification channel before making any payment.&rdquo;
-              </div>
-
-              <button
-                type="button"
-                id="contact-verify-btn"
-                onClick={onOpenVerification}
-                className="w-full py-3 px-4 rounded-xl bg-white hover:bg-neutral-50 text-neutral-800 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer flex items-center justify-center space-x-2 border border-neutral-300 shadow-xs"
-              >
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>Launch Verification Channel</span>
-              </button>
             </div>
           </div>
 
           {/* Interactive Contact Form */}
-          <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs">
+          <div className="col-span-7 p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs">
             {submitted && submittedSummary ? (
               <div className="py-6 text-center space-y-6 animate-in zoom-in-95 duration-200" id="contact-success-state">
                 {/* Success Indicator Badge */}
@@ -291,12 +271,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <span>Reference ID: {submittedSummary.id}</span>
                   </div>
 
-                  <h4 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
+                  <h4 className="text-3xl font-extrabold text-neutral-900 tracking-tight">
                     Request Submitted Successfully
                   </h4>
 
                   {/* Prominent Required Confirmation Notice */}
-                  <div className="text-left bg-[#F8F9FA] p-5 sm:p-6 rounded-2xl border border-neutral-200 space-y-3 text-sm text-neutral-700 leading-relaxed shadow-2xs">
+                  <div className="text-left bg-[#F8F9FA] p-6 rounded-2xl border border-neutral-200 space-y-3 text-sm text-neutral-700 leading-relaxed shadow-2xs">
                     <p className="font-medium text-neutral-900">
                       Thank you. Your vehicle request has been successfully submitted and received by our management team.
                     </p>
@@ -316,7 +296,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 {/* Submitted Summary Box */}
-                <div className="p-4 sm:p-5 rounded-2xl bg-white border border-neutral-200 text-left text-xs text-neutral-600 max-w-xl mx-auto space-y-2 font-mono shadow-2xs">
+                <div className="p-5 rounded-2xl bg-white border border-neutral-200 text-left text-xs text-neutral-600 max-w-xl mx-auto space-y-2 font-mono shadow-2xs">
                   <div className="flex items-center justify-between pb-2 border-b border-neutral-100 text-neutral-900 font-sans font-bold text-xs uppercase tracking-wider">
                     <span className="flex items-center space-x-1.5 text-neutral-700">
                       <FileText className="w-3.5 h-3.5 text-neutral-500" />
@@ -327,37 +307,37 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     </span>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs">
-                    <div className="flex justify-between sm:flex-col sm:space-y-0.5">
+                  <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
+                    <div className="flex flex-col space-y-0.5">
                       <span className="text-neutral-500">Applicant:</span>
                       <span className="text-neutral-900 font-medium">{submittedSummary.fullName}</span>
                     </div>
 
                     {submittedSummary.model && (
-                      <div className="flex justify-between sm:flex-col sm:space-y-0.5">
+                      <div className="flex flex-col space-y-0.5">
                         <span className="text-neutral-500">Vehicle Model:</span>
                         <span className="text-neutral-900 font-bold">{submittedSummary.model}</span>
                       </div>
                     )}
 
                     {submittedSummary.configuration && (
-                      <div className="flex justify-between sm:flex-col sm:space-y-0.5">
+                      <div className="flex flex-col space-y-0.5">
                         <span className="text-neutral-500">Configuration:</span>
                         <span className="text-neutral-900 font-medium">{submittedSummary.configuration}</span>
                       </div>
                     )}
 
-                    <div className="flex justify-between sm:flex-col sm:space-y-0.5">
+                    <div className="flex flex-col space-y-0.5">
                       <span className="text-neutral-500">Contact Number:</span>
                       <span className="text-neutral-900 font-medium">{submittedSummary.phoneNumber}</span>
                     </div>
 
-                    <div className="flex justify-between sm:flex-col sm:space-y-0.5">
+                    <div className="flex flex-col space-y-0.5">
                       <span className="text-neutral-500">Email Address:</span>
                       <span className="text-neutral-900 font-medium">{submittedSummary.email}</span>
                     </div>
 
-                    <div className="flex justify-between sm:flex-col sm:space-y-0.5">
+                    <div className="flex flex-col space-y-0.5">
                       <span className="text-neutral-500">Topic:</span>
                       <span className="text-neutral-900 font-medium">{submittedSummary.topic}</span>
                     </div>
@@ -365,7 +345,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 {/* Actions: Done & Submit Another Request */}
-                <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                <div className="pt-2 flex flex-row items-center justify-center gap-3 max-w-md mx-auto">
                   <button
                     type="button"
                     id="contact-done-btn"
@@ -376,7 +356,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         section.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="w-full sm:w-auto px-8 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-xs active:scale-98"
+                    className="px-8 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-xs active:scale-98"
                   >
                     Done
                   </button>
@@ -385,7 +365,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     type="button"
                     id="contact-another-request-btn"
                     onClick={resetForm}
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-neutral-100 text-neutral-700 text-xs font-bold uppercase tracking-wider border border-neutral-300 transition-colors cursor-pointer flex items-center justify-center space-x-2 active:scale-98"
+                    className="px-6 py-3 rounded-xl bg-white hover:bg-neutral-100 text-neutral-700 text-xs font-bold uppercase tracking-wider border border-neutral-300 transition-colors cursor-pointer flex items-center justify-center space-x-2 active:scale-98"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Submit Another Request</span>
@@ -405,7 +385,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
                       Your Name <span className="text-red-600">*</span>
@@ -464,13 +444,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <option value="Promotional Allocation Pricing">Promotional Allocation Pricing</option>
                     <option value="Corporate Fleet Order">Corporate Fleet Order</option>
                     <option value="International Delivery Coordination">International Delivery Coordination</option>
-                    <option value="Authorization & Verification Request">Authorization & Verification Request</option>
+                    <option value="General Vehicle Inquiry">General Vehicle Inquiry</option>
                   </select>
                 </div>
 
                 {/* Model & Configuration Pickers for vehicle-related topics */}
                 {(inquiryTopic.includes('Vehicle') || inquiryTopic.includes('Pricing') || inquiryTopic.includes('Fleet')) && (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-3.5 rounded-xl bg-[#F8F9FA] border border-neutral-200">
+                  <div className="grid grid-cols-2 gap-4 p-3.5 rounded-xl bg-[#F8F9FA] border border-neutral-200">
                     <VehicleModelDropdown
                       id="contact-preferred-model"
                       selectedModelName={selectedModel}
@@ -517,7 +497,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     required
                   />
                   <label htmlFor="contact-consent" className="text-xs text-neutral-700 leading-relaxed cursor-pointer select-none">
-                    I agree to be contacted by an authorized Tesla Management coordinator regarding this inquiry.
+                    I agree to be contacted by a Tesla Management coordinator regarding this inquiry.
                   </label>
                 </div>
 

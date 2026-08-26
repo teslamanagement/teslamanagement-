@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Lock, Globe, ExternalLink } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { AuthorizationInfo, Vehicle } from '../types';
 import { TeslaLogo } from './TeslaLogo';
 import { TeslaWordmark } from './TeslaWordmark';
@@ -7,7 +7,6 @@ import { TeslaWordmark } from './TeslaWordmark';
 interface FooterProps {
   vehicles?: Vehicle[];
   authInfo?: AuthorizationInfo;
-  onOpenVerification: () => void;
   onOpenDashboard: () => void;
   onOpenPurchaseModal: () => void;
   onSelectVehicle?: (vehicle: Vehicle) => void;
@@ -16,17 +15,16 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({
   vehicles = [],
   authInfo,
-  onOpenVerification,
   onOpenDashboard,
   onOpenPurchaseModal,
   onSelectVehicle,
 }) => {
   return (
     <footer className="bg-neutral-900 text-neutral-400 border-t border-neutral-800 pt-16 pb-12 text-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-          {/* Col 1: Brand & Authorization */}
-          <div className="lg:col-span-2 space-y-4">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-5 gap-10 mb-12">
+          {/* Col 1: Brand */}
+          <div className="col-span-2 space-y-4">
             <div className="flex items-center space-x-2.5">
               <TeslaLogo className="w-7 h-7 flex-shrink-0 text-white" />
               <div className="flex items-center space-x-1.5">
@@ -38,18 +36,8 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
 
             <p className="text-xs text-neutral-400 leading-relaxed max-w-sm">
-              Dedicated client vehicle assistance, verified management promotional allocation pricing, and international purchasing coordination.
+              Dedicated client vehicle assistance, management promotional allocation pricing, and international purchasing coordination.
             </p>
-
-            <div className="p-3.5 rounded-xl bg-neutral-800/70 border border-neutral-700 space-y-1">
-              <div className="flex items-center space-x-2 text-white font-semibold">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Authorized Representative ID</span>
-              </div>
-              <div className="font-mono text-emerald-400 font-bold text-xs">
-                {authInfo?.authorizationNumber || 'TM-AUTH-2026-GLOBAL-8941'}
-              </div>
-            </div>
           </div>
 
           {/* Col 2: Navigation */}
@@ -105,22 +93,12 @@ export const Footer: React.FC<FooterProps> = ({
             </ul>
           </div>
 
-          {/* Col 4: Verification & Administration */}
+          {/* Col 4: Administration */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-3 font-mono">
-              Verification & Admin
+              Administration
             </h4>
             <ul className="space-y-2">
-              <li>
-                <button
-                  type="button"
-                  onClick={onOpenVerification}
-                  className="hover:text-white flex items-center space-x-1.5 transition-colors cursor-pointer text-left"
-                >
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Verify Authorization</span>
-                </button>
-              </li>
               <li>
                 <button
                   type="button"
@@ -141,14 +119,14 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Legal Disclaimer Box */}
         <div className="pt-8 border-t border-neutral-800 space-y-4">
           <p className="text-[11px] text-neutral-400 leading-relaxed">
-            {authInfo?.legalDisclaimer || 'Tesla Management operates as an authorized representative for client vehicle allocation, specifications verification, and purchase coordination. All promotional vehicle prices are published under authorization reference TM-AUTH-2026-GLOBAL-8941.'}
+            {authInfo?.legalDisclaimer || 'Tesla Management provides client vehicle allocation assistance, specification review, and purchase coordination. All vehicle brand names, trademarks, and vehicle imagery are the property of Tesla, Inc.'}
           </p>
 
           <p className="text-[11px] text-neutral-400 leading-relaxed">
-            &ldquo;Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the authorized purchasing process. Submitting an inquiry does not constitute a completed vehicle purchase or guaranteed vehicle allocation.&rdquo;
+            &ldquo;Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the purchasing process. Submitting an inquiry does not constitute a completed vehicle purchase or guaranteed vehicle allocation.&rdquo;
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between pt-4 text-[11px] text-neutral-500 gap-2 font-mono">
+          <div className="flex flex-row items-center justify-between pt-4 text-[11px] text-neutral-500 gap-2 font-mono">
             <div>
               &copy; {new Date().getFullYear()} Tesla Management Desk. All Rights Reserved.
             </div>

@@ -66,58 +66,59 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
   };
 
   return (
-    <section id="vehicles" className="py-20 bg-[#F8F9FA] text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="vehicles" className="py-16 sm:py-20 bg-[#F8F9FA] text-neutral-900 border-t border-neutral-200">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-          <div>
-            <div className="flex items-center space-x-2 text-red-600 text-xs font-bold uppercase tracking-widest mb-2 font-mono">
-              <Shield className="w-4 h-4 text-red-600" />
-              <span>Verified Catalog</span>
+        <div className="mb-8 text-left">
+          <div className="flex items-center space-x-2 text-red-600 text-xs font-bold uppercase tracking-widest mb-2 font-mono">
+            <Shield className="w-4 h-4 text-red-600" />
+            <span>Verified Catalog</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 font-sans">
+            Tesla Vehicle Lineup
+          </h2>
+          <p className="text-sm sm:text-base text-neutral-600 mt-2 max-w-2xl leading-relaxed">
+            Explore specifications, performance figures, and authorized management allocation pricing across the full lineup.
+          </p>
+
+          {/* Search bar & Filter row */}
+          <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+            {/* Category Pills */}
+            <div className="flex items-center space-x-1.5 overflow-x-auto no-scrollbar py-1">
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  id={`cat-filter-${cat.id}`}
+                  onClick={() => setSelectedCategory(cat.id)}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                    selectedCategory === cat.id
+                      ? 'bg-neutral-900 text-white shadow-xs font-bold'
+                      : 'bg-white text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 border border-neutral-200'
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-neutral-900 font-sans">
-              Tesla Vehicle Lineup
-            </h2>
-            <p className="text-sm sm:text-base text-neutral-600 mt-2 max-w-2xl leading-relaxed">
-              Explore specifications, performance figures, and authorized management allocation pricing across the full lineup.
-            </p>
-          </div>
 
-          {/* Search bar */}
-          <div className="w-full md:w-72">
-            <input
-              type="text"
-              id="vehicle-search-input"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search models, specs..."
-              className="w-full px-4 py-2.5 bg-white border border-neutral-300 rounded-xl text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-colors shadow-2xs"
-            />
+            {/* Search Input */}
+            <div className="w-full sm:w-64 flex-shrink-0">
+              <input
+                type="text"
+                id="vehicle-search-input"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search models, specs..."
+                className="w-full px-3.5 py-1.5 bg-white border border-neutral-300 rounded-xl text-xs sm:text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 transition-colors shadow-2xs"
+              />
+            </div>
           </div>
-        </div>
-
-        {/* Category Pills */}
-        <div className="flex items-center space-x-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              id={`cat-filter-${cat.id}`}
-              onClick={() => setSelectedCategory(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer ${
-                selectedCategory === cat.id
-                  ? 'bg-neutral-900 text-white shadow-xs font-bold'
-                  : 'bg-white text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 border border-neutral-200'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
         </div>
 
         {/* Vehicle Grid / Loading State / Empty State */}
         {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[1, 2, 3, 4, 5, 6].map((idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((idx) => (
               <div
                 key={`skeleton-${idx}`}
                 className="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-xs animate-pulse flex flex-col"
@@ -127,7 +128,6 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                   <div className="space-y-2">
                     <div className="h-4 bg-neutral-200 rounded-md w-3/4" />
                     <div className="h-3 bg-neutral-100 rounded-md w-full" />
-                    <div className="h-3 bg-neutral-100 rounded-md w-5/6" />
                   </div>
                   <div className="pt-3 border-t border-neutral-100 space-y-2">
                     <div className="h-6 bg-neutral-200 rounded-md w-1/2" />
@@ -141,7 +141,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
             ))}
           </div>
         ) : filteredVehicles.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {filteredVehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
@@ -182,7 +182,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                       <span className="text-[10px] uppercase font-mono tracking-widest text-neutral-300 block">
                         Tesla
                       </span>
-                      <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight drop-shadow-xs">
+                      <h3 className="text-2xl font-bold text-white tracking-tight drop-shadow-xs">
                         {vehicle.name}
                       </h3>
                     </div>
@@ -264,9 +264,6 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                       <span className="text-2xl font-extrabold text-neutral-900 font-mono tracking-tight">
                         {formatCurrency(vehicle.promotionalPrice)}
                       </span>
-                      <span className="text-[10px] text-emerald-700 font-semibold px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-200">
-                        Authorized
-                      </span>
                     </div>
 
                     {/* Action Buttons */}
@@ -301,7 +298,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
             <Info className="w-10 h-10 mx-auto text-neutral-400 mb-3" />
             <p className="text-base font-medium text-neutral-900">No vehicles are currently listed in the catalog.</p>
             <p className="text-xs text-neutral-500 mt-1">
-              Authorized administrators can configure and publish vehicles from the Management Dashboard.
+              Administrators can configure and publish vehicles from the Management Dashboard.
             </p>
             {onRefresh && (
               <button
@@ -334,7 +331,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
 
         {/* Pricing disclaimer in catalog */}
         <div className="mt-10 p-4 rounded-xl bg-white border border-neutral-200 text-[11px] text-neutral-600 leading-relaxed shadow-2xs">
-          <span className="font-semibold text-neutral-900">Pricing Terms:</span> Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the authorized purchasing process.
+          <span className="font-semibold text-neutral-900">Pricing Terms:</span> Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the purchase allocation process.
         </div>
       </div>
     </section>

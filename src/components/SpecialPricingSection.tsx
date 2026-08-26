@@ -1,19 +1,17 @@
 import React from 'react';
-import { Tag, ShieldCheck, ArrowRight, Info } from 'lucide-react';
+import { Tag, ArrowRight, Info } from 'lucide-react';
 import { Vehicle } from '../types';
 
 interface SpecialPricingSectionProps {
   vehicles: Vehicle[];
   isLoading?: boolean;
   onRequestVehicle: (vehicle: Vehicle) => void;
-  onOpenVerification: () => void;
 }
 
 export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
   vehicles,
   isLoading = false,
   onRequestVehicle,
-  onOpenVerification,
 }) => {
   const formatCurrency = (val: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -26,52 +24,29 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
   return (
     <section
       id="special-pricing"
-      className="py-20 bg-white text-neutral-900 border-t border-neutral-200"
+      className="py-16 sm:py-20 bg-white text-neutral-900 border-t border-neutral-200"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800 text-xs font-bold uppercase tracking-wider mb-3 font-mono">
+        <div className="text-left mb-10">
+          <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800 text-xs font-bold uppercase tracking-wider mb-2.5 font-mono">
             <Tag className="w-3.5 h-3.5 text-red-600" />
             <span>Management Pricing Matrix</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
             Special Promotional Pricing
           </h2>
 
-          <p className="text-sm sm:text-base text-neutral-600 mt-3 leading-relaxed">
-            Verified Management Promotional Pricing available on authorized client allocations.
+          <p className="text-sm sm:text-base text-neutral-600 mt-2 max-w-2xl leading-relaxed">
+            Management Promotional Pricing available on selected vehicle allocations.
           </p>
-        </div>
-
-        {/* Regulatory / Authorization Notice Box */}
-        <div className="mb-10 p-5 rounded-2xl bg-[#F8F9FA] border border-neutral-200 shadow-xs max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-start space-x-3.5">
-            <ShieldCheck className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-0.5" />
-            <div className="text-xs text-neutral-600 space-y-1">
-              <p className="font-bold text-neutral-900">
-                Authorized Publication Standard
-              </p>
-              <p className="text-neutral-600 leading-relaxed">
-                Published under verified authorization. These figures reflect authorized Management Promotional Pricing and are distinct from standard factory MSRP until verified during client matching.
-              </p>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={onOpenVerification}
-            className="px-3.5 py-2 rounded-lg bg-white hover:bg-neutral-100 text-neutral-800 text-xs font-semibold whitespace-nowrap border border-neutral-300 transition-colors flex-shrink-0 cursor-pointer shadow-2xs"
-          >
-            Verify Protocol
-          </button>
         </div>
 
         {/* Pricing Matrix Cards / Loading Skeletons */}
         {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[1, 2, 3].map((idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+            {[1, 2].map((idx) => (
               <div
                 key={`promo-skel-${idx}`}
                 className="p-6 rounded-2xl bg-white border border-neutral-200 shadow-xs animate-pulse space-y-4"
@@ -88,7 +63,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
             ))}
           </div>
         ) : vehicles.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
             {vehicles.map((vehicle) => {
               const hasOriginalPrice = typeof vehicle.originalPrice === 'number' && vehicle.originalPrice > 0;
               return (
@@ -165,7 +140,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
                     </button>
 
                     <p className="text-[10px] text-neutral-400 text-center mt-2.5 font-mono">
-                      {vehicle.availability} • Authorized inquiry
+                      {vehicle.availability} • Direct allocation inquiry
                     </p>
                   </div>
                 </div>
@@ -187,7 +162,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
             <span>Pricing Terms & Conditions</span>
           </div>
           <p className="text-neutral-600 leading-relaxed">
-            &ldquo;Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the authorized purchasing process.&rdquo;
+            &ldquo;Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the purchasing process.&rdquo;
           </p>
         </div>
       </div>

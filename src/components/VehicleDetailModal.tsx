@@ -161,9 +161,9 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
         {/* Modal Scrollable Body */}
         <div className="overflow-y-auto p-6 space-y-8 flex-1">
           {/* Main Gallery & Overview Top Banner */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="grid grid-cols-12 gap-6">
             {/* Image Gallery Column */}
-            <div className="lg:col-span-7 space-y-3">
+            <div className="col-span-7 space-y-3">
               <div
                 className="relative aspect-[16/10] rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 select-none group touch-pan-y shadow-2xs"
                 onTouchStart={handleTouchStart}
@@ -200,7 +200,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                     <button
                       type="button"
                       onClick={handlePrevImage}
-                      className="absolute left-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md sm:opacity-0 sm:group-hover:opacity-100 border border-white/10"
+                      className="absolute left-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md opacity-0 group-hover:opacity-100 border border-white/10"
                       aria-label="Previous image"
                     >
                       <ChevronLeft className="w-5 h-5" />
@@ -208,7 +208,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                     <button
                       type="button"
                       onClick={handleNextImage}
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md sm:opacity-0 sm:group-hover:opacity-100 border border-white/10"
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/60 hover:bg-black/90 text-white backdrop-blur-xs transition-all cursor-pointer shadow-md opacity-0 group-hover:opacity-100 border border-white/10"
                       aria-label="Next image"
                     >
                       <ChevronRight className="w-5 h-5" />
@@ -310,7 +310,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
             </div>
 
             {/* Quick Specs & Direct Pricing Card */}
-            <div className="lg:col-span-5 flex flex-col justify-between bg-[#F8F9FA] p-5 rounded-2xl border border-neutral-200">
+            <div className="col-span-5 flex flex-col justify-between bg-[#F8F9FA] p-5 rounded-2xl border border-neutral-200">
               <div>
                 <div className="text-xs text-red-600 font-bold uppercase tracking-wider mb-1 font-mono">
                   {vehicle.tagline}
@@ -389,7 +389,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 <span>Available Verified Configurations</span>
               </h5>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-3">
                 {vehicle.configurations.map((config) => {
                   const isSelected = currentConfig?.id === config.id;
                   return (
@@ -428,7 +428,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
           )}
 
           {/* 4 Feature Columns (Performance, Charging, Interior, Safety) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+          <div className="grid grid-cols-4 gap-4 pt-2">
             {/* Performance */}
             <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200">
               <div className="flex items-center space-x-2 text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5 font-mono">
