@@ -66,7 +66,15 @@ export default function App() {
   const checkRoute = useCallback(() => {
     const path = window.location.pathname.toLowerCase();
     const hash = window.location.hash.toLowerCase();
-    const isAdminUrl = ADMIN_PATHS.some(p => path === p || path.startsWith(p + '/')) || hash === '#admin' || hash === '#/admin';
+    const baseUrl = (import.meta.env.BASE_URL || '/').toLowerCase();
+    // Normalize path by stripping base URL if present
+    const relativePath = path.startsWith(baseUrl) ? '/' + path.slice(baseUrl.length) : path;
+    const isAdminUrl =
+      ADMIN_PATHS.some(p => path === p || path.startsWith(p + '/') || relativePath === p || relativePath.startsWith(p + '/')) ||
+      hash === '#admin' ||
+      hash === '#/admin' ||
+      hash === '#admin-dashboard';
+
     if (isAdminUrl) {
       setDashboardOpen(true);
     }
@@ -151,15 +159,20 @@ export default function App() {
 
   const handleOpenDashboard = () => {
     setDashboardOpen(true);
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const targetPath = baseUrl.endsWith('/') ? `${baseUrl}admin-dashboard` : `${baseUrl}/admin-dashboard`;
     if (!window.location.pathname.includes('/admin')) {
-      window.history.pushState({ modal: 'admin-dashboard' }, '', '/admin-dashboard');
+      window.history.pushState({ modal: 'admin-dashboard' }, '', targetPath);
     }
   };
 
   const handleCloseDashboard = () => {
     setDashboardOpen(false);
-    if (ADMIN_PATHS.some(p => window.location.pathname.startsWith(p))) {
-      window.history.pushState(null, '', '/');
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const path = window.location.pathname.toLowerCase();
+    const relativePath = path.startsWith(baseUrl.toLowerCase()) ? '/' + path.slice(baseUrl.length) : path;
+    if (ADMIN_PATHS.some(p => path.startsWith(p) || relativePath.startsWith(p))) {
+      window.history.pushState(null, '', baseUrl);
     }
   };
 

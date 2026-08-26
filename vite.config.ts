@@ -3,13 +3,10 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({ mode }) => {
   return {
-    // GitHub Pages needs /teslamanagement-/
-    // Vercel needs /
-    base: process.env.GITHUB_ACTIONS
-      ? '/teslamanagement-/'
-      : '/',
+    // Repository base path for GitHub Pages (https://teslamanagement.github.io/teslamanagement-/)
+    base: process.env.VITE_BASE_PATH || '/teslamanagement-/',
 
     plugins: [
       react(),
