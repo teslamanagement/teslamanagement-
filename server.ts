@@ -16,8 +16,9 @@ dotenv.config();
 const DATA_DIR = path.join(process.cwd(), 'data');
 const STORE_FILE = path.join(DATA_DIR, 'store.json');
 const UPLOADS_DIR = path.join(DATA_DIR, 'uploads');
+const PUBLIC_UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads');
 
-// Helper: Convert Base64 data URL to permanent disk file in /data/uploads/
+// Helper: Convert Base64 data URL to permanent disk file in /data/uploads/ and /public/uploads/
 function saveBase64ImageToDisk(dataUrlOrUrl: string, prefix = 'vehicle'): string {
   if (!dataUrlOrUrl || typeof dataUrlOrUrl !== 'string') return '';
   const trimmed = dataUrlOrUrl.trim();
@@ -45,13 +46,18 @@ function saveBase64ImageToDisk(dataUrlOrUrl: string, prefix = 'vehicle'): string
     const safePrefix = prefix.replace(/[^a-zA-Z0-9_-]/g, '_').toLowerCase();
     const filename = `${safePrefix}-${Date.now()}-${crypto.randomBytes(4).toString('hex')}${ext}`;
     const filePath = path.join(UPLOADS_DIR, filename);
+    const publicFilePath = path.join(PUBLIC_UPLOADS_DIR, filename);
 
     if (!fs.existsSync(UPLOADS_DIR)) {
       fs.mkdirSync(UPLOADS_DIR, { recursive: true });
     }
+    if (!fs.existsSync(PUBLIC_UPLOADS_DIR)) {
+      fs.mkdirSync(PUBLIC_UPLOADS_DIR, { recursive: true });
+    }
 
     fs.writeFileSync(filePath, buffer);
-    console.log(`[Uploads] Saved image to disk: ${filename} (${buffer.length} bytes)`);
+    fs.writeFileSync(publicFilePath, buffer);
+    console.log(`[Uploads] Saved image to disk & public: ${filename} (${buffer.length} bytes)`);
     return `/uploads/${filename}`;
   } catch (err) {
     console.error('[Uploads] Error saving base64 image to disk:', err);

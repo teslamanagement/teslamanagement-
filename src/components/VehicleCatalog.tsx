@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Eye, ArrowUpRight, Gauge, BatteryCharging, Shield, RefreshCw, Info } from 'lucide-react';
 import { Vehicle } from '../types';
 import { getAutomotivePaintStyle } from '../utils/paintSwatch';
+import { resolveAssetUrl } from '../utils/resolveAsset';
 
 interface VehicleCatalogProps {
   vehicles: Vehicle[];
@@ -150,7 +151,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                 {/* Image Container with Availability Badge */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100 flex items-center justify-center">
                   <img
-                    src={vehicle.imageUrl}
+                    src={resolveAssetUrl(vehicle.imageUrl)}
                     alt={`${vehicle.name} exterior`}
                     loading="lazy"
                     decoding="async"

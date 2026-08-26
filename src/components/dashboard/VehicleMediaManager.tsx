@@ -22,6 +22,7 @@ import { Vehicle, VehicleColor } from '../../types';
 import { TESLA_COLOR_PRESETS } from '../../data/colors';
 import { storageService } from '../../services/storage';
 import { optimizeImageFile } from '../../utils/imageOptimizer';
+import { resolveAssetUrl } from '../../utils/resolveAsset';
 
 interface VehicleMediaManagerProps {
   vehicle: Vehicle;
@@ -600,7 +601,7 @@ export const VehicleMediaManager: React.FC<VehicleMediaManagerProps> = ({
                   {/* Thumbnail Container */}
                   <div className="relative aspect-[16/10] bg-neutral-200 overflow-hidden">
                     <img
-                      src={imgUrl}
+                      src={resolveAssetUrl(imgUrl)}
                       alt={`Vehicle visual ${idx + 1}`}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
@@ -989,7 +990,7 @@ export const VehicleMediaManager: React.FC<VehicleMediaManagerProps> = ({
                     >
                       <div className="relative aspect-[16/10] bg-neutral-100 overflow-hidden">
                         <img
-                          src={imgUrl}
+                          src={resolveAssetUrl(imgUrl)}
                           alt={`${activeColor.name} view ${idx + 1}`}
                           className="w-full h-full object-cover"
                           referrerPolicy="no-referrer"

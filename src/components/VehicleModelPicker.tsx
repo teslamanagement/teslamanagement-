@@ -3,6 +3,7 @@ import { ChevronDown, Check, Car, Sparkles, Search, Layers, Zap } from 'lucide-r
 import { Vehicle, VehicleConfiguration } from '../types';
 import { storageService } from '../services/storage';
 import { INITIAL_VEHICLES } from '../data/vehicles';
+import { resolveAssetUrl } from '../utils/resolveAsset';
 
 // ==========================================
 // 1. PREFERRED TESLA MODEL DROPDOWN COMPONENT
@@ -153,7 +154,7 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
           <div className="w-8 h-8 rounded-lg bg-neutral-100 border border-neutral-200 overflow-hidden flex-shrink-0 flex items-center justify-center">
             {currentVehicle?.imageUrl ? (
               <img
-                src={currentVehicle.imageUrl}
+                src={resolveAssetUrl(currentVehicle.imageUrl)}
                 alt={currentVehicle.name}
                 className="w-full h-full object-cover object-center"
                 referrerPolicy="no-referrer"
@@ -251,7 +252,7 @@ export const VehicleModelDropdown: React.FC<VehicleModelDropdownProps> = ({
                       <div className="w-10 h-8 rounded-md bg-neutral-100 border border-neutral-200 overflow-hidden flex-shrink-0 flex items-center justify-center">
                         {veh.imageUrl ? (
                           <img
-                            src={veh.imageUrl}
+                            src={resolveAssetUrl(veh.imageUrl)}
                             alt={veh.name}
                             className="w-full h-full object-cover object-center"
                             referrerPolicy="no-referrer"

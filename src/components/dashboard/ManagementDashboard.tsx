@@ -11,6 +11,7 @@ import { validateAndNormalizePhone } from '../../utils/phoneValidator';
 import { TeslaLogo } from '../TeslaLogo';
 import { TeslaWordmark } from '../TeslaWordmark';
 import { VehicleMediaManager } from './VehicleMediaManager';
+import { resolveAssetUrl } from '../../utils/resolveAsset';
 
 interface ManagementDashboardProps {
   isOpen: boolean;
@@ -1042,7 +1043,7 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
                           <div>
                             <div className="relative aspect-[16/9] mb-3 rounded-xl overflow-hidden bg-neutral-200 border border-neutral-200">
                               <img
-                                src={v.imageUrl}
+                                src={resolveAssetUrl(v.imageUrl)}
                                 alt={v.name}
                                 className="w-full h-full object-cover"
                                 referrerPolicy="no-referrer"

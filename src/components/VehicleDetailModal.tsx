@@ -13,6 +13,7 @@ import {
   Palette,
 } from 'lucide-react';
 import { Vehicle } from '../types';
+import { resolveAssetUrl } from '../utils/resolveAsset';
 
 interface VehicleDetailModalProps {
   vehicle: Vehicle | null;
@@ -170,7 +171,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 onTouchEnd={handleTouchEnd}
               >
                 <img
-                  src={currentImages[safeImageIndex] || vehicle.imageUrl}
+                  src={resolveAssetUrl(currentImages[safeImageIndex] || vehicle.imageUrl)}
                   alt={`${vehicle.name} - ${currentColor?.name || 'View'} ${safeImageIndex + 1}`}
                   decoding="async"
                   className="w-full h-full object-cover object-center transition-all duration-300"
@@ -250,7 +251,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                       }`}
                     >
                       <img
-                        src={img}
+                        src={resolveAssetUrl(img)}
                         alt={`thumbnail ${idx + 1}`}
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"

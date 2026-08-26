@@ -4,9 +4,21 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig(({ mode }) => {
+  // Auto-detect base path:
+  // - If VITE_BASE_PATH is provided, use it.
+  // - If running in GitHub Actions for username.github.io (root domain), use '/'.
+  // - If running in GitHub Actions for a project repo (e.g., /teslamanagement-/), use '/<repo>/'.
+  // - Otherwise default to '/' or './'
+  let basePath = process.env.VITE_BASE_PATH || '/';
+  if (process.env.GITHUB_REPOSITORY) {
+    const repoName = process.env.GITHUB_REPOSITORY.split('/')[1];
+    if (repoName) {
+      basePath = repoName.endsWith('.github.io') ? '/' : `/${repoName}/`;
+    }
+  }
+
   return {
-    // Repository base path for GitHub Pages (https://teslamanagement.github.io/teslamanagement-/)
-    base: process.env.VITE_BASE_PATH || '/teslamanagement-/',
+    base: basePath,
 
     plugins: [
       react(),

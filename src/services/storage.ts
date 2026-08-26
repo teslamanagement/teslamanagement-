@@ -2,12 +2,14 @@ import { ActivityLog, AuthorizationInfo, CountryData, CustomerInquiry, InquirySt
 import { WORLDWIDE_COUNTRIES } from '../data/countries';
 import { INITIAL_AUTH_INFO } from '../data/initialContent';
 import { INITIAL_VEHICLES } from '../data/vehicles';
+import { resolveAssetUrl } from '../utils/resolveAsset';
 
 const TOKEN_STORAGE_KEY = 'tm_admin_bearer_token';
 
 // Dedicated Key for Permanent Vehicle Image Persistence across all sessions & GitHub Pages
-export const TESLA_VEHICLE_IMAGES_KEY = 'tesla_vehicle_images';
-export const VEHICLES_CACHE_KEY = 'tm_vehicles_cache_v1';
+export const TESLA_VEHICLE_IMAGES_KEY = 'tesla_vehicle_images_v2';
+export const VEHICLES_CACHE_KEY = 'tm_vehicles_cache_v2';
+export const AUTH_INFO_CACHE_KEY = 'tm_auth_info_cache_v2';
 export const DEFAULT_VEHICLES: Vehicle[] = INITIAL_VEHICLES;
 
 // In-Memory caches (Never persistent for sensitive inquiries/logs)
@@ -35,7 +37,7 @@ function getAuthHeaders(): HeadersInit {
  * 2. Previously stored vehicle image (from cached vehicle object)
  * 3. Default image (from DEFAULT_VEHICLES)
  *
- * Never reverse this order!
+ * Automatically resolves asset paths with resolveAssetUrl for GitHub Pages support.
  */
 function applyVehicleImagePriority(
   rawVehicles: Vehicle[],
@@ -50,30 +52,40 @@ function applyVehicleImagePriority(
 
     // 1. Check if a custom/saved image exists for this specific model ID
     const savedCustomImage = savedImagesMap[vehicle.id];
+    const isLegacyUnsplash = savedCustomImage && savedCustomImage.includes('images.unsplash.com');
+    const hasModernDefault = defaultImage && !defaultImage.includes('images.unsplash.com');
 
-    if (savedCustomImage && typeof savedCustomImage === 'string' && savedCustomImage.trim()) {
-      const activeImage = savedCustomImage.trim();
+    if (savedCustomImage && typeof savedCustomImage === 'string' && savedCustomImage.trim() && !(isLegacyUnsplash && hasModernDefault)) {
+      const activeImage = resolveAssetUrl(savedCustomImage.trim());
       vehicle.imageUrl = activeImage;
 
       // Ensure galleryImages has the saved image at index 0 without losing other photos
       if (Array.isArray(vehicle.galleryImages) && vehicle.galleryImages.length > 0) {
-        if (vehicle.galleryImages[0] !== activeImage) {
+        const resolvedGallery = vehicle.galleryImages.map(img => resolveAssetUrl(img));
+        if (resolvedGallery[0] !== activeImage) {
           vehicle.galleryImages = [
             activeImage,
-            ...vehicle.galleryImages.filter((img) => img !== activeImage),
+            ...resolvedGallery.filter((img) => img !== activeImage),
           ];
+        } else {
+          vehicle.galleryImages = resolvedGallery;
         }
       } else {
         vehicle.galleryImages = [activeImage];
       }
-    } else if (vehicle.imageUrl && typeof vehicle.imageUrl === 'string' && vehicle.imageUrl.trim()) {
+    } else if (vehicle.imageUrl && typeof vehicle.imageUrl === 'string' && vehicle.imageUrl.trim() && !(vehicle.imageUrl.includes('images.unsplash.com') && hasModernDefault)) {
       // 2. Use previously stored vehicle image
-      vehicle.imageUrl = vehicle.imageUrl.trim();
+      vehicle.imageUrl = resolveAssetUrl(vehicle.imageUrl.trim());
+      if (Array.isArray(vehicle.galleryImages)) {
+        vehicle.galleryImages = vehicle.galleryImages.map(img => resolveAssetUrl(img));
+      }
     } else {
       // 3. Fallback to default image
-      vehicle.imageUrl = defaultImage;
-      if (!vehicle.galleryImages || vehicle.galleryImages.length === 0) {
-        vehicle.galleryImages = defaultVehicle?.galleryImages ? [...defaultVehicle.galleryImages] : (defaultImage ? [defaultImage] : []);
+      vehicle.imageUrl = resolveAssetUrl(defaultImage);
+      if (!vehicle.galleryImages || vehicle.galleryImages.length === 0 || (vehicle.galleryImages.some(img => img.includes('images.unsplash.com')) && hasModernDefault)) {
+        vehicle.galleryImages = defaultVehicle?.galleryImages ? defaultVehicle.galleryImages.map(img => resolveAssetUrl(img)) : (defaultImage ? [resolveAssetUrl(defaultImage)] : []);
+      } else {
+        vehicle.galleryImages = vehicle.galleryImages.map(img => resolveAssetUrl(img));
       }
     }
 
@@ -220,7 +232,7 @@ export const storageService = {
 
   getAuthInfo(): AuthorizationInfo {
     try {
-      const raw = localStorage.getItem('tm_auth_info_cache_v1');
+      const raw = localStorage.getItem(AUTH_INFO_CACHE_KEY);
       if (raw !== null) {
         const parsed = JSON.parse(raw);
         if (parsed && parsed.authorizationNumber) return { ...INITIAL_AUTH_INFO, ...parsed };
@@ -317,7 +329,7 @@ export const storageService = {
         const data = await res.json();
         if (data && data.authorizationNumber) {
           try {
-            localStorage.setItem('tm_auth_info_cache_v1', JSON.stringify(data));
+            localStorage.setItem(AUTH_INFO_CACHE_KEY, JSON.stringify(data));
           } catch {}
           return data;
         }
