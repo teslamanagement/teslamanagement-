@@ -203,7 +203,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                       </h3>
                     </div>
                     <span className="text-xs font-semibold text-white bg-black/60 px-2.5 py-1 rounded-md backdrop-blur-xs border border-white/20 font-mono">
-                      {vehicle.specs.acceleration}
+                      {vehicle?.specs?.acceleration || '3.5s 0-60'}
                     </span>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                 <div className="p-5 flex-1 flex flex-col justify-between">
                   <div>
                     <p className="text-xs text-neutral-600 line-clamp-2 mb-3 leading-relaxed">
-                      {vehicle.description}
+                      {vehicle.description || vehicle.tagline}
                     </p>
 
                     {/* Color Swatches Mini Bar */}
@@ -246,7 +246,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                         <div className="truncate">
                           <span className="text-[10px] text-neutral-500 uppercase block font-mono">Range</span>
                           <span className="text-xs font-semibold text-neutral-900 truncate block font-mono">
-                            {vehicle.specs.range.split(' ')[0]} mi
+                            {vehicle?.specs?.range ? String(vehicle.specs.range).split(' ')[0] : '300'} mi
                           </span>
                         </div>
                       </div>
@@ -256,7 +256,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                         <div className="truncate">
                           <span className="text-[10px] text-neutral-500 uppercase block font-mono">Top Speed</span>
                           <span className="text-xs font-semibold text-neutral-900 truncate block font-mono">
-                            {vehicle.specs.topSpeed}
+                            {vehicle?.specs?.topSpeed || '150 mph'}
                           </span>
                         </div>
                       </div>

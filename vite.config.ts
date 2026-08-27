@@ -35,17 +35,7 @@ export default defineConfig(({ mode }) => {
       target: 'esnext',
       minify: 'esbuild' as const,
       cssMinify: true,
-
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vendor-react': ['react', 'react-dom'],
-            'vendor-icons': ['lucide-react'],
-          },
-        },
-      },
-
-      chunkSizeWarningLimit: 1000,
+      chunkSizeWarningLimit: 1500,
     },
 
     server: {

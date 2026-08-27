@@ -11,7 +11,7 @@ export const AboutManagement: React.FC<AboutManagementProps> = ({
 }) => {
   const representativeName = authInfo?.representativeName || 'Client Services & Fleet Allocation Desk';
   const authorizedTitle = authInfo?.authorizedTitle || 'Client Vehicle Representative & Allocation Coordinator';
-  const officialEmail = authInfo?.officialEmail || 'teslasemi60@gmail.com';
+  const officialEmail = authInfo?.officialEmail || 'teslamanagementct@gmail.com';
   const officialPhone = authInfo?.officialPhone || 'Unavailable at this moment';
   const officeLocation = authInfo?.officeLocation || 'Tesla Management Operations & International Client Support Center, 1 Tesla Road, Austin, TX 78725';
 

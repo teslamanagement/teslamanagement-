@@ -17,7 +17,7 @@ export const INITIAL_AUTH_INFO: AuthorizationInfo = {
     "Dedicated corporate fleet and individual customer order support",
     "Purchase guidance, client payment security, and order tracking"
   ],
-  "officialEmail": "teslasemi60@gmail.com",
+  "officialEmail": "teslamanagementct@gmail.com",
   "officialPhone": "Unavailable at this moment",
   "officialDialCode": "+1",
   "businessMessagingChannel": "Tesla Management Official Client Desk",

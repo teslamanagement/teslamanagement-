@@ -36,7 +36,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     return INITIAL_VEHICLES;
   }, [propVehicles]);
 
-  const officialEmail = authInfo?.officialEmail || 'teslasemi60@gmail.com';
+  const officialEmail = authInfo?.officialEmail || 'teslamanagementct@gmail.com';
   const officialDialCode = authInfo?.officialDialCode || '+1';
   const officialPhone = authInfo?.officialPhone || 'Unavailable at this moment';
   const businessMessagingChannel = authInfo?.businessMessagingChannel || 'Tesla Management Client Desk';

@@ -9,7 +9,7 @@ const TOKEN_STORAGE_KEY = 'tm_admin_bearer_token';
 // Dedicated Key for Permanent Vehicle Image Persistence across all sessions & GitHub Pages
 export const TESLA_VEHICLE_IMAGES_KEY = 'tesla_vehicle_images_v4';
 export const VEHICLES_CACHE_KEY = 'tm_vehicles_cache_v4';
-export const AUTH_INFO_CACHE_KEY = 'tm_auth_info_cache_v4';
+export const AUTH_INFO_CACHE_KEY = 'tm_auth_info_cache_v5';
 export const DEFAULT_VEHICLES: Vehicle[] = INITIAL_VEHICLES;
 
 // In-Memory caches (Never persistent for sensitive inquiries/logs)
@@ -651,7 +651,7 @@ export const storageService = {
       }
       if (json.authInfo) {
         try {
-          localStorage.setItem('tm_auth_info_cache_v1', JSON.stringify(json.authInfo));
+          localStorage.setItem(AUTH_INFO_CACHE_KEY, JSON.stringify(json.authInfo));
         } catch {}
       }
       return { success: true, authInfo: json.authInfo };
@@ -708,11 +708,11 @@ export const storageService = {
       }
       try {
         if (json.vehicles) {
-          localStorage.setItem('tm_vehicles_cache_v1', JSON.stringify(json.vehicles));
+          localStorage.setItem(VEHICLES_CACHE_KEY, JSON.stringify(json.vehicles));
           window.dispatchEvent(new CustomEvent('tm:vehicles_synced', { detail: json.vehicles }));
         }
         if (json.authInfo) {
-          localStorage.setItem('tm_auth_info_cache_v1', JSON.stringify(json.authInfo));
+          localStorage.setItem(AUTH_INFO_CACHE_KEY, JSON.stringify(json.authInfo));
         }
       } catch {}
       return {

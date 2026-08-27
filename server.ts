@@ -178,6 +178,9 @@ function initStore() {
 
       if (data.authInfo && typeof data.authInfo === 'object') {
         authInfo = { ...INITIAL_AUTH_INFO, ...data.authInfo };
+        if (authInfo.officialEmail === 'teslasemi60@gmail.com' || !authInfo.officialEmail) {
+          authInfo.officialEmail = 'teslamanagementct@gmail.com';
+        }
       }
       if (Array.isArray(data.countriesList)) {
         countriesList = data.countriesList;
@@ -364,6 +367,11 @@ async function startServer() {
   // ==========================================
   // PUBLIC API ENDPOINTS (No Admin Auth Required)
   // ==========================================
+
+  // Health check endpoint
+  app.get('/api/health', (_req: Request, res: Response) => {
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  });
 
   // 1. Get Public Vehicle Catalog (with cache-control)
   app.get('/api/vehicles', (_req: Request, res: Response) => {
