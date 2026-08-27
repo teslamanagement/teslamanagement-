@@ -120,6 +120,21 @@ function initStore() {
     if (!fs.existsSync(UPLOADS_DIR)) {
       fs.mkdirSync(UPLOADS_DIR, { recursive: true });
     }
+    if (!fs.existsSync(PUBLIC_UPLOADS_DIR)) {
+      fs.mkdirSync(PUBLIC_UPLOADS_DIR, { recursive: true });
+    }
+
+    // Sync any pre-existing files from public/uploads to data/uploads
+    if (fs.existsSync(PUBLIC_UPLOADS_DIR)) {
+      const publicFiles = fs.readdirSync(PUBLIC_UPLOADS_DIR);
+      for (const file of publicFiles) {
+        const src = path.join(PUBLIC_UPLOADS_DIR, file);
+        const dest = path.join(UPLOADS_DIR, file);
+        if (fs.statSync(src).isFile() && !fs.existsSync(dest)) {
+          fs.copyFileSync(src, dest);
+        }
+      }
+    }
 
     if (fs.existsSync(STORE_FILE)) {
       const raw = fs.readFileSync(STORE_FILE, 'utf-8');
@@ -131,8 +146,9 @@ function initStore() {
         // Automatically extract and migrate any legacy embedded base64 to disk files
         vehicles = data.vehicles.map(normalizeVehicleImages);
       }
-      // Apply strict priority: 1. Saved/custom image, 2. Stored vehicle image, 3. Default image
+      // Apply strict priority: 1. Saved/custom image, 2. Stored vehicle image (if valid remote or custom), 3. Default image
       vehicles = vehicles.map((v) => {
+        const defaultVehicle = INITIAL_VEHICLES.find((d) => d.id === v.id);
         const customImg = savedVehicleImages[v.id];
         if (customImg && typeof customImg === 'string' && customImg.trim()) {
           const cleanImg = customImg.trim();
@@ -143,6 +159,14 @@ function initStore() {
             }
           } else {
             v.galleryImages = [cleanImg];
+          }
+        } else if (v.imageUrl && (v.imageUrl.startsWith('http://') || v.imageUrl.startsWith('https://') || v.imageUrl.startsWith('data:'))) {
+          // Valid remote or data image, keep as is
+        } else {
+          // Use default vehicle image from INITIAL_VEHICLES
+          v.imageUrl = defaultVehicle?.imageUrl || v.imageUrl;
+          if (defaultVehicle?.galleryImages) {
+            v.galleryImages = [...defaultVehicle.galleryImages];
           }
         }
         return v;
@@ -311,6 +335,13 @@ async function startServer() {
 
   // Static serving for persistent uploaded media files with caching headers
   app.use('/uploads', express.static(UPLOADS_DIR, {
+    maxAge: '7d',
+    setHeaders: (res) => {
+      res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
+      res.setHeader('X-Content-Type-Options', 'nosniff');
+    }
+  }));
+  app.use('/uploads', express.static(PUBLIC_UPLOADS_DIR, {
     maxAge: '7d',
     setHeaders: (res) => {
       res.setHeader('Cache-Control', 'public, max-age=604800, immutable');

@@ -159,11 +159,11 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="overflow-y-auto p-6 space-y-8 flex-1">
+        <div className="overflow-y-auto p-4 sm:p-6 space-y-6 sm:space-y-8 flex-1">
           {/* Main Gallery & Overview Top Banner */}
-          <div className="grid grid-cols-12 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Image Gallery Column */}
-            <div className="col-span-7 space-y-3">
+            <div className="col-span-1 lg:col-span-7 space-y-3">
               <div
                 className="relative aspect-[16/10] rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 select-none group touch-pan-y shadow-2xs"
                 onTouchStart={handleTouchStart}
@@ -171,11 +171,25 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 onTouchEnd={handleTouchEnd}
               >
                 <img
+                  id={`detail-img-${vehicle.id}-${safeImageIndex}`}
                   src={resolveAssetUrl(currentImages[safeImageIndex] || vehicle.imageUrl)}
                   alt={`${vehicle.name} - ${currentColor?.name || 'View'} ${safeImageIndex + 1}`}
+                  loading="eager"
                   decoding="async"
-                  className="w-full h-full object-cover object-center transition-all duration-300"
+                  className="w-full h-full object-cover object-center transition-all duration-300 block"
                   referrerPolicy="no-referrer"
+                  onLoad={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    console.log(`[Modal Image Loaded] Successfully loaded ${vehicle.name} image:`, target.currentSrc || target.src);
+                  }}
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    console.error(`[Modal Image Error] Failed to load modal image for ${vehicle.name}:`, target.src);
+                    const fallback = vehicle.colors?.[0]?.images?.[0] || 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80';
+                    if (target.src !== fallback) {
+                      target.src = fallback;
+                    }
+                  }}
                 />
 
                 {/* Top Status & Color Badge */}
@@ -310,7 +324,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
             </div>
 
             {/* Quick Specs & Direct Pricing Card */}
-            <div className="col-span-5 flex flex-col justify-between bg-[#F8F9FA] p-5 rounded-2xl border border-neutral-200">
+            <div className="col-span-1 lg:col-span-5 flex flex-col justify-between bg-[#F8F9FA] p-5 rounded-2xl border border-neutral-200">
               <div>
                 <div className="text-xs text-red-600 font-bold uppercase tracking-wider mb-1 font-mono">
                   {vehicle.tagline}
@@ -389,7 +403,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                 <span>Available Verified Configurations</span>
               </h5>
 
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {vehicle.configurations.map((config) => {
                   const isSelected = currentConfig?.id === config.id;
                   return (
@@ -428,7 +442,7 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
           )}
 
           {/* 4 Feature Columns (Performance, Charging, Interior, Safety) */}
-          <div className="grid grid-cols-4 gap-4 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
             {/* Performance */}
             <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200">
               <div className="flex items-center space-x-2 text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5 font-mono">

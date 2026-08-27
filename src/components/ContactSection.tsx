@@ -189,25 +189,25 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#F8F9FA] text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+    <section id="contact" className="py-16 sm:py-20 bg-[#F8F9FA] text-neutral-900 border-t border-neutral-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-left max-w-3xl mb-10 sm:mb-12">
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-600 block mb-2">
             Direct Communication Desk
           </span>
-          <h2 className="text-5xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
             Contact Management
           </h2>
-          <p className="text-base text-neutral-600 mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-600 mt-2 leading-relaxed">
             Reach Tesla Management representatives for vehicle allocations, corporate orders, and direct pricing inquiries.
           </p>
         </div>
 
-        <div className="grid grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           {/* Contact Details Sidebar */}
-          <div className="col-span-5 space-y-6">
-            <div className="p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs space-y-6">
-              <h3 className="text-lg font-bold text-neutral-900 flex items-center space-x-2">
+          <div className="col-span-1 lg:col-span-5 space-y-6">
+            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs space-y-6">
+              <h3 className="text-base sm:text-lg font-bold text-neutral-900 flex items-center space-x-2">
                 <MessageSquare className="w-5 h-5 text-red-600" />
                 <span>Direct Contact Channels</span>
               </h3>
@@ -217,7 +217,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <Mail className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase font-mono block font-semibold">Official Management Email</span>
-                    <a href={`mailto:${officialEmail}`} className="text-neutral-900 hover:text-red-600 transition-colors font-medium">
+                    <a href={`mailto:${officialEmail}`} className="text-neutral-900 hover:text-red-600 transition-colors font-medium break-all text-xs sm:text-sm">
                       {officialEmail}
                     </a>
                   </div>
@@ -227,7 +227,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <Phone className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase font-mono block font-semibold">Official Telephone Number</span>
-                    <span className="text-neutral-900 font-mono font-medium">
+                    <span className="text-neutral-900 font-mono font-medium text-xs sm:text-sm">
                       {officialDialCode} {officialPhone}
                     </span>
                   </div>
@@ -237,7 +237,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <MessageSquare className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase font-mono block font-semibold">Client Messaging Channel</span>
-                    <span className="text-neutral-800 font-medium">
+                    <span className="text-neutral-800 font-medium text-xs sm:text-sm">
                       {businessMessagingChannel}
                     </span>
                   </div>
@@ -247,7 +247,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <MapPin className="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[10px] text-neutral-500 uppercase font-mono block font-semibold">Office Information</span>
-                    <span className="text-neutral-800 leading-relaxed">
+                    <span className="text-neutral-800 leading-relaxed text-xs">
                       {officeLocation}
                     </span>
                   </div>
@@ -257,7 +257,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           </div>
 
           {/* Interactive Contact Form */}
-          <div className="col-span-7 p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs">
+          <div className="col-span-1 lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-white border border-neutral-200 shadow-xs">
             {submitted && submittedSummary ? (
               <div className="py-6 text-center space-y-6 animate-in zoom-in-95 duration-200" id="contact-success-state">
                 {/* Success Indicator Badge */}
@@ -307,7 +307,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     </span>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 text-xs">
                     <div className="flex flex-col space-y-0.5">
                       <span className="text-neutral-500">Applicant:</span>
                       <span className="text-neutral-900 font-medium">{submittedSummary.fullName}</span>
@@ -345,7 +345,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 {/* Actions: Done & Submit Another Request */}
-                <div className="pt-2 flex flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 max-w-md mx-auto">
                   <button
                     type="button"
                     id="contact-done-btn"
@@ -356,7 +356,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         section.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="px-8 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-xs active:scale-98"
+                    className="w-full sm:w-auto px-8 py-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer shadow-xs active:scale-98"
                   >
                     Done
                   </button>
@@ -365,7 +365,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     type="button"
                     id="contact-another-request-btn"
                     onClick={resetForm}
-                    className="px-6 py-3 rounded-xl bg-white hover:bg-neutral-100 text-neutral-700 text-xs font-bold uppercase tracking-wider border border-neutral-300 transition-colors cursor-pointer flex items-center justify-center space-x-2 active:scale-98"
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white hover:bg-neutral-100 text-neutral-700 text-xs font-bold uppercase tracking-wider border border-neutral-300 transition-colors cursor-pointer flex items-center justify-center space-x-2 active:scale-98"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Submit Another Request</span>
@@ -374,7 +374,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4" id="contact-management-form">
-                <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-neutral-900 mb-2">
                   Direct Inquiries & Assistance
                 </h3>
 
@@ -385,7 +385,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   </div>
                 )}
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="contact-name" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5">
                       Your Name <span className="text-red-600">*</span>
@@ -450,7 +450,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                 {/* Model & Configuration Pickers for vehicle-related topics */}
                 {(inquiryTopic.includes('Vehicle') || inquiryTopic.includes('Pricing') || inquiryTopic.includes('Fleet')) && (
-                  <div className="grid grid-cols-2 gap-4 p-3.5 rounded-xl bg-[#F8F9FA] border border-neutral-200">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-3.5 rounded-xl bg-[#F8F9FA] border border-neutral-200">
                     <VehicleModelDropdown
                       id="contact-preferred-model"
                       selectedModelName={selectedModel}

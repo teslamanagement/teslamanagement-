@@ -26,7 +26,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
       id="special-pricing"
       className="py-16 sm:py-20 bg-white text-neutral-900 border-t border-neutral-200"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left mb-10">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800 text-xs font-bold uppercase tracking-wider mb-2.5 font-mono">
@@ -45,8 +45,8 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
 
         {/* Pricing Matrix Cards / Loading Skeletons */}
         {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-            {[1, 2].map((idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {[1, 2, 3].map((idx) => (
               <div
                 key={`promo-skel-${idx}`}
                 className="p-6 rounded-2xl bg-white border border-neutral-200 shadow-xs animate-pulse space-y-4"
@@ -63,7 +63,7 @@ export const SpecialPricingSection: React.FC<SpecialPricingSectionProps> = ({
             ))}
           </div>
         ) : vehicles.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {vehicles.map((vehicle) => {
               const hasOriginalPrice = typeof vehicle.originalPrice === 'number' && vehicle.originalPrice > 0;
               return (

@@ -7,6 +7,7 @@
 export function resolveAssetUrl(url: string | undefined | null): string {
   if (!url || typeof url !== 'string') return '';
   const trimmed = url.trim();
+  if (!trimmed) return '';
   
   // External URLs or Base64 / Blob URLs are returned as-is
   if (
@@ -21,6 +22,12 @@ export function resolveAssetUrl(url: string | undefined | null): string {
   // Get Vite's base path (e.g., '/' or '/teslamanagement-/')
   const base = import.meta.env.BASE_URL || '/';
   const cleanBase = base.endsWith('/') ? base : `${base}/`;
+
+  // If already prefixed with base, return as-is
+  if (cleanBase !== '/' && trimmed.startsWith(cleanBase)) {
+    return trimmed;
+  }
+
   const cleanPath = trimmed.startsWith('/') ? trimmed.slice(1) : trimmed;
 
   return `${cleanBase}${cleanPath}`;

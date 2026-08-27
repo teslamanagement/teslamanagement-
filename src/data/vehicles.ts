@@ -9,10 +9,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "High-Efficiency Electric Sports Sedan",
     "description": "Designed for electric efficiency, refined aerodynamics, quiet acoustic glass cabin, ambient interior lighting, and nimble handling.",
     "category": "sedan",
-    "imageUrl": "/uploads/model-3-img-1787747721635-cd8d8823.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/model-3-img-1787747721635-cd8d8823.webp",
-      "/uploads/model-3-img-1787747722822-ce626329.webp"
+      "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80"
     ],
     "colors": [
       {
@@ -140,10 +140,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Versatile Mid-Size Electric Crossover SUV",
     "description": "The best-selling all-electric crossover SUV engineered with maximum cargo versatility, elevated ride height, and all-weather capability.",
     "category": "suv",
-    "imageUrl": "/uploads/model-y-img-1787747768502-2e659d81.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/model-y-img-1787747768502-2e659d81.webp",
-      "/uploads/model-y-img-1787747770063-ee6df530.webp"
+      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
     ],
     "colors": [
       {
@@ -268,10 +268,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Extended Wheelbase Luxury Executive Crossover",
     "description": "Authorized extended-wheelbase specification featuring executive rear captain seating, enhanced legroom, premium sound isolation, and dual lounge consoles.",
     "category": "suv",
-    "imageUrl": "/uploads/model-y-l-img-1787747815199-6ba94775.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/model-y-l-img-1787747815199-6ba94775.webp",
-      "/uploads/model-y-l-img-1787747817374-d7c2656c.webp"
+      "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
     ],
     "colors": [
       {
@@ -385,10 +385,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Ultra-Hard 30X Cold-Rolled Stainless-Steel Exoskeleton",
     "description": "Built with an impenetrable exterior exoskeleton, shatter-resistant Armor Glass, 4-wheel steer-by-wire agility, and up to 11,000 lbs of towing power.",
     "category": "truck",
-    "imageUrl": "/uploads/cybertruck-img-1787747842474-288a014c.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/cybertruck-img-1787747842474-288a014c.webp",
-      "/uploads/cybertruck-img-1787747844667-15699132.webp"
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
     ],
     "colors": [
       {
@@ -396,7 +396,7 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Shield Black",
         "hex": "#1A1B1E",
         "images": [
-          "https://images.unsplash.com/photo-1698877546059-d8cbff695796?auto=format&fit=crop&w=1600&q=80"
+          "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80"
         ]
       }
     ],
@@ -472,10 +472,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "The Pinnacle of Electric Luxury & Acceleration",
     "description": "Unrivaled acceleration, ultra-long range, iconic liftback silhouette, tri-motor Plaid performance, and tri-zone climate luxury.",
     "category": "sedan",
-    "imageUrl": "/uploads/model-s-img-1787747887543-83da5a37.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/model-s-img-1787747887543-83da5a37.webp",
-      "/uploads/model-s-img-1787747889854-b9234d6c.webp"
+      "https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80"
     ],
     "colors": [
       {
@@ -590,10 +590,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Falcon Wing Flagship Luxury SUV",
     "description": "Signature Falcon Wing rear doors, panoramic windshield, unmatched acceleration, three-row luxury seating, and 5,000 lbs towing capacity.",
     "category": "suv",
-    "imageUrl": "/uploads/model-x-img-1787747922033-389ccb0f.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/model-x-img-1787747922033-389ccb0f.webp",
-      "/uploads/model-x-img-1787747923536-4b9ed94c.webp"
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
     ],
     "colors": [
       {
@@ -707,10 +707,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Supercar Performance & Record-Setting Aerodynamics",
     "description": "An all-electric supercar designed to maximize the potential of aerodynamic engineering into record-setting performance and efficiency.",
     "category": "specialty",
-    "imageUrl": "/uploads/roadster-img-1787747949166-cbaa15be.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/roadster-img-1787747949166-cbaa15be.webp",
-      "/uploads/roadster-img-1787747951067-17e1a38e.webp"
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
     ],
     "specs": {
       "range": "620 miles",
@@ -764,10 +764,9 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Dedicated Autonomous Point-to-Point Mobility",
     "description": "Designed exclusively for autonomous, driverless transportation with butterfly doors, inductive wireless charging, and zero steering wheel or pedal clutter.",
     "category": "specialty",
-    "imageUrl": "/uploads/cybercab-img-1787748016346-33871110.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/cybercab-img-1787748016346-33871110.webp",
-      "/uploads/cybercab-img-1787748018804-976b5e94.webp"
+      "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80"
     ],
     "specs": {
       "range": "200+ miles per charge",
@@ -821,10 +820,9 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Heavy-Duty Class 8 Electric Freight Hauler",
     "description": "Revolutionary heavy-duty commercial freight semi with center-driver cockpit, 3 independent electric motors, and massive operating cost savings.",
     "category": "commercial",
-    "imageUrl": "/uploads/tesla-semi-img-1787748050884-b610a1b7.webp",
+    "imageUrl": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80",
     "galleryImages": [
-      "/uploads/tesla-semi-img-1787748050884-b610a1b7.webp",
-      "/uploads/tesla-semi-img-1787748053248-f3df4feb.webp"
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80"
     ],
     "specs": {
       "range": "500 miles at 82,000 lbs gross combination weight",

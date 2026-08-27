@@ -16,31 +16,31 @@ export const CustomerSecurity: React.FC = () => {
   ];
 
   return (
-    <section id="security" className="py-20 bg-white text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+    <section id="security" className="py-16 sm:py-20 bg-white text-neutral-900 border-t border-neutral-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl">
           {/* Header */}
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-3 font-mono">
+          <div className="text-left mb-10 sm:mb-12">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-2.5 font-mono">
               <ShieldAlert className="w-3.5 h-3.5" />
               <span>Fraud Prevention & Customer Protection</span>
             </div>
 
-            <h2 className="text-5xl font-extrabold text-neutral-900 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
               Customer Security & Payment Safety
             </h2>
 
-            <p className="text-base text-neutral-600 mt-3 leading-relaxed">
+            <p className="text-sm sm:text-base text-neutral-600 mt-2 leading-relaxed">
               Transparent purchasing protocols to protect customers against fraudulent solicitations.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Prohibited Methods Card */}
-            <div className="p-8 rounded-2xl bg-red-50/50 border border-red-200 space-y-4 shadow-2xs">
+            <div className="p-6 sm:p-8 rounded-2xl bg-red-50/50 border border-red-200 space-y-4 shadow-2xs">
               <div className="flex items-center space-x-3 text-red-600">
                 <Ban className="w-6 h-6 flex-shrink-0" />
-                <h3 className="text-base font-bold uppercase tracking-wider text-neutral-900">
+                <h3 className="text-sm sm:text-base font-bold uppercase tracking-wider text-neutral-900">
                   Prohibited Payment Methods
                 </h3>
               </div>
@@ -49,7 +49,7 @@ export const CustomerSecurity: React.FC = () => {
                 Management representatives will <strong className="text-red-600">NEVER</strong> instruct customers to pay through any of the following methods:
               </p>
 
-              <ul className="space-y-3.5 pt-1.5">
+              <ul className="space-y-3 pt-1.5">
                 {bannedMethods.map((method, idx) => (
                   <li key={idx} className="flex items-start space-x-2.5 text-xs text-neutral-700 font-medium leading-relaxed">
                     <span className="text-red-600 font-bold flex-shrink-0">✕</span>
@@ -60,10 +60,10 @@ export const CustomerSecurity: React.FC = () => {
             </div>
 
             {/* Legitimate Protocol Card */}
-            <div className="p-8 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-4 shadow-2xs">
+            <div className="p-6 sm:p-8 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-4 shadow-2xs">
               <div className="flex items-center space-x-3 text-emerald-700">
                 <Lock className="w-6 h-6 flex-shrink-0" />
-                <h3 className="text-base font-bold uppercase tracking-wider text-neutral-900">
+                <h3 className="text-sm sm:text-base font-bold uppercase tracking-wider text-neutral-900">
                   Official Transaction Standards
                 </h3>
               </div>

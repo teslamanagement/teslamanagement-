@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Lock } from 'lucide-react';
+import { Lock, Menu, X } from 'lucide-react';
 import { AuthorizationInfo } from '../types';
 import { TeslaLogo } from './TeslaLogo';
 import { TeslaWordmark } from './TeslaWordmark';
@@ -18,6 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   activeSection = 'home',
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
@@ -45,6 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    setMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
       const navOffset = 80;
@@ -61,12 +63,12 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header
       id="main-header"
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-xs py-3.5'
-          : 'bg-white/80 backdrop-blur-xs border-b border-neutral-200/60 py-4'
+        isScrolled || mobileMenuOpen
+          ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-xs py-3'
+          : 'bg-white/85 backdrop-blur-xs border-b border-neutral-200/60 py-3.5 sm:py-4'
       }`}
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
         {/* Brand Logo & Name */}
         <div className="flex items-center space-x-3 flex-shrink-0">
           <a
@@ -76,17 +78,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             id="brand-logo"
           >
             {/* Official Tesla Logo */}
-            <TeslaLogo className="w-7 h-7 flex-shrink-0 transition-transform duration-200 group-hover:scale-105" color="#E82127" />
+            <TeslaLogo className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0 transition-transform duration-200 group-hover:scale-105" color="#E82127" />
             <div className="flex flex-col">
               <div className="flex items-center space-x-1.5">
-                <TeslaWordmark className="h-3.5 w-auto text-neutral-900" />
-                <span className="font-light text-xs tracking-[0.2em] uppercase text-neutral-500">
+                <TeslaWordmark className="h-3 sm:h-3.5 w-auto text-neutral-900" />
+                <span className="font-light text-[11px] sm:text-xs tracking-[0.2em] uppercase text-neutral-500">
                   MANAGEMENT
                 </span>
               </div>
               <div className="flex items-center space-x-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-xs"></span>
-                <span className="text-[10px] text-neutral-500 font-medium tracking-wide">
+                <span className="text-[9px] sm:text-[10px] text-neutral-500 font-medium tracking-wide">
                   Client Desk
                 </span>
               </div>
@@ -94,8 +96,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           </a>
         </div>
 
-        {/* Permanent Desktop Navigation Links */}
-        <nav className="flex items-center space-x-1 overflow-x-auto no-scrollbar py-1" aria-label="Main navigation">
+        {/* Desktop Navigation Links */}
+        <nav className="hidden lg:flex items-center space-x-1 py-1" aria-label="Main navigation">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.replace('#', '');
             return (
@@ -116,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Permanent Desktop Actions */}
+        {/* Actions & Mobile Menu Button */}
         <div className="flex items-center space-x-2 flex-shrink-0">
           {/* Private Dashboard trigger */}
           <button
@@ -134,12 +136,62 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             id="nav-contact-management-btn"
             onClick={() => onOpenPurchaseModal()}
-            className="px-3.5 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider shadow-xs transition-all duration-200 cursor-pointer flex items-center space-x-1.5 active:scale-95 whitespace-nowrap"
+            className="px-3 sm:px-3.5 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider shadow-xs transition-all duration-200 cursor-pointer flex items-center space-x-1.5 active:scale-95 whitespace-nowrap"
           >
             <span>Contact</span>
           </button>
+
+          {/* Mobile Menu Toggle Button */}
+          <button
+            type="button"
+            id="mobile-menu-toggle-btn"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 border border-neutral-200 transition-colors cursor-pointer"
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Navigation Dropdown */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t border-neutral-200 bg-white/98 backdrop-blur-md px-4 pt-3 pb-5 shadow-lg animate-in slide-in-from-top-2 duration-200">
+          <nav className="flex flex-col space-y-1.5" aria-label="Mobile navigation">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.replace('#', '');
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  id={`mobile-nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={`px-3.5 py-2.5 rounded-xl text-sm font-semibold tracking-wide transition-all ${
+                    isActive
+                      ? 'text-neutral-900 bg-neutral-100 font-bold border border-neutral-200'
+                      : 'text-neutral-700 hover:bg-neutral-50 hover:text-neutral-900'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
+            <div className="pt-2 border-t border-neutral-100 flex flex-col gap-2">
+              <button
+                type="button"
+                id="mobile-nav-inquiry-btn"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenPurchaseModal();
+                }}
+                className="w-full py-2.5 px-4 rounded-xl bg-neutral-900 text-white text-xs font-bold uppercase tracking-wider text-center cursor-pointer shadow-xs"
+              >
+                Submit Vehicle Request
+              </button>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

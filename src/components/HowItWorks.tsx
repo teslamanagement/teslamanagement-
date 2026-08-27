@@ -39,7 +39,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartInquiry }) => {
 
   return (
     <section id="how-it-works" className="py-16 sm:py-20 bg-[#F8F9FA] text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left mb-10">
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-600 block mb-2">
             Purchasing Process
@@ -53,7 +53,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartInquiry }) => {
         </div>
 
         {/* 4 Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
           {steps.map((step, idx) => {
             const Icon = step.icon;
             return (
@@ -107,7 +107,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ onStartInquiry }) => {
             type="button"
             id="how-it-works-start-btn"
             onClick={onStartInquiry}
-            className="px-5 py-2.5 rounded-xl bg-[#000000] hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors flex-shrink-0 cursor-pointer flex items-center space-x-2 shadow-2xs whitespace-nowrap self-start sm:self-center"
+            className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#000000] hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-colors flex-shrink-0 cursor-pointer flex items-center justify-center space-x-2 shadow-2xs whitespace-nowrap"
           >
             <span>Start Inquiry</span>
             <ArrowRight className="w-4 h-4" />

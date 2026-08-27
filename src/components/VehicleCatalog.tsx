@@ -67,7 +67,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
 
   return (
     <section id="vehicles" className="py-16 sm:py-20 bg-[#F8F9FA] text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-8 text-left">
           <div className="flex items-center space-x-2 text-red-600 text-xs font-bold uppercase tracking-widest mb-2 font-mono">
@@ -117,8 +117,8 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
 
         {/* Vehicle Grid / Loading State / Empty State */}
         {isLoading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[1, 2, 3, 4].map((idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1, 2, 3, 4, 5, 6].map((idx) => (
               <div
                 key={`skeleton-${idx}`}
                 className="bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-xs animate-pulse flex flex-col"
@@ -141,7 +141,7 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
             ))}
           </div>
         ) : filteredVehicles.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredVehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
@@ -151,14 +151,31 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                 {/* Image Container with Availability Badge */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100 flex items-center justify-center">
                   <img
+                    id={`img-${vehicle.id}`}
                     src={resolveAssetUrl(vehicle.imageUrl)}
                     alt={`${vehicle.name} exterior`}
-                    loading="lazy"
+                    loading="eager"
                     decoding="async"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 block"
                     referrerPolicy="no-referrer"
+                    onLoad={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.opacity = '1';
+                      target.style.display = 'block';
+                      console.log(`[Image Loaded] Successfully loaded ${vehicle.name} image:`, target.currentSrc || target.src);
+                    }}
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      console.error(`[Image Error] Failed to load image for ${vehicle.name}. Failing URL:`, target.src);
+                      // Automatic resilient fallback to default vehicle remote image
+                      const fallback = vehicle.colors?.[0]?.images?.[0] || 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80';
+                      if (target.src !== fallback) {
+                        console.log(`[Image Fallback] Switching ${vehicle.name} to fallback URL:`, fallback);
+                        target.src = fallback;
+                      }
+                    }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
                   {/* Availability & Photo count Badge */}
                   <div className="absolute top-3 left-3 flex items-center space-x-1.5">

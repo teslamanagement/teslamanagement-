@@ -327,7 +327,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
         </div>
 
         {/* Modal Body */}
-        <div className="overflow-y-auto p-6 flex-1">
+        <div className="overflow-y-auto p-4 sm:p-6 flex-1">
           {isSubmitted && submittedDetails ? (
             <div className="py-4 text-center space-y-6 animate-in zoom-in-95 duration-200" id="inquiry-success-state">
               {/* Success Badge */}
@@ -462,7 +462,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               )}
 
               {/* Full Name & Email */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="inq-fullname" className="block text-xs font-semibold uppercase tracking-wider text-neutral-700 mb-1.5 font-mono">
                     Full Name <span className="text-red-600">*</span>
@@ -522,7 +522,7 @@ export const PurchaseRequestModal: React.FC<PurchaseRequestModalProps> = ({
               </div>
 
               {/* Preferred Model & Dependent Configuration Cascading Dropdowns */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <VehicleModelDropdown
                   id="inq-preferred-model"
                   selectedModelName={selectedModel}

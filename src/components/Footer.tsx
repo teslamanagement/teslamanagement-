@@ -20,11 +20,11 @@ export const Footer: React.FC<FooterProps> = ({
   onSelectVehicle,
 }) => {
   return (
-    <footer className="bg-neutral-900 text-neutral-400 border-t border-neutral-800 pt-16 pb-12 text-xs">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-5 gap-10 mb-12">
+    <footer className="bg-neutral-900 text-neutral-400 border-t border-neutral-800 pt-12 sm:pt-16 pb-12 text-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-10 mb-10 sm:mb-12">
           {/* Col 1: Brand */}
-          <div className="col-span-2 space-y-4">
+          <div className="col-span-1 sm:col-span-2 md:col-span-2 space-y-4">
             <div className="flex items-center space-x-2.5">
               <TeslaLogo className="w-7 h-7 flex-shrink-0 text-white" />
               <div className="flex items-center space-x-1.5">
@@ -126,11 +126,11 @@ export const Footer: React.FC<FooterProps> = ({
             &ldquo;Final pricing may vary according to configuration, location, applicable taxes, delivery charges, inventory, eligibility and current terms. Final pricing is confirmed during the purchasing process. Submitting an inquiry does not constitute a completed vehicle purchase or guaranteed vehicle allocation.&rdquo;
           </p>
 
-          <div className="flex flex-row items-center justify-between pt-4 text-[11px] text-neutral-500 gap-2 font-mono">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-4 text-[11px] text-neutral-500 gap-3 font-mono">
             <div>
               &copy; {new Date().getFullYear()} Tesla Management Desk. All Rights Reserved.
             </div>
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
               <span>Standard ISO 3166-1 Worldwide System</span>
               <span>•</span>
               <button type="button" onClick={onOpenDashboard} className="hover:text-white transition-colors cursor-pointer">Admin Portal</button>

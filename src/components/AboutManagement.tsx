@@ -24,33 +24,33 @@ export const AboutManagement: React.FC<AboutManagementProps> = ({
   ];
 
   return (
-    <section id="about" className="py-20 bg-white text-neutral-900 border-t border-neutral-200">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="about" className="py-16 sm:py-20 bg-white text-neutral-900 border-t border-neutral-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-left max-w-3xl mb-10 sm:mb-12">
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-red-600 block mb-2">
             Operations & Scope
           </span>
-          <h2 className="text-5xl font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
             About Management
           </h2>
-          <p className="text-base text-neutral-600 mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-600 mt-2 leading-relaxed">
             Dedicated client assistance team coordinating vehicle specifications, promotional pricing inquiries, and order allocations.
           </p>
         </div>
 
-        <div className="grid grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           {/* Desk Information Box */}
-          <div className="col-span-5 p-8 rounded-2xl bg-white border border-neutral-200 shadow-2xs space-y-6">
+          <div className="col-span-1 lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-white border border-neutral-200 shadow-2xs space-y-6">
             <div className="flex items-center space-x-3.5">
-              <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-200 flex items-center justify-center text-red-600">
+              <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-200 flex items-center justify-center text-red-600 flex-shrink-0">
                 <Building2 className="w-6 h-6" />
               </div>
               <div>
                 <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-500 font-semibold">
                   Management Desk
                 </span>
-                <h3 className="text-lg font-bold text-neutral-900">
+                <h3 className="text-base sm:text-lg font-bold text-neutral-900">
                   {representativeName}
                 </h3>
               </div>
@@ -59,12 +59,12 @@ export const AboutManagement: React.FC<AboutManagementProps> = ({
             <div className="p-4 rounded-xl bg-[#F8F9FA] border border-neutral-200/80 space-y-3 text-xs">
               <div>
                 <span className="text-neutral-500 uppercase font-mono text-[10px] block font-semibold">Desk Function</span>
-                <span className="text-neutral-900 font-semibold text-sm">{authorizedTitle}</span>
+                <span className="text-neutral-900 font-semibold text-xs sm:text-sm">{authorizedTitle}</span>
               </div>
               <div className="pt-2 border-t border-neutral-200 space-y-2">
                 <div className="flex items-center space-x-2 text-neutral-700">
                   <Mail className="w-3.5 h-3.5 text-neutral-400 flex-shrink-0" />
-                  <span className="font-mono text-xs">{officialEmail}</span>
+                  <span className="font-mono text-xs break-all">{officialEmail}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-neutral-700">
                   <Phone className="w-3.5 h-3.5 text-neutral-400 flex-shrink-0" />
@@ -75,19 +75,19 @@ export const AboutManagement: React.FC<AboutManagementProps> = ({
 
             <div className="p-3.5 rounded-xl bg-[#F8F9FA] border border-neutral-200 text-xs text-neutral-600 flex items-start space-x-2.5">
               <MapPin className="w-4 h-4 text-neutral-500 flex-shrink-0 mt-0.5" />
-              <span className="leading-relaxed">{officeLocation}</span>
+              <span className="leading-relaxed text-xs">{officeLocation}</span>
             </div>
           </div>
 
           {/* Scope & Responsibilities */}
-          <div className="col-span-7 space-y-6">
-            <div className="p-8 rounded-2xl bg-[#F8F9FA] border border-neutral-200 space-y-6 shadow-2xs">
+          <div className="col-span-1 lg:col-span-7 space-y-6">
+            <div className="p-6 sm:p-8 rounded-2xl bg-[#F8F9FA] border border-neutral-200 space-y-6 shadow-2xs">
               <div>
-                <h4 className="text-lg font-bold text-neutral-900 mb-2 flex items-center space-x-2">
-                  <Briefcase className="w-4 h-4 text-red-600" />
+                <h4 className="text-base sm:text-lg font-bold text-neutral-900 mb-2 flex items-center space-x-2">
+                  <Briefcase className="w-4 h-4 text-red-600 flex-shrink-0" />
                   <span>Key Responsibilities</span>
                 </h4>
-                <p className="text-sm text-neutral-600">
+                <p className="text-xs sm:text-sm text-neutral-600">
                   Management coordinates client inquiries and purchasing workflows according to high operational standards:
                 </p>
               </div>
@@ -96,7 +96,7 @@ export const AboutManagement: React.FC<AboutManagementProps> = ({
                 {responsibilities.map((resp, index) => (
                   <div key={index} className="flex items-start space-x-3 p-3.5 rounded-xl bg-white border border-neutral-200 shadow-2xs">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-neutral-800 font-medium">{resp}</span>
+                    <span className="text-xs sm:text-sm text-neutral-800 font-medium">{resp}</span>
                   </div>
                 ))}
               </div>
