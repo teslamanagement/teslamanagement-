@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ChevronDown, CheckCircle2, Globe2 } from 'lucide-react';
 import { AuthorizationInfo } from '../types';
+import { resolveAssetUrl } from '../utils/resolveAsset';
 
 interface HeroProps {
   onExploreVehicles: () => void;
@@ -21,7 +22,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background Vehicle Image with Soft Light Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=2000&q=85"
+          src={resolveAssetUrl('/uploads/model-s-img-1787823409678-655c31fd.webp')}
           alt="Tesla Fleet"
           fetchPriority="high"
           decoding="async"

@@ -160,11 +160,15 @@ function initStore() {
           } else {
             v.galleryImages = [cleanImg];
           }
-        } else if (v.imageUrl && (v.imageUrl.startsWith('http://') || v.imageUrl.startsWith('https://') || v.imageUrl.startsWith('data:'))) {
-          // Valid remote or data image, keep as is
+        } else if (v.imageUrl && typeof v.imageUrl === 'string' && v.imageUrl.trim()) {
+          // Valid stored image URL (uploads path, remote URL, or base64)
+          v.imageUrl = v.imageUrl.trim();
+          if (!Array.isArray(v.galleryImages) || v.galleryImages.length === 0) {
+            v.galleryImages = defaultVehicle?.galleryImages ? [...defaultVehicle.galleryImages] : [v.imageUrl];
+          }
         } else {
           // Use default vehicle image from INITIAL_VEHICLES
-          v.imageUrl = defaultVehicle?.imageUrl || v.imageUrl;
+          v.imageUrl = defaultVehicle?.imageUrl || '';
           if (defaultVehicle?.galleryImages) {
             v.galleryImages = [...defaultVehicle.galleryImages];
           }

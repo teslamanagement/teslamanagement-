@@ -64,14 +64,12 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
     (vehicle.colors || [])[0];
 
   let currentImages: string[] = [];
-  if (currentColor && currentColor.images && currentColor.images.length > 0) {
-    currentImages = currentColor.images;
-  } else if (vehicle.galleryImages && vehicle.galleryImages.length > 0) {
-    currentImages = vehicle.galleryImages;
+  if (Array.isArray(vehicle.galleryImages) && vehicle.galleryImages.length > 0) {
+    currentImages = vehicle.galleryImages.filter((img) => typeof img === 'string' && img.trim());
   } else if (vehicle.imageUrl) {
     currentImages = [vehicle.imageUrl];
-  } else {
-    currentImages = [];
+  } else if (currentColor && currentColor.images && currentColor.images.length > 0) {
+    currentImages = currentColor.images.filter((img) => typeof img === 'string' && img.trim());
   }
 
   const safeImageIndex = Math.min(activeImageIndex, Math.max(0, currentImages.length - 1));
@@ -185,8 +183,8 @@ export const VehicleDetailModal: React.FC<VehicleDetailModalProps> = ({
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     console.error(`[Modal Image Error] Failed to load modal image for ${vehicle.name}:`, target.src);
-                    const fallback = vehicle.colors?.[0]?.images?.[0] || 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80';
-                    if (target.src !== fallback) {
+                    const fallback = resolveAssetUrl(vehicle.imageUrl || vehicle.galleryImages?.[0] || '');
+                    if (fallback && target.src !== fallback) {
                       target.src = fallback;
                     }
                   }}

@@ -517,7 +517,7 @@ export const VehicleMediaManager: React.FC<VehicleMediaManagerProps> = ({
                   handleAddGeneralUrl();
                 }
               }}
-              placeholder="Paste image URL (e.g. https://images.unsplash.com/...)"
+              placeholder="Paste image URL (e.g. https://... or /uploads/...)"
               className="flex-1 px-3 py-1.5 bg-white border border-neutral-300 rounded-lg text-xs text-neutral-900 shadow-2xs focus:outline-none focus:border-red-600"
             />
             <button

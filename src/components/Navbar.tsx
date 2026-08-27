@@ -64,31 +64,31 @@ export const Navbar: React.FC<NavbarProps> = ({
       id="main-header"
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-xs py-3'
-          : 'bg-white/85 backdrop-blur-xs border-b border-neutral-200/60 py-3.5 sm:py-4'
+          ? 'bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-xs py-2.5 sm:py-3'
+          : 'bg-white/90 backdrop-blur-xs border-b border-neutral-200/60 py-3 sm:py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-1.5 sm:gap-3">
         {/* Brand Logo & Name */}
-        <div className="flex items-center space-x-3 flex-shrink-0">
+        <div className="flex items-center min-w-0 flex-shrink">
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center space-x-2.5 group focus:outline-none"
+            className="flex items-center space-x-1.5 sm:space-x-2.5 group focus:outline-none min-w-0"
             id="brand-logo"
           >
             {/* Official Tesla Logo */}
-            <TeslaLogo className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0 transition-transform duration-200 group-hover:scale-105" color="#E82127" />
-            <div className="flex flex-col">
-              <div className="flex items-center space-x-1.5">
-                <TeslaWordmark className="h-3 sm:h-3.5 w-auto text-neutral-900" />
-                <span className="font-light text-[11px] sm:text-xs tracking-[0.2em] uppercase text-neutral-500">
+            <TeslaLogo className="w-5 h-5 sm:w-7 sm:h-7 flex-shrink-0 transition-transform duration-200 group-hover:scale-105" color="#E82127" />
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center space-x-1 sm:space-x-1.5">
+                <TeslaWordmark className="h-2.5 sm:h-3.5 w-auto text-neutral-900 flex-shrink-0" />
+                <span className="font-light text-[9px] sm:text-xs tracking-[0.14em] sm:tracking-[0.2em] uppercase text-neutral-500 truncate">
                   MANAGEMENT
                 </span>
               </div>
-              <div className="flex items-center space-x-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-xs"></span>
-                <span className="text-[9px] sm:text-[10px] text-neutral-500 font-medium tracking-wide">
+              <div className="flex items-center space-x-1 sm:space-x-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-xs flex-shrink-0"></span>
+                <span className="text-[8.5px] sm:text-[10px] text-neutral-500 font-medium tracking-wide whitespace-nowrap">
                   Client Desk
                 </span>
               </div>
@@ -119,14 +119,15 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Actions & Mobile Menu Button */}
-        <div className="flex items-center space-x-2 flex-shrink-0">
+        <div className="flex items-center space-x-1.5 sm:space-x-2 flex-shrink-0">
           {/* Private Dashboard trigger */}
           <button
             type="button"
             id="nav-dashboard-button"
             onClick={onOpenDashboard}
-            className="p-2 rounded-lg text-xs font-medium text-neutral-500 hover:text-neutral-800 border border-neutral-300 bg-white hover:bg-neutral-50 transition-all cursor-pointer shadow-2xs"
+            className="p-1.5 sm:p-2 rounded-lg text-xs font-medium text-neutral-600 hover:text-neutral-900 border border-neutral-300 bg-white hover:bg-neutral-50 transition-all cursor-pointer shadow-2xs flex-shrink-0"
             title="Private Management Dashboard"
+            aria-label="Private Management Dashboard"
           >
             <Lock className="w-3.5 h-3.5" />
           </button>
@@ -136,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             id="nav-contact-management-btn"
             onClick={() => onOpenPurchaseModal()}
-            className="px-3 sm:px-3.5 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider shadow-xs transition-all duration-200 cursor-pointer flex items-center space-x-1.5 active:scale-95 whitespace-nowrap"
+            className="px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-neutral-900 hover:bg-neutral-800 text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider shadow-xs transition-all duration-200 cursor-pointer flex items-center space-x-1 active:scale-95 whitespace-nowrap flex-shrink-0"
           >
             <span>Contact</span>
           </button>
@@ -146,10 +147,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             type="button"
             id="mobile-menu-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 border border-neutral-200 transition-colors cursor-pointer"
+            className="lg:hidden p-1.5 sm:p-2 rounded-lg text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 border border-neutral-200 transition-colors cursor-pointer flex-shrink-0"
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
         </div>
       </div>

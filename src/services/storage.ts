@@ -2,14 +2,14 @@ import { ActivityLog, AuthorizationInfo, CountryData, CustomerInquiry, InquirySt
 import { WORLDWIDE_COUNTRIES } from '../data/countries';
 import { INITIAL_AUTH_INFO } from '../data/initialContent';
 import { INITIAL_VEHICLES } from '../data/vehicles';
-import { resolveAssetUrl } from '../utils/resolveAsset';
+export { resolveAssetUrl } from '../utils/resolveAsset';
 
 const TOKEN_STORAGE_KEY = 'tm_admin_bearer_token';
 
 // Dedicated Key for Permanent Vehicle Image Persistence across all sessions & GitHub Pages
-export const TESLA_VEHICLE_IMAGES_KEY = 'tesla_vehicle_images_v3';
-export const VEHICLES_CACHE_KEY = 'tm_vehicles_cache_v3';
-export const AUTH_INFO_CACHE_KEY = 'tm_auth_info_cache_v3';
+export const TESLA_VEHICLE_IMAGES_KEY = 'tesla_vehicle_images_v4';
+export const VEHICLES_CACHE_KEY = 'tm_vehicles_cache_v4';
+export const AUTH_INFO_CACHE_KEY = 'tm_auth_info_cache_v4';
 export const DEFAULT_VEHICLES: Vehicle[] = INITIAL_VEHICLES;
 
 // In-Memory caches (Never persistent for sensitive inquiries/logs)

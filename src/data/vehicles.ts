@@ -9,10 +9,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "High-Efficiency Electric Sports Sedan",
     "description": "Designed for electric efficiency, refined aerodynamics, quiet acoustic glass cabin, ambient interior lighting, and nimble handling.",
     "category": "sedan",
-    "imageUrl": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/model-3-img-1787823274281-674eb4c3.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+      "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
     ],
     "colors": [
       {
@@ -20,7 +20,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Diamond Black",
         "hex": "#111215",
         "images": [
-          "https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+          "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
         ]
       },
       {
@@ -28,7 +29,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Stealth Gray",
         "hex": "#3D4148",
         "images": [
-          "https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+          "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
         ]
       },
       {
@@ -36,7 +38,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Ultra Red",
         "hex": "#96151D",
         "images": [
-          "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+          "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
         ]
       },
       {
@@ -44,7 +47,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Pearl White Multi-Coat",
         "hex": "#F4F5F7",
         "images": [
-          "https://images.unsplash.com/photo-1561580125-028ee3bd62eb?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+          "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
         ]
       },
       {
@@ -52,7 +56,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Deep Blue Metallic",
         "hex": "#1B355A",
         "images": [
-          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+          "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
         ]
       },
       {
@@ -60,7 +65,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Quicksilver",
         "hex": "#7A808A",
         "images": [
-          "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+          "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
         ]
       }
     ],
@@ -140,10 +146,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Versatile Mid-Size Electric Crossover SUV",
     "description": "The best-selling all-electric crossover SUV engineered with maximum cargo versatility, elevated ride height, and all-weather capability.",
     "category": "suv",
-    "imageUrl": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/model-y-img-1787823311496-e945c3bf.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+      "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
     ],
     "colors": [
       {
@@ -151,7 +157,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Pearl White Multi-Coat",
         "hex": "#F4F5F7",
         "images": [
-          "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+          "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
         ]
       },
       {
@@ -159,7 +166,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Diamond Black",
         "hex": "#111215",
         "images": [
-          "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+          "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
         ]
       },
       {
@@ -167,7 +175,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Glacier Blue",
         "hex": "#55758C",
         "images": [
-          "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+          "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
         ]
       },
       {
@@ -175,7 +184,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Stealth Gray",
         "hex": "#3D4148",
         "images": [
-          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+          "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
         ]
       },
       {
@@ -183,7 +193,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Quicksilver",
         "hex": "#7A808A",
         "images": [
-          "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+          "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
         ]
       },
       {
@@ -191,7 +202,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Ultra Red",
         "hex": "#96151D",
         "images": [
-          "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+          "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
         ]
       }
     ],
@@ -268,10 +280,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Extended Wheelbase Luxury Executive Crossover",
     "description": "Authorized extended-wheelbase specification featuring executive rear captain seating, enhanced legroom, premium sound isolation, and dual lounge consoles.",
     "category": "suv",
-    "imageUrl": "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+      "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
     ],
     "colors": [
       {
@@ -279,7 +291,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Cosmic Silver",
         "hex": "#8E939C",
         "images": [
-          "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+          "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
         ]
       },
       {
@@ -287,7 +300,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Ultra Red",
         "hex": "#96151D",
         "images": [
-          "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+          "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
         ]
       },
       {
@@ -295,7 +309,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Diamond Black",
         "hex": "#111215",
         "images": [
-          "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+          "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
         ]
       },
       {
@@ -303,7 +318,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Marine Blue",
         "hex": "#1C3F60",
         "images": [
-          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+          "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
         ]
       },
       {
@@ -311,7 +327,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Pearl White",
         "hex": "#F4F5F7",
         "images": [
-          "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+          "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
         ]
       },
       {
@@ -319,7 +336,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Stealth Gray",
         "hex": "#3D4148",
         "images": [
-          "https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+          "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
         ]
       }
     ],
@@ -385,10 +403,11 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Ultra-Hard 30X Cold-Rolled Stainless-Steel Exoskeleton",
     "description": "Built with an impenetrable exterior exoskeleton, shatter-resistant Armor Glass, 4-wheel steer-by-wire agility, and up to 11,000 lbs of towing power.",
     "category": "truck",
-    "imageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/cybertruck-main-1787823385132-f3d687cd.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/cybertruck-main-1787823385132-f3d687cd.webp",
+      "/uploads/cybertruck-gal-0-1787823385132-4a3fc8e7.webp",
+      "/uploads/cybertruck-img-1787823380357-16448ec1.webp"
     ],
     "colors": [
       {
@@ -396,7 +415,9 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Shield Black",
         "hex": "#1A1B1E",
         "images": [
-          "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/cybertruck-main-1787823385132-f3d687cd.webp",
+          "/uploads/cybertruck-gal-0-1787823385132-4a3fc8e7.webp",
+          "/uploads/cybertruck-img-1787823380357-16448ec1.webp"
         ]
       }
     ],
@@ -472,10 +493,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "The Pinnacle of Electric Luxury & Acceleration",
     "description": "Unrivaled acceleration, ultra-long range, iconic liftback silhouette, tri-motor Plaid performance, and tri-zone climate luxury.",
     "category": "sedan",
-    "imageUrl": "https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/model-s-img-1787823409678-655c31fd.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/model-s-img-1787823409678-655c31fd.webp",
+      "/uploads/model-s-img-1787823411499-f77af729.webp"
     ],
     "colors": [
       {
@@ -483,7 +504,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Stealth Gray",
         "hex": "#3D4148",
         "images": [
-          "https://images.unsplash.com/photo-1536700503339-1e4b06520771?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-s-img-1787823409678-655c31fd.webp",
+          "/uploads/model-s-img-1787823411499-f77af729.webp"
         ]
       },
       {
@@ -491,7 +513,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Diamond Black",
         "hex": "#111215",
         "images": [
-          "https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-s-img-1787823409678-655c31fd.webp",
+          "/uploads/model-s-img-1787823411499-f77af729.webp"
         ]
       },
       {
@@ -499,7 +522,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Frost Blue Metallic",
         "hex": "#546E7A",
         "images": [
-          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-s-img-1787823409678-655c31fd.webp",
+          "/uploads/model-s-img-1787823411499-f77af729.webp"
         ]
       },
       {
@@ -507,7 +531,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Lunar Silver",
         "hex": "#9EADB8",
         "images": [
-          "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-s-img-1787823409678-655c31fd.webp",
+          "/uploads/model-s-img-1787823411499-f77af729.webp"
         ]
       },
       {
@@ -515,7 +540,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Pearl White Multi-Coat",
         "hex": "#F4F5F7",
         "images": [
-          "https://images.unsplash.com/photo-1561580125-028ee3bd62eb?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-s-img-1787823409678-655c31fd.webp",
+          "/uploads/model-s-img-1787823411499-f77af729.webp"
         ]
       },
       {
@@ -523,7 +549,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Ultra Red",
         "hex": "#96151D",
         "images": [
-          "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-s-img-1787823409678-655c31fd.webp",
+          "/uploads/model-s-img-1787823411499-f77af729.webp"
         ]
       }
     ],
@@ -590,10 +617,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Falcon Wing Flagship Luxury SUV",
     "description": "Signature Falcon Wing rear doors, panoramic windshield, unmatched acceleration, three-row luxury seating, and 5,000 lbs towing capacity.",
     "category": "suv",
-    "imageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/model-x-img-1787823435675-d840c478.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/model-x-img-1787823435675-d840c478.webp",
+      "/uploads/model-x-img-1787823437292-778d50cf.webp"
     ],
     "colors": [
       {
@@ -601,7 +628,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Stealth Gray",
         "hex": "#3D4148",
         "images": [
-          "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-x-img-1787823435675-d840c478.webp",
+          "/uploads/model-x-img-1787823437292-778d50cf.webp"
         ]
       },
       {
@@ -609,7 +637,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Diamond Black",
         "hex": "#111215",
         "images": [
-          "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-x-img-1787823435675-d840c478.webp",
+          "/uploads/model-x-img-1787823437292-778d50cf.webp"
         ]
       },
       {
@@ -617,7 +646,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Frost Blue Metallic",
         "hex": "#546E7A",
         "images": [
-          "https://images.unsplash.com/photo-1554744512-d6c603f27c54?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-x-img-1787823435675-d840c478.webp",
+          "/uploads/model-x-img-1787823437292-778d50cf.webp"
         ]
       },
       {
@@ -625,7 +655,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Lunar Silver",
         "hex": "#9EADB8",
         "images": [
-          "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-x-img-1787823435675-d840c478.webp",
+          "/uploads/model-x-img-1787823437292-778d50cf.webp"
         ]
       },
       {
@@ -633,7 +664,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Pearl White Multi-Coat",
         "hex": "#F4F5F7",
         "images": [
-          "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-x-img-1787823435675-d840c478.webp",
+          "/uploads/model-x-img-1787823437292-778d50cf.webp"
         ]
       },
       {
@@ -641,7 +673,8 @@ export const INITIAL_VEHICLES: Vehicle[] = [
         "name": "Ultra Red",
         "hex": "#96151D",
         "images": [
-          "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1600&q=80"
+          "/uploads/model-x-img-1787823435675-d840c478.webp",
+          "/uploads/model-x-img-1787823437292-778d50cf.webp"
         ]
       }
     ],
@@ -707,10 +740,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Supercar Performance & Record-Setting Aerodynamics",
     "description": "An all-electric supercar designed to maximize the potential of aerodynamic engineering into record-setting performance and efficiency.",
     "category": "specialty",
-    "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/roadster-img-1787823468050-f328c50f.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/roadster-img-1787823468050-f328c50f.webp",
+      "/uploads/roadster-img-1787823470727-0d61c75a.webp"
     ],
     "specs": {
       "range": "620 miles",
@@ -764,9 +797,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Dedicated Autonomous Point-to-Point Mobility",
     "description": "Designed exclusively for autonomous, driverless transportation with butterfly doors, inductive wireless charging, and zero steering wheel or pedal clutter.",
     "category": "specialty",
-    "imageUrl": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/cybercab-img-1787823516325-2cd8a297.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/cybercab-img-1787823516325-2cd8a297.webp",
+      "/uploads/cybercab-img-1787823517557-abadf8e2.webp"
     ],
     "specs": {
       "range": "200+ miles per charge",
@@ -820,9 +854,10 @@ export const INITIAL_VEHICLES: Vehicle[] = [
     "tagline": "Heavy-Duty Class 8 Electric Freight Hauler",
     "description": "Revolutionary heavy-duty commercial freight semi with center-driver cockpit, 3 independent electric motors, and massive operating cost savings.",
     "category": "commercial",
-    "imageUrl": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80",
+    "imageUrl": "/uploads/tesla-semi-img-1787823564730-12700a8c.webp",
     "galleryImages": [
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80"
+      "/uploads/tesla-semi-img-1787823564730-12700a8c.webp",
+      "/uploads/tesla-semi-img-1787823565584-ade2c135.webp"
     ],
     "specs": {
       "range": "500 miles at 82,000 lbs gross combination weight",

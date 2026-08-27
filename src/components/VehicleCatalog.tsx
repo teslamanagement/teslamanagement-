@@ -167,9 +167,8 @@ export const VehicleCatalog: React.FC<VehicleCatalogProps> = ({
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       console.error(`[Image Error] Failed to load image for ${vehicle.name}. Failing URL:`, target.src);
-                      // Automatic resilient fallback to default vehicle remote image
-                      const fallback = vehicle.colors?.[0]?.images?.[0] || 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80';
-                      if (target.src !== fallback) {
+                      const fallback = resolveAssetUrl(vehicle.galleryImages?.[0] || vehicle.imageUrl || '');
+                      if (fallback && target.src !== fallback) {
                         console.log(`[Image Fallback] Switching ${vehicle.name} to fallback URL:`, fallback);
                         target.src = fallback;
                       }

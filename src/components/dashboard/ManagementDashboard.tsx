@@ -255,8 +255,8 @@ export const ManagementDashboard: React.FC<ManagementDashboardProps> = ({
       tagline: 'All-Electric Platform',
       description: 'Authorized description of verified features and capabilities.',
       category: 'sedan',
-      imageUrl: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=1600&q=80',
-      galleryImages: [],
+      imageUrl: '/uploads/model-3-img-1787823274281-674eb4c3.webp',
+      galleryImages: ['/uploads/model-3-img-1787823274281-674eb4c3.webp'],
       specs: {
         range: '300 miles',
         acceleration: '3.9s 0-60 mph',

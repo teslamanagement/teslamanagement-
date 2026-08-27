@@ -1,0 +1,2852 @@
+{
+  "vehicles": [
+    {
+      "id": "model-3",
+      "name": "Model 3",
+      "modelCode": "M3-2026",
+      "tagline": "High-Efficiency Electric Sports Sedan",
+      "description": "Designed for electric efficiency, refined aerodynamics, quiet acoustic glass cabin, ambient interior lighting, and nimble handling.",
+      "category": "sedan",
+      "imageUrl": "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+      "galleryImages": [
+        "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+        "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
+      ],
+      "colors": [
+        {
+          "id": "m3-diamond-black",
+          "name": "Diamond Black",
+          "hex": "#111215",
+          "images": [
+            "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+            "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
+          ]
+        },
+        {
+          "id": "m3-stealth-gray",
+          "name": "Stealth Gray",
+          "hex": "#3D4148",
+          "images": [
+            "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+            "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
+          ]
+        },
+        {
+          "id": "m3-ultra-red",
+          "name": "Ultra Red",
+          "hex": "#96151D",
+          "images": [
+            "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+            "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
+          ]
+        },
+        {
+          "id": "m3-pearl-white",
+          "name": "Pearl White Multi-Coat",
+          "hex": "#F4F5F7",
+          "images": [
+            "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+            "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
+          ]
+        },
+        {
+          "id": "m3-deep-blue",
+          "name": "Deep Blue Metallic",
+          "hex": "#1B355A",
+          "images": [
+            "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+            "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
+          ]
+        },
+        {
+          "id": "m3-quicksilver",
+          "name": "Quicksilver",
+          "hex": "#7A808A",
+          "images": [
+            "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+            "/uploads/model-3-img-1787823275866-5bb9e87b.webp"
+          ]
+        }
+      ],
+      "specs": {
+        "range": "341 miles (EPA est.)",
+        "acceleration": "2.9s 0-60 mph (Performance)",
+        "topSpeed": "163 mph",
+        "drivetrain": "Rear-Wheel Drive / Dual Motor AWD",
+        "seating": "5 Adults",
+        "cargoCapacity": "24.1 cu ft",
+        "chargingRate": "Up to 175 miles in 15 min (250kW Supercharging)",
+        "payloadOrTowing": "1,000 lbs towing capacity"
+      },
+      "configurations": [
+        {
+          "id": "m3-rwd",
+          "name": "Rear-Wheel Drive Standard",
+          "range": "272 miles",
+          "acceleration": "5.8s 0-60 mph",
+          "topSpeed": "125 mph",
+          "drivetrain": "Single Motor RWD",
+          "basePrice": 23178
+        },
+        {
+          "id": "m3-lrawd",
+          "name": "Long Range All-Wheel Drive",
+          "range": "341 miles",
+          "acceleration": "4.2s 0-60 mph",
+          "topSpeed": "125 mph",
+          "drivetrain": "Dual Motor AWD",
+          "basePrice": 27500
+        },
+        {
+          "id": "m3-perf",
+          "name": "Performance All-Wheel Drive",
+          "range": "303 miles",
+          "acceleration": "2.9s 0-60 mph",
+          "topSpeed": "163 mph",
+          "drivetrain": "Dual Motor Performance AWD",
+          "basePrice": 32900
+        }
+      ],
+      "originalPrice": 38990,
+      "promotionalPrice": 23178,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Available for Order",
+      "isFeatured": true,
+      "performanceHighlights": [
+        "Refined sport suspension with adaptive frequency-selective damping",
+        "Ultra-low 0.219 drag coefficient for maximum efficiency",
+        "Track Mode V3 on Performance trim"
+      ],
+      "interiorHighlights": [
+        "15.4-inch center touchscreen with ultra-thin bezel",
+        "8-inch rear passenger display for climate & media controls",
+        "Acoustic glass with 360-degree cabin sound dampening"
+      ],
+      "safetyHighlights": [
+        "5-Star overall safety rating in all categories and subcategories",
+        "Rigid steel and aluminum unibody passenger cell structure",
+        "Active emergency braking, lane departure avoidance & side collision warning"
+      ],
+      "chargingHighlights": [
+        "Access to 50,000+ Tesla Superchargers worldwide",
+        "Up to 250 kW peak charging speeds",
+        "Automated battery preconditioning for rapid stopovers"
+      ],
+      "pricingNotes": "Final pricing confirmed during authorized documentation review based on options and local duties.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31",
+      "eligibilityRequirements": "Applicable to authorized client inquiries with confirmed allocation voucher."
+    },
+    {
+      "id": "model-y",
+      "name": "Model Y",
+      "modelCode": "MY-2026",
+      "tagline": "Versatile Mid-Size Electric Crossover SUV",
+      "description": "The best-selling all-electric crossover SUV engineered with maximum cargo versatility, elevated ride height, and all-weather capability.",
+      "category": "suv",
+      "imageUrl": "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+      "galleryImages": [
+        "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+        "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
+      ],
+      "colors": [
+        {
+          "id": "my-pearl-white",
+          "name": "Pearl White Multi-Coat",
+          "hex": "#F4F5F7",
+          "images": [
+            "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+            "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
+          ]
+        },
+        {
+          "id": "my-diamond-black",
+          "name": "Diamond Black",
+          "hex": "#111215",
+          "images": [
+            "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+            "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
+          ]
+        },
+        {
+          "id": "my-glacier-blue",
+          "name": "Glacier Blue",
+          "hex": "#55758C",
+          "images": [
+            "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+            "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
+          ]
+        },
+        {
+          "id": "my-stealth-gray",
+          "name": "Stealth Gray",
+          "hex": "#3D4148",
+          "images": [
+            "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+            "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
+          ]
+        },
+        {
+          "id": "my-quicksilver",
+          "name": "Quicksilver",
+          "hex": "#7A808A",
+          "images": [
+            "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+            "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
+          ]
+        },
+        {
+          "id": "my-ultra-red",
+          "name": "Ultra Red",
+          "hex": "#96151D",
+          "images": [
+            "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+            "/uploads/model-y-img-1787823312906-e5d7e6e9.webp"
+          ]
+        }
+      ],
+      "specs": {
+        "range": "310 miles (EPA est.)",
+        "acceleration": "3.5s 0-60 mph (Performance)",
+        "topSpeed": "155 mph",
+        "drivetrain": "Dual Motor All-Wheel Drive",
+        "seating": "5 to 7 Adults",
+        "cargoCapacity": "76 cu ft maximum storage",
+        "chargingRate": "Up to 162 miles in 15 min",
+        "payloadOrTowing": "3,500 lbs towing capacity"
+      },
+      "configurations": [
+        {
+          "id": "my-lrawd",
+          "name": "Long Range All-Wheel Drive",
+          "range": "310 miles",
+          "acceleration": "4.8s 0-60 mph",
+          "topSpeed": "135 mph",
+          "drivetrain": "Dual Motor AWD",
+          "basePrice": 23994
+        },
+        {
+          "id": "my-perf",
+          "name": "Performance All-Wheel Drive",
+          "range": "279 miles",
+          "acceleration": "3.5s 0-60 mph",
+          "topSpeed": "155 mph",
+          "drivetrain": "Performance Dual Motor AWD",
+          "basePrice": 29500
+        },
+        {
+          "id": "my-rwd",
+          "name": "Standard Range Rear-Wheel Drive",
+          "range": "260 miles",
+          "acceleration": "6.6s 0-60 mph",
+          "topSpeed": "135 mph",
+          "drivetrain": "Single Motor RWD",
+          "basePrice": 21900
+        }
+      ],
+      "originalPrice": 44990,
+      "promotionalPrice": 23994,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Available for Order",
+      "isFeatured": true,
+      "performanceHighlights": [
+        "Independent digital motors controlling torque to front and rear wheels in milliseconds",
+        "Off-road assist mode and dedicated snow traction control",
+        "Lower center of gravity for superior rollover protection"
+      ],
+      "interiorHighlights": [
+        "Panoramic all-glass roof with ultraviolet and infrared protection",
+        "Expansive second-row legroom with adjustable seat backs",
+        "Power liftgate with deep sub-trunk storage wells"
+      ],
+      "safetyHighlights": [
+        "Top Safety Pick+ award winner with ultra-high-strength steel pillars",
+        "Active safety suite including blind spot collision warning and obstacle-aware acceleration"
+      ],
+      "chargingHighlights": [
+        "High-speed NACS charging compatibility",
+        "Integrated route planner optimizing Supercharger stops globally"
+      ],
+      "pricingNotes": "Subject to inventory status and authorized management approval.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    },
+    {
+      "id": "model-y-l",
+      "name": "Model Y L",
+      "modelCode": "MYL-2026",
+      "tagline": "Extended Wheelbase Luxury Executive Crossover",
+      "description": "Authorized extended-wheelbase specification featuring executive rear captain seating, enhanced legroom, premium sound isolation, and dual lounge consoles.",
+      "category": "suv",
+      "imageUrl": "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+      "galleryImages": [
+        "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+        "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
+      ],
+      "colors": [
+        {
+          "id": "myl-cosmic-silver",
+          "name": "Cosmic Silver",
+          "hex": "#8E939C",
+          "images": [
+            "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+            "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
+          ]
+        },
+        {
+          "id": "myl-ultra-red",
+          "name": "Ultra Red",
+          "hex": "#96151D",
+          "images": [
+            "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+            "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
+          ]
+        },
+        {
+          "id": "myl-diamond-black",
+          "name": "Diamond Black",
+          "hex": "#111215",
+          "images": [
+            "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+            "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
+          ]
+        },
+        {
+          "id": "myl-marine-blue",
+          "name": "Marine Blue",
+          "hex": "#1C3F60",
+          "images": [
+            "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+            "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
+          ]
+        },
+        {
+          "id": "myl-pearl-white",
+          "name": "Pearl White",
+          "hex": "#F4F5F7",
+          "images": [
+            "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+            "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
+          ]
+        },
+        {
+          "id": "myl-stealth-gray",
+          "name": "Stealth Gray",
+          "hex": "#3D4148",
+          "images": [
+            "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+            "/uploads/model-y-l-img-1787823337645-a8db7ab1.webp"
+          ]
+        }
+      ],
+      "specs": {
+        "range": "335 miles (EPA est.)",
+        "acceleration": "4.1s 0-60 mph",
+        "topSpeed": "145 mph",
+        "drivetrain": "Dual Motor All-Wheel Drive",
+        "seating": "4 or 6 Executive Passenger Layout",
+        "cargoCapacity": "82 cu ft maximum storage",
+        "chargingRate": "Up to 170 miles in 15 min",
+        "payloadOrTowing": "3,800 lbs towing capacity"
+      },
+      "configurations": [
+        {
+          "id": "myl-exec",
+          "name": "Executive Lounge AWD",
+          "range": "335 miles",
+          "acceleration": "4.1s 0-60 mph",
+          "topSpeed": "145 mph",
+          "drivetrain": "Dual Motor AWD",
+          "basePrice": 37194
+        },
+        {
+          "id": "myl-lounge",
+          "name": "Grand Touring AWD",
+          "range": "350 miles",
+          "acceleration": "4.4s 0-60 mph",
+          "topSpeed": "140 mph",
+          "drivetrain": "Dual Motor AWD",
+          "basePrice": 39500
+        }
+      ],
+      "originalPrice": 52490,
+      "promotionalPrice": 37194,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Limited Allocation",
+      "isFeatured": true,
+      "performanceHighlights": [
+        "Calibrated executive smooth-ride air suspension",
+        "Whisper-quiet electric powertrain acoustics"
+      ],
+      "interiorHighlights": [
+        "Power reclining rear executive massage seating",
+        "Dual 10-inch rear entertainment monitors with wireless audio",
+        "Executive work fold-out tables and chilled beverage compartment"
+      ],
+      "safetyHighlights": [
+        "Reinforced long-wheelbase chassis with active side impact deflection",
+        "Complete 360-degree vision camera architecture"
+      ],
+      "chargingHighlights": [
+        "Fast Supercharging with thermal battery management"
+      ],
+      "pricingNotes": "Limited allocation reservation with verified executive client status.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    },
+    {
+      "id": "cybertruck",
+      "name": "Cybertruck",
+      "modelCode": "CT-2026",
+      "tagline": "Ultra-Hard 30X Cold-Rolled Stainless-Steel Exoskeleton",
+      "description": "Built with an impenetrable exterior exoskeleton, shatter-resistant Armor Glass, 4-wheel steer-by-wire agility, and up to 11,000 lbs of towing power.",
+      "category": "truck",
+      "imageUrl": "/uploads/cybertruck-main-1787823385132-f3d687cd.webp",
+      "galleryImages": [
+        "/uploads/cybertruck-main-1787823385132-f3d687cd.webp",
+        "/uploads/cybertruck-gal-0-1787823385132-4a3fc8e7.webp",
+        "/uploads/cybertruck-img-1787823380357-16448ec1.webp"
+      ],
+      "colors": [
+        {
+          "id": "ct-shield-black",
+          "name": "Shield Black",
+          "hex": "#1A1B1E",
+          "images": [
+            "/uploads/cybertruck-main-1787823385132-f3d687cd.webp",
+            "/uploads/cybertruck-gal-0-1787823385132-4a3fc8e7.webp",
+            "/uploads/cybertruck-img-1787823380357-16448ec1.webp"
+          ]
+        }
+      ],
+      "specs": {
+        "range": "340 miles (470+ mi with Range Extender)",
+        "acceleration": "2.6s 0-60 mph (Cyberbeast)",
+        "topSpeed": "130 mph",
+        "drivetrain": "Dual Motor AWD / Tri-Motor Cyberbeast",
+        "seating": "5 Adults",
+        "cargoCapacity": "120.9 cu ft lockable vault + frunk",
+        "chargingRate": "Up to 136 miles in 15 min (800V architecture)",
+        "payloadOrTowing": "11,000 lbs towing / 2,500 lbs payload"
+      },
+      "configurations": [
+        {
+          "id": "ct-awd",
+          "name": "All-Wheel Drive (Dual Motor)",
+          "range": "340 miles",
+          "acceleration": "4.1s 0-60 mph",
+          "topSpeed": "112 mph",
+          "drivetrain": "Dual Motor AWD",
+          "basePrice": 49341
+        },
+        {
+          "id": "ct-beast",
+          "name": "Cyberbeast (Tri-Motor)",
+          "range": "320 miles",
+          "acceleration": "2.6s 0-60 mph",
+          "topSpeed": "130 mph",
+          "drivetrain": "Tri-Motor AWD",
+          "basePrice": 68500
+        },
+        {
+          "id": "ct-rwd",
+          "name": "Rear-Wheel Drive (Future Production)",
+          "range": "250 miles",
+          "acceleration": "6.5s 0-60 mph",
+          "topSpeed": "112 mph",
+          "drivetrain": "Single Motor RWD",
+          "basePrice": 44000
+        }
+      ],
+      "originalPrice": 79990,
+      "promotionalPrice": 42341,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Limited Allocation",
+      "isFeatured": true,
+      "performanceHighlights": [
+        "800V electrical architecture for ultra-high-rate charging",
+        "True steer-by-wire variable steering ratio with active rear-wheel steering",
+        "Adaptive air suspension with up to 17 inches of ground clearance"
+      ],
+      "interiorHighlights": [
+        "18.5-inch infinity center touchscreen & 9.4-inch rear entertainment display",
+        "Integrated 120V & 240V bed power outlets (up to 11.5 kW onboard power for job sites)",
+        "Motorized lockable vault tonneau cover strong enough to stand on"
+      ],
+      "safetyHighlights": [
+        "Ultra-hard 30X cold-rolled stainless-steel structural skin resists dents and scratches",
+        "Armor Glass withstands class 4 hail and high-velocity road debris"
+      ],
+      "chargingHighlights": [
+        "Powershare vehicle-to-home and vehicle-to-load bidirectional capability"
+      ],
+      "pricingNotes": "Management promotional pricing available on confirmed authorized allocations.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    },
+    {
+      "id": "model-s",
+      "name": "Model S",
+      "modelCode": "MS-2026",
+      "tagline": "The Pinnacle of Electric Luxury & Acceleration",
+      "description": "Unrivaled acceleration, ultra-long range, iconic liftback silhouette, tri-motor Plaid performance, and tri-zone climate luxury.",
+      "category": "sedan",
+      "imageUrl": "/uploads/model-s-img-1787823409678-655c31fd.webp",
+      "galleryImages": [
+        "/uploads/model-s-img-1787823409678-655c31fd.webp",
+        "/uploads/model-s-img-1787823411499-f77af729.webp"
+      ],
+      "colors": [
+        {
+          "id": "ms-stealth-gray",
+          "name": "Stealth Gray",
+          "hex": "#3D4148",
+          "images": [
+            "/uploads/model-s-img-1787823409678-655c31fd.webp",
+            "/uploads/model-s-img-1787823411499-f77af729.webp"
+          ]
+        },
+        {
+          "id": "ms-diamond-black",
+          "name": "Diamond Black",
+          "hex": "#111215",
+          "images": [
+            "/uploads/model-s-img-1787823409678-655c31fd.webp",
+            "/uploads/model-s-img-1787823411499-f77af729.webp"
+          ]
+        },
+        {
+          "id": "ms-frost-blue",
+          "name": "Frost Blue Metallic",
+          "hex": "#546E7A",
+          "images": [
+            "/uploads/model-s-img-1787823409678-655c31fd.webp",
+            "/uploads/model-s-img-1787823411499-f77af729.webp"
+          ]
+        },
+        {
+          "id": "ms-lunar-silver",
+          "name": "Lunar Silver",
+          "hex": "#9EADB8",
+          "images": [
+            "/uploads/model-s-img-1787823409678-655c31fd.webp",
+            "/uploads/model-s-img-1787823411499-f77af729.webp"
+          ]
+        },
+        {
+          "id": "ms-pearl-white",
+          "name": "Pearl White Multi-Coat",
+          "hex": "#F4F5F7",
+          "images": [
+            "/uploads/model-s-img-1787823409678-655c31fd.webp",
+            "/uploads/model-s-img-1787823411499-f77af729.webp"
+          ]
+        },
+        {
+          "id": "ms-ultra-red",
+          "name": "Ultra Red",
+          "hex": "#96151D",
+          "images": [
+            "/uploads/model-s-img-1787823409678-655c31fd.webp",
+            "/uploads/model-s-img-1787823411499-f77af729.webp"
+          ]
+        }
+      ],
+      "specs": {
+        "range": "402 miles (EPA est.)",
+        "acceleration": "1.99s 0-60 mph (Plaid)",
+        "topSpeed": "200 mph",
+        "drivetrain": "Dual Motor AWD / Tri-Motor Plaid AWD",
+        "seating": "5 Adults",
+        "cargoCapacity": "28 cu ft trunk + frunk",
+        "chargingRate": "Up to 200 miles in 15 min",
+        "payloadOrTowing": "1,020 hp peak output"
+      },
+      "configurations": [
+        {
+          "id": "ms-awd",
+          "name": "Model S Dual Motor AWD",
+          "range": "402 miles",
+          "acceleration": "3.1s 0-60 mph",
+          "topSpeed": "130 mph",
+          "drivetrain": "Dual Motor AWD",
+          "basePrice": 53994
+        },
+        {
+          "id": "ms-plaid",
+          "name": "Model S Plaid (Tri-Motor)",
+          "range": "359 miles",
+          "acceleration": "1.99s 0-60 mph",
+          "topSpeed": "200 mph",
+          "drivetrain": "Tri-Motor Carbon-Sleeved AWD",
+          "basePrice": 69900
+        }
+      ],
+      "originalPrice": 74990,
+      "promotionalPrice": 39994,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Available for Order",
+      "isFeatured": true,
+      "performanceHighlights": [
+        "1,020 horsepower with torque vectoring across three independent carbon-sleeved rotors",
+        "World-record 0.208 drag coefficient for effortless highway cruising",
+        "Adaptive air suspension with automatic GPS-based height memory"
+      ],
+      "interiorHighlights": [
+        "17-inch cinematic tilting center display with 2200x1300 resolution",
+        "22-speaker, 960-watt audio system with active road noise reduction",
+        "Wireless gaming computer with 10 teraflops of processing capability"
+      ],
+      "safetyHighlights": [
+        "Reinforced battery architecture shielding passenger compartment",
+        "Standard Autopilot and full suite of 360-degree neural network optical cameras"
+      ],
+      "chargingHighlights": [
+        "250 kW high-speed Supercharging with automatic battery temperature optimization"
+      ],
+      "pricingNotes": "Authorized promotional rate valid for selected corporate and private client requests.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    },
+    {
+      "id": "model-x",
+      "name": "Model X",
+      "modelCode": "MX-2026",
+      "tagline": "Falcon Wing Flagship Luxury SUV",
+      "description": "Signature Falcon Wing rear doors, panoramic windshield, unmatched acceleration, three-row luxury seating, and 5,000 lbs towing capacity.",
+      "category": "suv",
+      "imageUrl": "/uploads/model-x-img-1787823435675-d840c478.webp",
+      "galleryImages": [
+        "/uploads/model-x-img-1787823435675-d840c478.webp",
+        "/uploads/model-x-img-1787823437292-778d50cf.webp"
+      ],
+      "colors": [
+        {
+          "id": "mx-stealth-gray",
+          "name": "Stealth Gray",
+          "hex": "#3D4148",
+          "images": [
+            "/uploads/model-x-img-1787823435675-d840c478.webp",
+            "/uploads/model-x-img-1787823437292-778d50cf.webp"
+          ]
+        },
+        {
+          "id": "mx-diamond-black",
+          "name": "Diamond Black",
+          "hex": "#111215",
+          "images": [
+            "/uploads/model-x-img-1787823435675-d840c478.webp",
+            "/uploads/model-x-img-1787823437292-778d50cf.webp"
+          ]
+        },
+        {
+          "id": "mx-frost-blue",
+          "name": "Frost Blue Metallic",
+          "hex": "#546E7A",
+          "images": [
+            "/uploads/model-x-img-1787823435675-d840c478.webp",
+            "/uploads/model-x-img-1787823437292-778d50cf.webp"
+          ]
+        },
+        {
+          "id": "mx-lunar-silver",
+          "name": "Lunar Silver",
+          "hex": "#9EADB8",
+          "images": [
+            "/uploads/model-x-img-1787823435675-d840c478.webp",
+            "/uploads/model-x-img-1787823437292-778d50cf.webp"
+          ]
+        },
+        {
+          "id": "mx-pearl-white",
+          "name": "Pearl White Multi-Coat",
+          "hex": "#F4F5F7",
+          "images": [
+            "/uploads/model-x-img-1787823435675-d840c478.webp",
+            "/uploads/model-x-img-1787823437292-778d50cf.webp"
+          ]
+        },
+        {
+          "id": "mx-ultra-red",
+          "name": "Ultra Red",
+          "hex": "#96151D",
+          "images": [
+            "/uploads/model-x-img-1787823435675-d840c478.webp",
+            "/uploads/model-x-img-1787823437292-778d50cf.webp"
+          ]
+        }
+      ],
+      "specs": {
+        "range": "335 miles (EPA est.)",
+        "acceleration": "2.5s 0-60 mph (Plaid)",
+        "topSpeed": "163 mph",
+        "drivetrain": "Dual Motor AWD / Tri-Motor Plaid AWD",
+        "seating": "5, 6 or 7 Adults",
+        "cargoCapacity": "88 cu ft maximum storage",
+        "chargingRate": "Up to 175 miles in 15 min",
+        "payloadOrTowing": "5,000 lbs towing capacity"
+      },
+      "configurations": [
+        {
+          "id": "mx-awd",
+          "name": "Model X Dual Motor AWD",
+          "range": "335 miles",
+          "acceleration": "3.8s 0-60 mph",
+          "topSpeed": "149 mph",
+          "drivetrain": "Dual Motor AWD",
+          "basePrice": 59994
+        },
+        {
+          "id": "mx-plaid",
+          "name": "Model X Plaid (Tri-Motor)",
+          "range": "326 miles",
+          "acceleration": "2.5s 0-60 mph",
+          "topSpeed": "163 mph",
+          "drivetrain": "Tri-Motor Plaid AWD",
+          "basePrice": 76000
+        }
+      ],
+      "originalPrice": 79990,
+      "promotionalPrice": 40024,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Available for Order",
+      "isFeatured": true,
+      "performanceHighlights": [
+        "Fastest accelerating production SUV in history (0-60 mph in 2.5s)",
+        "Intelligent all-wheel drive with instant torque modulation"
+      ],
+      "interiorHighlights": [
+        "Motorized Falcon Wing doors with ultrasonic distance clearance sensors",
+        "Largest all-glass panoramic windshield in production",
+        "Six-passenger captain chair configuration with power tilt and slide"
+      ],
+      "safetyHighlights": [
+        "Lowest rollover risk of any SUV tested by NHTSA",
+        "HEPA air filtration system with Bioweapon Defense Mode"
+      ],
+      "chargingHighlights": [
+        "Supercharging network integration with pre-conditioning"
+      ],
+      "pricingNotes": "Authorized management promotional pricing subject to inventory matching.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    },
+    {
+      "id": "roadster",
+      "name": "Roadster",
+      "modelCode": "RD-2026",
+      "tagline": "Supercar Performance & Record-Setting Aerodynamics",
+      "description": "An all-electric supercar designed to maximize the potential of aerodynamic engineering into record-setting performance and efficiency.",
+      "category": "specialty",
+      "imageUrl": "/uploads/roadster-img-1787823468050-f328c50f.webp",
+      "galleryImages": [
+        "/uploads/roadster-img-1787823468050-f328c50f.webp",
+        "/uploads/roadster-img-1787823470727-0d61c75a.webp"
+      ],
+      "specs": {
+        "range": "620 miles",
+        "acceleration": "1.9s 0-60 mph (sub-1s with thruster package)",
+        "topSpeed": "250+ mph",
+        "drivetrain": "All-Wheel Drive Tri-Motor",
+        "seating": "4 Passengers (2+2)",
+        "cargoCapacity": "Removable lightweight glass roof trunk",
+        "chargingRate": "High-Density 350 kW Support",
+        "payloadOrTowing": "10,000 Nm wheel torque"
+      },
+      "configurations": [
+        {
+          "id": "rd-base",
+          "name": "Roadster Founders Series Reservation",
+          "range": "620 miles",
+          "acceleration": "1.9s 0-60 mph",
+          "topSpeed": "250+ mph",
+          "drivetrain": "Tri-Motor All-Wheel Drive",
+          "basePrice": 120000
+        }
+      ],
+      "originalPrice": 200000,
+      "promotionalPrice": 98950,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Reservation Inquiry",
+      "isFeatured": false,
+      "performanceHighlights": [
+        "10,000 Nm wheel torque delivering breathtaking launches",
+        "Sub-8.8 second quarter-mile run capability",
+        "Active aero rear wing and ground effect diffuser"
+      ],
+      "interiorHighlights": [
+        "Lightweight removable glass roof storing neatly in trunk",
+        "Minimalist driver-centric cockpit with curved OLED interface"
+      ],
+      "safetyHighlights": [
+        "Carbon-composite passenger safety cell with energy-absorbing crash structures"
+      ],
+      "chargingHighlights": [
+        "200 kWh battery pack with dual-phase thermal management"
+      ],
+      "pricingNotes": "Reservation inquiry via authorized management allocation protocol only.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    },
+    {
+      "id": "cybercab",
+      "name": "Cybercab",
+      "modelCode": "CC-2026",
+      "tagline": "Dedicated Autonomous Point-to-Point Mobility",
+      "description": "Designed exclusively for autonomous, driverless transportation with butterfly doors, inductive wireless charging, and zero steering wheel or pedal clutter.",
+      "category": "specialty",
+      "imageUrl": "/uploads/cybercab-img-1787823516325-2cd8a297.webp",
+      "galleryImages": [
+        "/uploads/cybercab-img-1787823516325-2cd8a297.webp",
+        "/uploads/cybercab-img-1787823517557-abadf8e2.webp"
+      ],
+      "specs": {
+        "range": "200+ miles per charge",
+        "acceleration": "Autonomous speed control",
+        "topSpeed": "110 mph",
+        "drivetrain": "High-Efficiency Single Motor Rear Drive",
+        "seating": "2 Passengers with generous luggage space",
+        "cargoCapacity": "Spacious rear luggage trunk for two full suitcases",
+        "chargingRate": "100% Inductive Wireless Pad Charging",
+        "payloadOrTowing": "Dedicated fleet autonomy architecture"
+      },
+      "configurations": [
+        {
+          "id": "cc-autonomous",
+          "name": "Cybercab Fleet Edition",
+          "range": "200+ miles",
+          "acceleration": "Autonomous Speed Regulation",
+          "topSpeed": "110 mph",
+          "drivetrain": "Rear-Wheel Drive Autonomous",
+          "basePrice": 180000
+        }
+      ],
+      "originalPrice": 90000,
+      "promotionalPrice": 42050,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Production Preview",
+      "isFeatured": false,
+      "performanceHighlights": [
+        "Next-generation AI 4 Full Self-Driving hardware platform",
+        "No mechanical steering column or pedal assemblies"
+      ],
+      "interiorHighlights": [
+        "Large 21-inch passenger media and route display",
+        "Dual ergonomic reclining lounge chairs with easy-clean sustainable fabrics",
+        "Upward-opening motorized butterfly doors for effortless curbside ingress"
+      ],
+      "safetyHighlights": [
+        "Complete sensor redundancy and fail-operational compute architecture"
+      ],
+      "chargingHighlights": [
+        "Hands-free wireless inductive charging - no cables or plugs needed"
+      ],
+      "pricingNotes": "Commercial and fleet interest inquiry. Subject to regulatory approvals.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    },
+    {
+      "id": "tesla-semi",
+      "name": "Tesla Semi",
+      "modelCode": "SEMI-2026",
+      "tagline": "Heavy-Duty Class 8 Electric Freight Hauler",
+      "description": "Revolutionary heavy-duty commercial freight semi with center-driver cockpit, 3 independent electric motors, and massive operating cost savings.",
+      "category": "commercial",
+      "imageUrl": "/uploads/tesla-semi-img-1787823564730-12700a8c.webp",
+      "galleryImages": [
+        "/uploads/tesla-semi-img-1787823564730-12700a8c.webp",
+        "/uploads/tesla-semi-img-1787823565584-ade2c135.webp"
+      ],
+      "specs": {
+        "range": "500 miles at 82,000 lbs gross combination weight",
+        "acceleration": "0-60 mph in 20s with full 82,000 lbs load",
+        "topSpeed": "65 mph highway cruising on a 5% grade",
+        "drivetrain": "Tri-Motor Rear Axle Electric Drive",
+        "seating": "Center Captain Seat + Passenger Jump Seat",
+        "cargoCapacity": "Class 8 semi-truck trailer connection",
+        "chargingRate": "Megawatt Charging (Up to 70% in 30 minutes)",
+        "payloadOrTowing": "82,000 lbs GCW Rating"
+      },
+      "configurations": [
+        {
+          "id": "semi-300",
+          "name": "Tesla Semi 300-Mile Range",
+          "range": "300 miles fully loaded",
+          "acceleration": "20s 0-60 mph (loaded)",
+          "topSpeed": "65 mph",
+          "drivetrain": "Tri-Motor Rear Axles",
+          "basePrice": 90000
+        },
+        {
+          "id": "semi-500",
+          "name": "Tesla Semi 500-Mile Range",
+          "range": "500 miles fully loaded",
+          "acceleration": "20s 0-60 mph (loaded)",
+          "topSpeed": "65 mph",
+          "drivetrain": "Tri-Motor Rear Axles",
+          "basePrice": 110000
+        }
+      ],
+      "originalPrice": 150000,
+      "promotionalPrice": 90000,
+      "promotionalLabel": "Management Promotional Price",
+      "availability": "Limited Allocation",
+      "isFeatured": false,
+      "performanceHighlights": [
+        "Maintains 65 mph highway speeds uphill on a 5% continuous highway grade",
+        "Regenerative braking recuperates majority of kinetic energy on descents"
+      ],
+      "interiorHighlights": [
+        "Centered driver seating position providing unparalleled road visibility",
+        "Dual 15-inch touchscreens flanking the steering wheel for navigation and blind-spot monitoring"
+      ],
+      "safetyHighlights": [
+        "Active traction and torque control preventing jackknifing under extreme road conditions",
+        "Low center of gravity with battery pack mounted low within frame rails"
+      ],
+      "chargingHighlights": [
+        "Compatible with high-power Megawatt Charging System (MCS)"
+      ],
+      "pricingNotes": "Commercial fleet inquiry pricing subject to fleet contract terms and delivery region.",
+      "effectiveDate": "2026-08-01",
+      "expirationDate": "2026-12-31"
+    }
+  ],
+  "savedVehicleImages": {
+    "model-3": "/uploads/model-3-img-1787823274281-674eb4c3.webp",
+    "model-y": "/uploads/model-y-img-1787823311496-e945c3bf.webp",
+    "model-y-l": "/uploads/model-y-l-img-1787823336064-e27f2f43.webp",
+    "cybertruck": "/uploads/cybertruck-main-1787823385132-f3d687cd.webp",
+    "model-s": "/uploads/model-s-img-1787823409678-655c31fd.webp",
+    "model-x": "/uploads/model-x-img-1787823435675-d840c478.webp",
+    "roadster": "/uploads/roadster-img-1787823468050-f328c50f.webp",
+    "cybercab": "/uploads/cybercab-img-1787823516325-2cd8a297.webp",
+    "tesla-semi": "/uploads/tesla-semi-img-1787823564730-12700a8c.webp"
+  },
+  "authInfo": {
+    "representativeName": "Client Services & Fleet Allocation Desk",
+    "authorizedTitle": "Client Vehicle Representative & Allocation Coordinator",
+    "authorizationNumber": "",
+    "authorizationDate": "",
+    "expirationDate": "",
+    "verificationUrl": "",
+    "publicAuthorizationReference": "",
+    "verificationInstructions": "",
+    "responsibilities": [
+      "Client vehicle purchase request processing and configuration coordination",
+      "Application and confirmation of management promotional allocation pricing",
+      "Cross-border delivery, logistics, and documentation review assistance",
+      "Dedicated corporate fleet and individual customer order support",
+      "Purchase guidance, client payment security, and order tracking"
+    ],
+    "officialEmail": "teslasemi60@gmail.com",
+    "officialPhone": "Unavailable at this moment",
+    "officialDialCode": "+1",
+    "businessMessagingChannel": "Tesla Management Official Client Desk",
+    "officeLocation": "Tesla Management Operations & International Client Support Center, 1 Tesla Road, Austin, TX 78725",
+    "legalDisclaimer": "Tesla Management provides private vehicle acquisition assistance and fleet allocation services. All vehicle brand names, trademarks, and vehicle imagery are the property of Tesla, Inc. Promotional figures represent Management Promotional Pricing and are distinct from standard manufacturer MSRP until formally confirmed upon order completion."
+  },
+  "countriesList": [
+    {
+      "name": "Afghanistan",
+      "isoCode": "AF",
+      "dialCode": "+93",
+      "flag": "🇦🇫",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Albania",
+      "isoCode": "AL",
+      "dialCode": "+355",
+      "flag": "🇦🇱",
+      "minLength": 8,
+      "maxLength": 9
+    },
+    {
+      "name": "Algeria",
+      "isoCode": "DZ",
+      "dialCode": "+213",
+      "flag": "🇩🇿",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Andorra",
+      "isoCode": "AD",
+      "dialCode": "+376",
+      "flag": "🇦🇩",
+      "minLength": 6,
+      "maxLength": 9
+    },
+    {
+      "name": "Angola",
+      "isoCode": "AO",
+      "dialCode": "+244",
+      "flag": "🇦🇴",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "isoCode": "AG",
+      "dialCode": "+1268",
+      "flag": "🇦🇬",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Argentina",
+      "isoCode": "AR",
+      "dialCode": "+54",
+      "flag": "🇦🇷",
+      "minLength": 10,
+      "maxLength": 11
+    },
+    {
+      "name": "Armenia",
+      "isoCode": "AM",
+      "dialCode": "+374",
+      "flag": "🇦🇲",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Australia",
+      "isoCode": "AU",
+      "dialCode": "+61",
+      "flag": "🇦🇺",
+      "minLength": 9,
+      "maxLength": 10
+    },
+    {
+      "name": "Austria",
+      "isoCode": "AT",
+      "dialCode": "+43",
+      "flag": "🇦🇹",
+      "minLength": 9,
+      "maxLength": 13
+    },
+    {
+      "name": "Azerbaijan",
+      "isoCode": "AZ",
+      "dialCode": "+994",
+      "flag": "🇦🇿",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Bahamas",
+      "isoCode": "BS",
+      "dialCode": "+1242",
+      "flag": "🇧🇸",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Bahrain",
+      "isoCode": "BH",
+      "dialCode": "+973",
+      "flag": "🇧🇭",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Bangladesh",
+      "isoCode": "BD",
+      "dialCode": "+880",
+      "flag": "🇧🇩",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Barbados",
+      "isoCode": "BB",
+      "dialCode": "+1246",
+      "flag": "🇧🇧",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Belarus",
+      "isoCode": "BY",
+      "dialCode": "+375",
+      "flag": "🇧🇾",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Belgium",
+      "isoCode": "BE",
+      "dialCode": "+32",
+      "flag": "🇧🇪",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Belize",
+      "isoCode": "BZ",
+      "dialCode": "+501",
+      "flag": "🇧🇿",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Benin",
+      "isoCode": "BJ",
+      "dialCode": "+229",
+      "flag": "🇧🇯",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Bhutan",
+      "isoCode": "BT",
+      "dialCode": "+975",
+      "flag": "🇧🇹",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Bolivia",
+      "isoCode": "BO",
+      "dialCode": "+591",
+      "flag": "🇧🇴",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "isoCode": "BA",
+      "dialCode": "+387",
+      "flag": "🇧🇦",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Botswana",
+      "isoCode": "BW",
+      "dialCode": "+267",
+      "flag": "🇧🇼",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Brazil",
+      "isoCode": "BR",
+      "dialCode": "+55",
+      "flag": "🇧🇷",
+      "minLength": 10,
+      "maxLength": 11
+    },
+    {
+      "name": "Brunei",
+      "isoCode": "BN",
+      "dialCode": "+673",
+      "flag": "🇧🇳",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Bulgaria",
+      "isoCode": "BG",
+      "dialCode": "+359",
+      "flag": "🇧🇬",
+      "minLength": 8,
+      "maxLength": 9
+    },
+    {
+      "name": "Burkina Faso",
+      "isoCode": "BF",
+      "dialCode": "+226",
+      "flag": "🇧🇫",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Burundi",
+      "isoCode": "BI",
+      "dialCode": "+257",
+      "flag": "🇧🇮",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Cambodia",
+      "isoCode": "KH",
+      "dialCode": "+855",
+      "flag": "🇰🇭",
+      "minLength": 8,
+      "maxLength": 9
+    },
+    {
+      "name": "Cameroon",
+      "isoCode": "CM",
+      "dialCode": "+237",
+      "flag": "🇨🇲",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Canada",
+      "isoCode": "CA",
+      "dialCode": "+1",
+      "flag": "🇨🇦",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Cape Verde",
+      "isoCode": "CV",
+      "dialCode": "+238",
+      "flag": "🇨🇻",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Central African Republic",
+      "isoCode": "CF",
+      "dialCode": "+236",
+      "flag": "🇨🇫",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Chad",
+      "isoCode": "TD",
+      "dialCode": "+235",
+      "flag": "🇹🇩",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Chile",
+      "isoCode": "CL",
+      "dialCode": "+56",
+      "flag": "🇨🇱",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "China",
+      "isoCode": "CN",
+      "dialCode": "+86",
+      "flag": "🇨🇳",
+      "minLength": 11,
+      "maxLength": 11
+    },
+    {
+      "name": "Colombia",
+      "isoCode": "CO",
+      "dialCode": "+57",
+      "flag": "🇨🇴",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Comoros",
+      "isoCode": "KM",
+      "dialCode": "+269",
+      "flag": "🇰🇲",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Congo (DRC)",
+      "isoCode": "CD",
+      "dialCode": "+243",
+      "flag": "🇨🇩",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Congo (Republic)",
+      "isoCode": "CG",
+      "dialCode": "+242",
+      "flag": "🇨🇬",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Costa Rica",
+      "isoCode": "CR",
+      "dialCode": "+506",
+      "flag": "🇨🇷",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Croatia",
+      "isoCode": "HR",
+      "dialCode": "+385",
+      "flag": "🇭🇷",
+      "minLength": 8,
+      "maxLength": 9
+    },
+    {
+      "name": "Cuba",
+      "isoCode": "CU",
+      "dialCode": "+53",
+      "flag": "🇨🇺",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Cyprus",
+      "isoCode": "CY",
+      "dialCode": "+357",
+      "flag": "🇨🇾",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Czech Republic",
+      "isoCode": "CZ",
+      "dialCode": "+420",
+      "flag": "🇨🇿",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Denmark",
+      "isoCode": "DK",
+      "dialCode": "+45",
+      "flag": "🇩🇰",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Djibouti",
+      "isoCode": "DJ",
+      "dialCode": "+253",
+      "flag": "🇩🇯",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Dominica",
+      "isoCode": "DM",
+      "dialCode": "+1767",
+      "flag": "🇩🇲",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Dominican Republic",
+      "isoCode": "DO",
+      "dialCode": "+1809",
+      "flag": "🇩🇴",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Ecuador",
+      "isoCode": "EC",
+      "dialCode": "+593",
+      "flag": "🇪🇨",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Egypt",
+      "isoCode": "EG",
+      "dialCode": "+20",
+      "flag": "🇪🇬",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "El Salvador",
+      "isoCode": "SV",
+      "dialCode": "+503",
+      "flag": "🇸🇻",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Equatorial Guinea",
+      "isoCode": "GQ",
+      "dialCode": "+240",
+      "flag": "🇬🇶",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Eritrea",
+      "isoCode": "ER",
+      "dialCode": "+291",
+      "flag": "🇪🇷",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Estonia",
+      "isoCode": "EE",
+      "dialCode": "+372",
+      "flag": "🇪🇪",
+      "minLength": 7,
+      "maxLength": 8
+    },
+    {
+      "name": "Eswatini",
+      "isoCode": "SZ",
+      "dialCode": "+268",
+      "flag": "🇸🇿",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Ethiopia",
+      "isoCode": "ET",
+      "dialCode": "+251",
+      "flag": "🇪🇹",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Fiji",
+      "isoCode": "FJ",
+      "dialCode": "+679",
+      "flag": "🇫🇯",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Finland",
+      "isoCode": "FI",
+      "dialCode": "+358",
+      "flag": "🇫🇮",
+      "minLength": 9,
+      "maxLength": 11
+    },
+    {
+      "name": "France",
+      "isoCode": "FR",
+      "dialCode": "+33",
+      "flag": "🇫🇷",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Gabon",
+      "isoCode": "GA",
+      "dialCode": "+241",
+      "flag": "🇬🇦",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Gambia",
+      "isoCode": "GM",
+      "dialCode": "+220",
+      "flag": "🇬🇲",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Georgia",
+      "isoCode": "GE",
+      "dialCode": "+995",
+      "flag": "🇬🇪",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Germany",
+      "isoCode": "DE",
+      "dialCode": "+49",
+      "flag": "🇩🇪",
+      "minLength": 10,
+      "maxLength": 11
+    },
+    {
+      "name": "Ghana",
+      "isoCode": "GH",
+      "dialCode": "+233",
+      "flag": "🇬🇭",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Greece",
+      "isoCode": "GR",
+      "dialCode": "+30",
+      "flag": "🇬🇷",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Grenada",
+      "isoCode": "GD",
+      "dialCode": "+1473",
+      "flag": "🇬🇩",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Guatemala",
+      "isoCode": "GT",
+      "dialCode": "+502",
+      "flag": "🇬🇹",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Guinea",
+      "isoCode": "GN",
+      "dialCode": "+224",
+      "flag": "🇬🇳",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Guinea-Bissau",
+      "isoCode": "GW",
+      "dialCode": "+245",
+      "flag": "🇬🇼",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Guyana",
+      "isoCode": "GY",
+      "dialCode": "+592",
+      "flag": "🇬🇾",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Haiti",
+      "isoCode": "HT",
+      "dialCode": "+509",
+      "flag": "🇭🇹",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Honduras",
+      "isoCode": "HN",
+      "dialCode": "+504",
+      "flag": "🇭🇳",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Hong Kong",
+      "isoCode": "HK",
+      "dialCode": "+852",
+      "flag": "🇭🇰",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Hungary",
+      "isoCode": "HU",
+      "dialCode": "+36",
+      "flag": "🇭🇺",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Iceland",
+      "isoCode": "IS",
+      "dialCode": "+354",
+      "flag": "🇮🇸",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "India",
+      "isoCode": "IN",
+      "dialCode": "+91",
+      "flag": "🇮🇳",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Indonesia",
+      "isoCode": "ID",
+      "dialCode": "+62",
+      "flag": "🇮🇩",
+      "minLength": 9,
+      "maxLength": 12
+    },
+    {
+      "name": "Iran",
+      "isoCode": "IR",
+      "dialCode": "+98",
+      "flag": "🇮🇷",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Iraq",
+      "isoCode": "IQ",
+      "dialCode": "+964",
+      "flag": "🇮🇶",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Ireland",
+      "isoCode": "IE",
+      "dialCode": "+353",
+      "flag": "🇮🇪",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Israel",
+      "isoCode": "IL",
+      "dialCode": "+972",
+      "flag": "🇮🇱",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Italy",
+      "isoCode": "IT",
+      "dialCode": "+39",
+      "flag": "🇮🇹",
+      "minLength": 9,
+      "maxLength": 10
+    },
+    {
+      "name": "Ivory Coast",
+      "isoCode": "CI",
+      "dialCode": "+225",
+      "flag": "🇨🇮",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Jamaica",
+      "isoCode": "JM",
+      "dialCode": "+1876",
+      "flag": "🇯🇲",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Japan",
+      "isoCode": "JP",
+      "dialCode": "+81",
+      "flag": "🇯🇵",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Jordan",
+      "isoCode": "JO",
+      "dialCode": "+962",
+      "flag": "🇯🇴",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Kazakhstan",
+      "isoCode": "KZ",
+      "dialCode": "+7",
+      "flag": "🇰🇿",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Kenya",
+      "isoCode": "KE",
+      "dialCode": "+254",
+      "flag": "🇰🇪",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Kuwait",
+      "isoCode": "KW",
+      "dialCode": "+965",
+      "flag": "🇰🇼",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Kyrgyzstan",
+      "isoCode": "KG",
+      "dialCode": "+996",
+      "flag": "🇰🇬",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Laos",
+      "isoCode": "LA",
+      "dialCode": "+856",
+      "flag": "🇱🇦",
+      "minLength": 8,
+      "maxLength": 10
+    },
+    {
+      "name": "Latvia",
+      "isoCode": "LV",
+      "dialCode": "+371",
+      "flag": "🇱🇻",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Lebanon",
+      "isoCode": "LB",
+      "dialCode": "+961",
+      "flag": "🇱🇧",
+      "minLength": 7,
+      "maxLength": 8
+    },
+    {
+      "name": "Lesotho",
+      "isoCode": "LS",
+      "dialCode": "+266",
+      "flag": "🇱🇸",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Liberia",
+      "isoCode": "LR",
+      "dialCode": "+231",
+      "flag": "🇱🇷",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Libya",
+      "isoCode": "LY",
+      "dialCode": "+218",
+      "flag": "🇱🇾",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Liechtenstein",
+      "isoCode": "LI",
+      "dialCode": "+423",
+      "flag": "🇱🇮",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Lithuania",
+      "isoCode": "LT",
+      "dialCode": "+370",
+      "flag": "🇱🇹",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Luxembourg",
+      "isoCode": "LU",
+      "dialCode": "+352",
+      "flag": "🇱🇺",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Madagascar",
+      "isoCode": "MG",
+      "dialCode": "+261",
+      "flag": "🇲🇬",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Malawi",
+      "isoCode": "MW",
+      "dialCode": "+265",
+      "flag": "🇲🇼",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Malaysia",
+      "isoCode": "MY",
+      "dialCode": "+60",
+      "flag": "🇲🇾",
+      "minLength": 9,
+      "maxLength": 10
+    },
+    {
+      "name": "Maldives",
+      "isoCode": "MV",
+      "dialCode": "+960",
+      "flag": "🇲🇻",
+      "minLength": 7,
+      "maxLength": 7
+    },
+    {
+      "name": "Mali",
+      "isoCode": "ML",
+      "dialCode": "+223",
+      "flag": "🇲🇱",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Malta",
+      "isoCode": "MT",
+      "dialCode": "+356",
+      "flag": "🇲🇹",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Mauritania",
+      "isoCode": "MR",
+      "dialCode": "+222",
+      "flag": "🇲🇷",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Mauritius",
+      "isoCode": "MU",
+      "dialCode": "+230",
+      "flag": "🇲🇺",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Mexico",
+      "isoCode": "MX",
+      "dialCode": "+52",
+      "flag": "🇲🇽",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Moldova",
+      "isoCode": "MD",
+      "dialCode": "+373",
+      "flag": "🇲🇩",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Monaco",
+      "isoCode": "MC",
+      "dialCode": "+377",
+      "flag": "🇲🇨",
+      "minLength": 8,
+      "maxLength": 9
+    },
+    {
+      "name": "Mongolia",
+      "isoCode": "MN",
+      "dialCode": "+976",
+      "flag": "🇲🇳",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Montenegro",
+      "isoCode": "ME",
+      "dialCode": "+382",
+      "flag": "🇲🇪",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Morocco",
+      "isoCode": "MA",
+      "dialCode": "+212",
+      "flag": "🇲🇦",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Mozambique",
+      "isoCode": "MZ",
+      "dialCode": "+258",
+      "flag": "🇲🇿",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Myanmar",
+      "isoCode": "MM",
+      "dialCode": "+95",
+      "flag": "🇲🇲",
+      "minLength": 8,
+      "maxLength": 10
+    },
+    {
+      "name": "Namibia",
+      "isoCode": "NA",
+      "dialCode": "+264",
+      "flag": "🇳🇦",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Nepal",
+      "isoCode": "NP",
+      "dialCode": "+977",
+      "flag": "🇳🇵",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Netherlands",
+      "isoCode": "NL",
+      "dialCode": "+31",
+      "flag": "🇳🇱",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "New Zealand",
+      "isoCode": "NZ",
+      "dialCode": "+64",
+      "flag": "🇳🇿",
+      "minLength": 8,
+      "maxLength": 10
+    },
+    {
+      "name": "Nicaragua",
+      "isoCode": "NI",
+      "dialCode": "+505",
+      "flag": "🇳🇮",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Niger",
+      "isoCode": "NE",
+      "dialCode": "+227",
+      "flag": "🇳🇪",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Nigeria",
+      "isoCode": "NG",
+      "dialCode": "+234",
+      "flag": "🇳🇬",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "North Macedonia",
+      "isoCode": "MK",
+      "dialCode": "+389",
+      "flag": "🇲🇰",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Norway",
+      "isoCode": "NO",
+      "dialCode": "+47",
+      "flag": "🇳🇴",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Oman",
+      "isoCode": "OM",
+      "dialCode": "+968",
+      "flag": "🇴🇲",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Pakistan",
+      "isoCode": "PK",
+      "dialCode": "+92",
+      "flag": "🇵🇰",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Panama",
+      "isoCode": "PA",
+      "dialCode": "+507",
+      "flag": "🇵🇦",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Papua New Guinea",
+      "isoCode": "PG",
+      "dialCode": "+675",
+      "flag": "🇵🇬",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Paraguay",
+      "isoCode": "PY",
+      "dialCode": "+595",
+      "flag": "🇵🇾",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Peru",
+      "isoCode": "PE",
+      "dialCode": "+51",
+      "flag": "🇵🇪",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Philippines",
+      "isoCode": "PH",
+      "dialCode": "+63",
+      "flag": "🇵🇭",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Poland",
+      "isoCode": "PL",
+      "dialCode": "+48",
+      "flag": "🇵🇱",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Portugal",
+      "isoCode": "PT",
+      "dialCode": "+351",
+      "flag": "🇵🇹",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Qatar",
+      "isoCode": "QA",
+      "dialCode": "+974",
+      "flag": "🇶🇦",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Romania",
+      "isoCode": "RO",
+      "dialCode": "+40",
+      "flag": "🇷🇴",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Rwanda",
+      "isoCode": "RW",
+      "dialCode": "+250",
+      "flag": "🇷🇼",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Saudi Arabia",
+      "isoCode": "SA",
+      "dialCode": "+966",
+      "flag": "🇸🇦",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Senegal",
+      "isoCode": "SN",
+      "dialCode": "+221",
+      "flag": "🇸🇳",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Serbia",
+      "isoCode": "RS",
+      "dialCode": "+381",
+      "flag": "🇷🇸",
+      "minLength": 8,
+      "maxLength": 9
+    },
+    {
+      "name": "Singapore",
+      "isoCode": "SG",
+      "dialCode": "+65",
+      "flag": "🇸🇬",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Slovakia",
+      "isoCode": "SK",
+      "dialCode": "+421",
+      "flag": "🇸🇰",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Slovenia",
+      "isoCode": "SI",
+      "dialCode": "+386",
+      "flag": "🇸🇮",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "South Africa",
+      "isoCode": "ZA",
+      "dialCode": "+27",
+      "flag": "🇿🇦",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "South Korea",
+      "isoCode": "KR",
+      "dialCode": "+82",
+      "flag": "🇰🇷",
+      "minLength": 9,
+      "maxLength": 10
+    },
+    {
+      "name": "Spain",
+      "isoCode": "ES",
+      "dialCode": "+34",
+      "flag": "🇪🇸",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Sri Lanka",
+      "isoCode": "LK",
+      "dialCode": "+94",
+      "flag": "🇱🇰",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Sweden",
+      "isoCode": "SE",
+      "dialCode": "+46",
+      "flag": "🇸🇪",
+      "minLength": 9,
+      "maxLength": 10
+    },
+    {
+      "name": "Switzerland",
+      "isoCode": "CH",
+      "dialCode": "+41",
+      "flag": "🇨🇭",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Taiwan",
+      "isoCode": "TW",
+      "dialCode": "+886",
+      "flag": "🇹🇼",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Tanzania",
+      "isoCode": "TZ",
+      "dialCode": "+255",
+      "flag": "🇹🇿",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Thailand",
+      "isoCode": "TH",
+      "dialCode": "+66",
+      "flag": "🇹🇭",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Togo",
+      "isoCode": "TG",
+      "dialCode": "+228",
+      "flag": "🇹🇬",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "isoCode": "TT",
+      "dialCode": "+1868",
+      "flag": "🇹🇹",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Tunisia",
+      "isoCode": "TN",
+      "dialCode": "+216",
+      "flag": "🇹🇳",
+      "minLength": 8,
+      "maxLength": 8
+    },
+    {
+      "name": "Turkey",
+      "isoCode": "TR",
+      "dialCode": "+90",
+      "flag": "🇹🇷",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Uganda",
+      "isoCode": "UG",
+      "dialCode": "+256",
+      "flag": "🇺🇬",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Ukraine",
+      "isoCode": "UA",
+      "dialCode": "+380",
+      "flag": "🇺🇦",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "United Arab Emirates",
+      "isoCode": "AE",
+      "dialCode": "+971",
+      "flag": "🇦🇪",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "United Kingdom",
+      "isoCode": "GB",
+      "dialCode": "+44",
+      "flag": "🇬🇧",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "United States",
+      "isoCode": "US",
+      "dialCode": "+1",
+      "flag": "🇺🇸",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Uruguay",
+      "isoCode": "UY",
+      "dialCode": "+598",
+      "flag": "🇺🇾",
+      "minLength": 8,
+      "maxLength": 9
+    },
+    {
+      "name": "Uzbekistan",
+      "isoCode": "UZ",
+      "dialCode": "+998",
+      "flag": "🇺🇿",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Venezuela",
+      "isoCode": "VE",
+      "dialCode": "+58",
+      "flag": "🇻🇪",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    {
+      "name": "Vietnam",
+      "isoCode": "VN",
+      "dialCode": "+84",
+      "flag": "🇻🇳",
+      "minLength": 9,
+      "maxLength": 10
+    },
+    {
+      "name": "Zambia",
+      "isoCode": "ZM",
+      "dialCode": "+260",
+      "flag": "🇿🇲",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    {
+      "name": "Zimbabwe",
+      "isoCode": "ZW",
+      "dialCode": "+263",
+      "flag": "🇿🇼",
+      "minLength": 9,
+      "maxLength": 9
+    }
+  ],
+  "inquiries": [],
+  "activityLogs": [
+    {
+      "id": "log-1787823570887-241862",
+      "timestamp": "2026-08-27T09:39:30.887Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823565851-701e08",
+      "timestamp": "2026-08-27T09:39:25.851Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823565843-637dc4",
+      "timestamp": "2026-08-27T09:39:25.843Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823565584-0c75d9",
+      "timestamp": "2026-08-27T09:39:25.584Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for tesla-semi (/uploads/tesla-semi-img-1787823565584-ade2c135.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823564952-d20a6e",
+      "timestamp": "2026-08-27T09:39:24.952Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for tesla-semi",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823564730-086c06",
+      "timestamp": "2026-08-27T09:39:24.730Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for tesla-semi (/uploads/tesla-semi-img-1787823564730-12700a8c.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823521238-68a7cc",
+      "timestamp": "2026-08-27T09:38:41.238Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823521219-699d8f",
+      "timestamp": "2026-08-27T09:38:41.219Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823517760-7e141d",
+      "timestamp": "2026-08-27T09:38:37.760Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823517749-3aaafe",
+      "timestamp": "2026-08-27T09:38:37.750Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823517558-530087",
+      "timestamp": "2026-08-27T09:38:37.558Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for cybercab (/uploads/cybercab-img-1787823517557-abadf8e2.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823516504-cb0c7a",
+      "timestamp": "2026-08-27T09:38:36.504Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybercab",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823516326-eab1f9",
+      "timestamp": "2026-08-27T09:38:36.326Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for cybercab (/uploads/cybercab-img-1787823516325-2cd8a297.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823495317-2bbe79",
+      "timestamp": "2026-08-27T09:38:15.317Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823495307-3b5f5f",
+      "timestamp": "2026-08-27T09:38:15.308Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823471022-638668",
+      "timestamp": "2026-08-27T09:37:51.022Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823470998-575108",
+      "timestamp": "2026-08-27T09:37:50.998Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823470728-bb32bd",
+      "timestamp": "2026-08-27T09:37:50.728Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for roadster (/uploads/roadster-img-1787823470727-0d61c75a.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823468512-fa206b",
+      "timestamp": "2026-08-27T09:37:48.512Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823468051-63c62f",
+      "timestamp": "2026-08-27T09:37:48.051Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for roadster (/uploads/roadster-img-1787823468050-f328c50f.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823454816-4afd60",
+      "timestamp": "2026-08-27T09:37:34.816Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for roadster",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823441554-1158a7",
+      "timestamp": "2026-08-27T09:37:21.554Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model X",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823441545-fd34f1",
+      "timestamp": "2026-08-27T09:37:21.545Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823437495-0dc593",
+      "timestamp": "2026-08-27T09:37:17.495Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823437484-ed73a8",
+      "timestamp": "2026-08-27T09:37:17.484Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823437292-ee2d1d",
+      "timestamp": "2026-08-27T09:37:17.292Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-x (/uploads/model-x-img-1787823437292-778d50cf.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823435902-6834cd",
+      "timestamp": "2026-08-27T09:37:15.902Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823435676-77e92d",
+      "timestamp": "2026-08-27T09:37:15.676Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-x (/uploads/model-x-img-1787823435675-d840c478.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823425915-735244",
+      "timestamp": "2026-08-27T09:37:05.915Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-x",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823414834-939150",
+      "timestamp": "2026-08-27T09:36:54.835Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model S",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823414825-a7557c",
+      "timestamp": "2026-08-27T09:36:54.825Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823411698-cd367e",
+      "timestamp": "2026-08-27T09:36:51.698Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823411695-27b399",
+      "timestamp": "2026-08-27T09:36:51.695Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823411499-a357b6",
+      "timestamp": "2026-08-27T09:36:51.499Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-s (/uploads/model-s-img-1787823411499-f77af729.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823409916-22bc9a",
+      "timestamp": "2026-08-27T09:36:49.916Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823409679-e09eb7",
+      "timestamp": "2026-08-27T09:36:49.679Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-s (/uploads/model-s-img-1787823409678-655c31fd.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823394516-5c2754",
+      "timestamp": "2026-08-27T09:36:34.516Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-s",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823385133-fb7025",
+      "timestamp": "2026-08-27T09:36:25.133Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823384785-e62213",
+      "timestamp": "2026-08-27T09:36:24.785Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823380858-d58ce5",
+      "timestamp": "2026-08-27T09:36:20.858Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823380595-fc1ae0",
+      "timestamp": "2026-08-27T09:36:20.595Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823380358-54237c",
+      "timestamp": "2026-08-27T09:36:20.358Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for cybertruck (/uploads/cybertruck-img-1787823380357-16448ec1.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823379128-3fdf5a",
+      "timestamp": "2026-08-27T09:36:19.128Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823348751-e5afd0",
+      "timestamp": "2026-08-27T09:35:48.751Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for cybertruck",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823343119-8b7b74",
+      "timestamp": "2026-08-27T09:35:43.119Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model Y L",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823343106-d7e1ae",
+      "timestamp": "2026-08-27T09:35:43.106Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823337863-c52569",
+      "timestamp": "2026-08-27T09:35:37.863Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823337860-19dc22",
+      "timestamp": "2026-08-27T09:35:37.860Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823337646-04b93b",
+      "timestamp": "2026-08-27T09:35:37.646Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y-l (/uploads/model-y-l-img-1787823337645-a8db7ab1.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823336277-f0c402",
+      "timestamp": "2026-08-27T09:35:36.278Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823336064-ea0b3d",
+      "timestamp": "2026-08-27T09:35:36.064Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y-l (/uploads/model-y-l-img-1787823336064-e27f2f43.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823324090-9b5749",
+      "timestamp": "2026-08-27T09:35:24.090Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y-l",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823316201-2f25f7",
+      "timestamp": "2026-08-27T09:35:16.201Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model Y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823316199-a55bf3",
+      "timestamp": "2026-08-27T09:35:16.199Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823313117-be958e",
+      "timestamp": "2026-08-27T09:35:13.117Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823313107-b2290b",
+      "timestamp": "2026-08-27T09:35:13.107Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823312906-71158b",
+      "timestamp": "2026-08-27T09:35:12.906Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y (/uploads/model-y-img-1787823312906-e5d7e6e9.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823311697-0e066e",
+      "timestamp": "2026-08-27T09:35:11.697Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823311496-a211ca",
+      "timestamp": "2026-08-27T09:35:11.496Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-y (/uploads/model-y-img-1787823311496-e945c3bf.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823298413-67b4f0",
+      "timestamp": "2026-08-27T09:34:58.413Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-y",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823288489-59c86a",
+      "timestamp": "2026-08-27T09:34:48.489Z",
+      "action": "VEHICLE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Updated specifications/media for Model 3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823288484-2c53fd",
+      "timestamp": "2026-08-27T09:34:48.484Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823276062-530d9d",
+      "timestamp": "2026-08-27T09:34:36.062Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823276057-c35962",
+      "timestamp": "2026-08-27T09:34:36.057Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823275867-0da384",
+      "timestamp": "2026-08-27T09:34:35.867Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-3 (/uploads/model-3-img-1787823275866-5bb9e87b.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823274527-e2cbdc",
+      "timestamp": "2026-08-27T09:34:34.527Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823274281-d7d421",
+      "timestamp": "2026-08-27T09:34:34.281Z",
+      "action": "MEDIA_UPLOADED",
+      "category": "VEHICLE",
+      "details": "Uploaded image for model-3 (/uploads/model-3-img-1787823274281-674eb4c3.webp)",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823251249-bde97d",
+      "timestamp": "2026-08-27T09:34:11.249Z",
+      "action": "IMAGE_UPDATED",
+      "category": "VEHICLE",
+      "details": "Saved permanent vehicle image for model-3",
+      "performedBy": "Management Admin"
+    },
+    {
+      "id": "log-1787823226482-64ade3",
+      "timestamp": "2026-08-27T09:33:46.482Z",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "category": "SECURITY",
+      "details": "Authorized management representative authenticated successfully.",
+      "performedBy": "Client Services & Fleet Allocation Desk"
+    },
+    {
+      "id": "log-boot-1",
+      "timestamp": "2026-08-27T09:27:21.961Z",
+      "action": "SYSTEM_BOOT",
+      "category": "SECURITY",
+      "details": "Tesla Management secure server initialized with authorized endpoints and role protection.",
+      "performedBy": "System Core"
+    }
+  ],
+  "adminPasscode": "vQ7$z5N2!rL9@xJK4#pT76&",
+  "updatedAt": "2026-08-27T09:39:30.904Z"
+}
